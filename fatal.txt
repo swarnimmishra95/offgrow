@@ -1,0 +1,749 @@
+55:09-30 13:34:19.780  3453  3453 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+56:09-30 13:34:19.785  3453  3453 I AndroidRuntime: Using default boot image
+57:09-30 13:34:19.785  3453  3453 I AndroidRuntime: Leaving lock profiling enabled
+58-09-30 13:34:19.788  3453  3453 I app_process: Core platform API reporting enabled, enforcing=false
+59-09-30 13:34:19.789  3453  3453 I app_process: Using CollectorTypeCC GC.
+60-09-30 13:34:19.806  1571  3399 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+61-09-30 13:34:19.806  1571  3399 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+62-09-30 13:34:19.806  1571  3399 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+63-09-30 13:34:19.806  1571  3399 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+64-09-30 13:34:19.806  1571  3399 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+65-09-30 13:34:19.806  1571  3399 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+66-09-30 13:34:19.806  1571  3399 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+67-09-30 13:34:19.806  1571  3399 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+68-09-30 13:34:19.810  1571  1830 I SP      : <==== Finishing job {W:b:u:l, bg}, 6741 ms. elapsed since start
+69-09-30 13:34:19.811  1571  1830 I SP      : Download stopped: manifests:emoticon_content_description-2022081613, failed (retriable) paused, size: 0
+70-09-30 13:34:19.816  1799  2677 W A       : GetSuggestions failed
+71-09-30 13:34:19.816  1799  2677 W A       : java.util.concurrent.CancellationException
+72-09-30 13:34:19.816  1799  2677 W A       : 	at kotlinx.coroutines.d.b.c(PG:2)
+73-09-30 13:34:19.816  1799  2677 W A       : 	at kotlinx.coroutines.d.b.get(PG:1)
+74-09-30 13:34:19.816  1799  2677 W A       : 	at com.google.common.util.concurrent.eb.a(PG:1)
+75-09-30 13:34:19.816  1799  2677 W A       : 	at com.google.common.util.concurrent.ci.r(PG:2)
+76-09-30 13:34:19.816  1799  2677 W A       : 	at com.google.common.util.concurrent.cb.run(PG:4)
+77-09-30 13:34:19.816  1799  2677 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+78-09-30 13:34:19.816  1799  2677 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+79-09-30 13:34:19.816  1799  2677 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+80-09-30 13:34:19.816  1799  2677 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+81-09-30 13:34:19.816  1799  2677 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+82-09-30 13:34:19.816  1799  2677 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+--
+456:09-30 13:34:20.374  3453  3453 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+457-09-30 13:34:20.376  3429  3429 I android.traceur: Using CollectorTypeCC GC.
+458-09-30 13:34:20.376  3453  3453 D UiAutomationConnection: Created on user UserHandle{0}
+459-09-30 13:34:20.376  3429  3429 W android.traceur: Unexpected CPU variant for x86: x86_64.
+460-09-30 13:34:20.376  3429  3429 W android.traceur: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+461-09-30 13:34:20.377  3429  3429 E android.traceur: Not starting debugger since process cannot load the jdwp agent.
+462-09-30 13:34:20.378  1799  2365 I cr_CronetLibraryLoader: Cronet version: 102.0.4973.2, arch: x86_64
+463-09-30 13:34:20.381   336  3504 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+464-09-30 13:34:20.381   336  3504 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x752aab295510
+465-09-30 13:34:20.381   336  3504 I resolv  : doQuery: rcode=0, ancount=1, return value=75
+466-09-30 13:34:20.381   336  3507 I resolv  : res_nmkquery: (QUERY, IN, A)
+467-09-30 13:34:20.381   336  3507 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x752aab294470
+468-09-30 13:34:20.381   336  3507 I resolv  : doQuery: rcode=0, ancount=1, return value=63
+469-09-30 13:34:20.383  1007  3461 D TrafficStats: tagSocket(109) with statsTag=0xffffff81, statsUid=-1
+470-09-30 13:34:20.391  1478  1484 I gle.android.gms: Background young concurrent copying GC freed 33865(1965KB) AllocSpace objects, 15(788KB) LOS objects, 0% free, 8922KB/8922KB, paused 22us,12us total 1.521s
+471-09-30 13:34:20.404  1799  1799 I A       : Constructor was called
+472-09-30 13:34:20.406  1799  1799 I A       : No savedInstanceState.
+473-09-30 13:34:20.408  1799  1799 I A       : makeRequest: subscribing to new source
+474-09-30 13:34:20.410  1799  1799 I A       : OnCreate Was Called
+475-09-30 13:34:20.411  1799  1799 I A       : getMinusOnePromotion
+476-09-30 13:34:20.412  1799  2965 I MicroDataManager: Created a new hotword model for:
+477-09-30 13:34:20.412  1799  2965 I MicroDataManager:  LOC: en-US/hotword.data SR: 16000 CC: 1
+478-09-30 13:34:20.422   526  3414 I HealthConnectBackupRestore: Attempt to schedule download timeout job with state: 0
+479-09-30 13:34:20.427   526  3414 I HealthConnectBackupRestore: Attempt to schedule staging timeout job with state: 0
+480-09-30 13:34:20.428   526  3414 I HealthConnectBackupRestore: Attempt to schedule merging timeout job with state: 0
+481-09-30 13:34:20.434  1057  1057 D TelephonyProvider: subIdString = 1 subId = 1
+--
+23135:09-30 13:35:20.311  3453  3453 I AndroidRuntime: VM exiting with result code 0.
+23136-09-30 13:35:20.319  1799  2423 I A       : NGA enabled in interactor.
+23137-09-30 13:35:20.320  1799  2423 I A       : Nga state changed to NgaStateDetails{state=ENABLED, isSpecialExperience=false}
+23138-09-30 13:35:20.345  1799  2661 I A       : Using proto config with mendel
+23139-09-30 13:35:20.361  1799  2661 I A       : Using proto config with mendel
+23140-09-30 13:35:20.362  1799  2661 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1790775308119]
+23141-09-30 13:35:20.388  1430  1437 I .gms.persistent: Background young concurrent copying GC freed 136035(6190KB) AllocSpace objects, 2(40KB) LOS objects, 17% free, 28MB/35MB, paused 23us,21us total 156.381ms
+23142-09-30 13:35:20.411  1799  2365 I A       : Refusing EXCLUSIVE task 24, it is already pending. Try again in 305 seconds.
+23143-09-30 13:35:20.427   526  2235 V ActivityManager: Got obituary of 3532:app.offgrow
+23144-09-30 13:35:20.431   526   548 W ActivityManager: setHasOverlayUi called on unknown pid: 3532
+23145-09-30 13:35:20.433  1799  2280 I FedAssExpListener: Fed-ass not supported for signed out users.
+23146-09-30 13:35:20.433  1799  2280 I FedAssExpListener: Successfully processed experiments changed.
+23147-09-30 13:35:20.440  1799  2365 I OpaEligibilityChecker: send OpaEligibilityChange broadcast to CommonBroadcastReceiver
+23148-09-30 13:35:20.454  1799  2280 I A       : NGA enabled in interactor.
+23149-09-30 13:35:20.464  1684  3355 I A       : Initializing all components
+23150-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: Invalid input from icing corpus JSON flag.
+23151-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+23152-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at android.util.JsonReader.syntaxError(JsonReader.java:1162)
+23153-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at android.util.JsonReader.checkLenient(JsonReader.java:840)
+23154-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at android.util.JsonReader.nextInArray(JsonReader.java:615)
+23155-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at android.util.JsonReader.peek(JsonReader.java:345)
+23156-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at android.util.JsonReader.hasNext(JsonReader.java:321)
+23157-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at com.google.android.apps.gsa.searchbox.c.b.b.k.c(PG:7)
+23158-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at com.google.android.apps.gsa.searchbox.c.b.b.j.a(Unknown Source:2)
+23159-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at com.google.android.apps.gsa.search.core.i.r.run(PG:5)
+23160-09-30 13:35:20.479  1799  2365 W CorpusConfigHelper: 	at com.google.android.libraries.gsa.k.a.h.run(PG:2)
+--
+23215:09-30 13:35:20.543  5339  5339 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+23216-09-30 13:35:20.545  1684  2363 I A       : stopListening(NGA_PAUSED_UNKNOWN_REASON, NGA_CREATE), idleOverride=NOT_LISTENING
+23217-09-30 13:35:20.550  1799  2661 I HotwordService: Model ID: en_us_x_google_agsa__p20230131_fedhot_standalone_fl_full_training_3wlTKwxhekc8fk7-d9loeGg
+23218-09-30 13:35:20.550  1799  2661 I HotwordService: hotwordModelLocation is null false, locale is en-US, re-mapped Chinese locale 
+23219:09-30 13:35:20.550  5339  5339 I AndroidRuntime: Using default boot image
+23220:09-30 13:35:20.550  5339  5339 I AndroidRuntime: Leaving lock profiling enabled
+23221-09-30 13:35:20.550  1799  2661 I A       : Using proto config with mendel
+23222-09-30 13:35:20.551  1799  2661 I A       : Using proto config with mendel
+23223-09-30 13:35:20.551  1799  2661 I A       : Using proto config with mendel
+23224-09-30 13:35:20.551  1478  1522 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+23225-09-30 13:35:20.552  1799  2661 I A       : Merging legacy hotword config map with new proto.
+23226-09-30 13:35:20.552  1799  2661 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+23227-09-30 13:35:20.552  1799  2661 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+23228-09-30 13:35:20.552  1799  2661 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+23229-09-30 13:35:20.552  1799  2661 I A       : Skipping. Expected model: 2 Found: 1
+23230-09-30 13:35:20.553  1799  2661 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+23231-09-30 13:35:20.553  5339  5339 I app_process: Core platform API reporting enabled, enforcing=false
+23232-09-30 13:35:20.553  5339  5339 I app_process: Using CollectorTypeCC GC.
+23233-09-30 13:35:20.554  1571  1830 I SP      : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 1 pending: manifests:kc_tflite_model-20220919 @ {W:b:u:l, bg}
+23234-09-30 13:35:20.555  1799  2661 I A       : Using proto config with mendel
+23235-09-30 13:35:20.556  1799  2661 I A       : Using proto config with mendel
+23236-09-30 13:35:20.556  1799  2661 I A       : Using proto config with mendel
+23237-09-30 13:35:20.557  1799  2661 I A       : Merging legacy hotword config map with new proto.
+23238-09-30 13:35:20.557  1799  2661 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+23239-09-30 13:35:20.558  1799  2661 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+23240-09-30 13:35:20.559  1799  2661 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+23241-09-30 13:35:20.559  1799  2661 I A       : Skipping. Expected model: 2 Found: 1
+23242-09-30 13:35:20.559  1799  2661 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+23243-09-30 13:35:20.561   337   337 I Zygote  : Process 3532 exited due to signal 9 (Killed)
+23244-09-30 13:35:20.561  1430  1492 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+23245-09-30 13:35:20.574  1478  1522 W Icing   : No valid account for uploading user actions
+--
+23282:09-30 13:35:20.663  5339  5339 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+23283-09-30 13:35:20.657  5339  5339 W main    : type=1400 audit(0.0:52): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+23284-09-30 13:35:20.666  1684  2407 I A       : Initialize
+23285-09-30 13:35:20.668  5339  5339 D UiAutomationConnection: Created on user UserHandle{0}
+23286-09-30 13:35:20.671   526   914 I ActivityManager: Force stopping app.offgrow appid=10192 user=0: start instr
+23287-09-30 13:35:20.673  1684  2407 D StrictMode: StrictMode policy violation: android.os.strictmode.DiskReadViolation
+23288-09-30 13:35:20.673  1684  2407 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1666)
+23289-09-30 13:35:20.673  1684  2407 D StrictMode: 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:275)
+23290-09-30 13:35:20.673  1684  2407 D StrictMode: 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:344)
+23291-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.apps.gsa.shared.util.w.i.k(PG:2)
+23292-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.apps.gsa.shared.util.w.i.j(PG:1)
+23293-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.apps.gsa.nga.engine.v.a.p.b(PG:13)
+23294-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.apps.gsa.nga.engine.v.o.T(PG:3)
+23295-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.apps.gsa.nga.engine.v.f.M(PG:1)
+23296-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.apps.gsa.nga.engine.h.a.x.run(PG:21)
+23297-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.libraries.gsa.k.a.h.run(PG:2)
+23298-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.apps.gsa.shared.util.c.a.cf.b(PG:1)
+23299-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.apps.gsa.shared.util.c.a.ci.run(PG:1)
+23300-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.common.util.concurrent.dn.run(PG:1)
+23301-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.common.util.concurrent.do.run(PG:4)
+23302-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.libraries.i.ae.run(PG:1)
+23303-09-30 13:35:20.673  1684  2407 D StrictMode: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+23304-09-30 13:35:20.673  1684  2407 D StrictMode: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+23305-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.libraries.i.k.run(PG:2)
+23306-09-30 13:35:20.673  1684  2407 D StrictMode: 	at com.google.android.libraries.i.p.run(PG:4)
+23307-09-30 13:35:20.673  1684  2407 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+--
+44947:09-30 13:36:42.695  5339  5339 I AndroidRuntime: VM exiting with result code 0.
+44948-09-30 13:36:42.696  5354  5367 W MessageQueue: Handler (android.os.Handler) {796f6d0} sending message to a Handler on a dead thread
+44949-09-30 13:36:42.696  5354  5367 W MessageQueue: java.lang.IllegalStateException: Handler (android.os.Handler) {796f6d0} sending message to a Handler on a dead thread
+44950-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:560)
+44951-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:786)
+44952-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:735)
+44953-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:705)
+44954-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.os.Handler.post(Handler.java:435)
+44955-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.os.HandlerExecutor.execute(HandlerExecutor.java:41)
+44956-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.init(AccessibilityService.java:2886)
+44957-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:235)
+44958-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.os.Binder.execTransactInternal(Binder.java:1344)
+44959-09-30 13:36:42.696  5354  5367 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:1275)
+44960-09-30 13:36:42.698  5354  5367 W Binder  : Caught a RuntimeException from the binder stub implementation.
+44961-09-30 13:36:42.698  5354  5367 W Binder  : java.util.concurrent.RejectedExecutionException: Handler (android.os.Handler) {796f6d0} is shutting down
+44962-09-30 13:36:42.698  5354  5367 W Binder  : 	at android.os.HandlerExecutor.execute(HandlerExecutor.java:42)
+44963-09-30 13:36:42.698  5354  5367 W Binder  : 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.init(AccessibilityService.java:2886)
+44964-09-30 13:36:42.698  5354  5367 W Binder  : 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:235)
+44965-09-30 13:36:42.698  5354  5367 W Binder  : 	at android.os.Binder.execTransactInternal(Binder.java:1344)
+44966-09-30 13:36:42.698  5354  5367 W Binder  : 	at android.os.Binder.execTransact(Binder.java:1275)
+44967-09-30 13:36:42.703  1799  2365 I A       : NGA enabled in interactor.
+44968-09-30 13:36:42.703  1799  2365 I A       : Nga state changed to NgaStateDetails{state=ENABLED, isSpecialExperience=false}
+44969-09-30 13:36:42.706  1684  1784 I A       : Initializing all components
+44970-09-30 13:36:42.706  1684  1784 I A       : APA or Classic session decision: SessionDecision(sessionVariance=CLASSIC, platformVariance=CLASSIC, justification=CURRENT_PLATFORM_VARIANCE).
+44971-09-30 13:36:42.706  1684  1784 I A       : [Memory] eligibility: StashEligibility{6}
+44972-09-30 13:36:42.709   526  1944 E ActivityManager: Unable to freeze binder for 5354: -11
+--
+45069:09-30 13:36:42.975  6541  6541 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+45070:09-30 13:36:42.978  6541  6541 I AndroidRuntime: Using default boot image
+45071:09-30 13:36:42.978  6541  6541 I AndroidRuntime: Leaving lock profiling enabled
+45072-09-30 13:36:42.980  6541  6541 I app_process: Core platform API reporting enabled, enforcing=false
+45073-09-30 13:36:42.980  6541  6541 I app_process: Using CollectorTypeCC GC.
+45074-09-30 13:36:43.027  6541  6541 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+45075-09-30 13:36:43.035  6541  6541 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+45076-09-30 13:36:43.035  6541  6541 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+45077-09-30 13:36:43.039  6541  6541 W app_process: Unexpected CPU variant for x86: x86_64.
+45078-09-30 13:36:43.039  6541  6541 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+45079-09-30 13:36:43.051  6541  6541 W libc    : Access denied finding property "ro.product.name_for_attestation"
+45080-09-30 13:36:43.051  6541  6541 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+45081-09-30 13:36:43.051  6541  6541 W libc    : Access denied finding property "ro.product.model_for_attestation"
+45082:09-30 13:36:43.052  6541  6541 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+45083-09-30 13:36:43.054  6541  6541 D UiAutomationConnection: Created on user UserHandle{0}
+45084-09-30 13:36:43.049  6541  6541 W main    : type=1400 audit(0.0:69): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+45085-09-30 13:36:43.054   526  1103 I ActivityManager: Force stopping app.offgrow appid=10192 user=0: start instr
+45086-09-30 13:36:43.057   526  1103 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+45087-09-30 13:36:43.057   526   558 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+45088-09-30 13:36:43.058   526   612 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10192; state: ENABLED
+45089-09-30 13:36:43.049  6541  6541 W main    : type=1400 audit(0.0:70): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+45090-09-30 13:36:43.062   337   337 D Zygote  : Forked child process 6554
+45091-09-30 13:36:43.062   526   558 I ActivityManager: Start proc 6554:app.offgrow/u0a192 for added application app.offgrow
+45092-09-30 13:36:43.049  6541  6541 W main    : type=1400 audit(0.0:71): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+45093-09-30 13:36:43.095  6554  6554 I app.offgrow: Late-enabling -Xcheck:jni
+45094-09-30 13:36:43.104  6554  6554 I app.offgrow: Using CollectorTypeCC GC.
+45095-09-30 13:36:43.104  6554  6554 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+45096-09-30 13:36:43.104  6554  6554 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+45097-09-30 13:36:43.122   412   425 I adbd    : jdwp connection from 6554
+45098-09-30 13:36:43.129  6554  6554 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10192; state: ENABLED
+45099-09-30 13:36:43.129  6554  6554 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10192; state: ENABLED
+45100-09-30 13:36:43.131   526  1103 D CompatibilityChangeReporter: Compat change id reported: 170503758; UID 10192; state: ENABLED
+45101-09-30 13:36:43.133  6554  6554 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+45102-09-30 13:36:43.135  6554  6554 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*836642756]#PCL[/system/framework/android.test.mock.jar*3186112116]} | PCL[])
+45103-09-30 13:36:43.136  6554  6554 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247])
+45104-09-30 13:36:43.137  6554  6554 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247:/system/framework/android.test.mock.jar*3186112116])
+45105-09-30 13:36:43.138  6554  6554 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+45106-09-30 13:36:43.138  6554  6554 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+45107-09-30 13:36:43.156  6554  6554 W ziparchive: Unable to open '/data/app/~~LZ5BLq52_h6I_MvL92uMgg==/app.offgrow-ib8aYkRRrV413G_Qz_1s8A==/base.dm': No such file or directory
+--
+51243:09-30 13:39:07.368  6541  6541 I AndroidRuntime: VM exiting with result code 0.
+51244-09-30 13:39:07.379  1684  2363 I NgaEntryPointEventSendr: onServiceConnected
+51245-09-30 13:39:07.386  1799  3450 I A       : Calling beginBinderSession().
+51246-09-30 13:39:07.387  1799  3450 I A       : beginBinderSession(): calling binder
+51247-09-30 13:39:07.388  1684  2363 I NgaEntryPointEventSendr: State changed: Connecting => Ready
+51248-09-30 13:39:07.392   526  1103 W ActivityManager: Unable to start service Intent { cmp=com.google.android.apps.tachyon/.clientapi.ClientApiService } U=0: not found
+51249-09-30 13:39:07.394  1799  4709 I PBSessionCacheImpl: Deleted sessionId[7913876448726688] from persistence.
+51250-09-30 13:39:07.400  1799  2846 I A       : Using proto config with mendel
+51251-09-30 13:39:07.402   844   927 D EGL_emulation: app_time_stats: avg=4286.10ms min=701.60ms max=7870.61ms count=2
+51252-09-30 13:39:07.402  5803  6307 I GMS_MM_Logger: Memory Metric Logging not allowed. Stopping.
+51253-09-30 13:39:07.406  1684  2363 I A       : Successfully initialized all components
+51254-09-30 13:39:07.411  1799  2846 I A       : Using proto config with mendel
+51255-09-30 13:39:07.413  1799  2846 W A       : UiCallbackStub-onGenericEvent[ServiceEvent = 241] task was not run. Callback from Service received after client was disposed.
+51256-09-30 13:39:07.413  1799  2846 W A       : UiCallbackStub-onGenericEvent[ServiceEvent = 241] task was not run. Callback from Service received after client was disposed.
+51257-09-30 13:39:07.414  1684  2363 I NgaEntryPointEventSendr: State changed: Ready => Disconnected (onOpaDisconnected)
+51258-09-30 13:39:07.414  1799  3431 I PBSessionCacheImpl: Deleted sessionId[7913876448726691] from persistence.
+51259-09-30 13:39:07.415  1799  2846 W A       : UiCallbackStub-onGenericEvent[ServiceEvent = 60] task was not run. Callback from Service received after client was disposed.
+51260-09-30 13:39:07.418   526  1103 V ActivityManager: Got obituary of 6554:app.offgrow
+51261-09-30 13:39:07.420   526   548 W ActivityManager: setHasOverlayUi called on unknown pid: 6554
+51262-09-30 13:39:07.435   337   337 I Zygote  : Process 6554 exited due to signal 9 (Killed)
+51263-09-30 13:39:07.448  1684  1684 V ClearcutMetricXmitter: Transmission is done.
+51264:09-30 13:39:07.497  7415  7415 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+51265:09-30 13:39:07.500  7415  7415 I AndroidRuntime: Using default boot image
+51266:09-30 13:39:07.500  7415  7415 I AndroidRuntime: Leaving lock profiling enabled
+51267-09-30 13:39:07.502  7415  7415 I app_process: Core platform API reporting enabled, enforcing=false
+51268-09-30 13:39:07.502  7415  7415 I app_process: Using CollectorTypeCC GC.
+51269-09-30 13:39:07.548  7415  7415 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+51270-09-30 13:39:07.555  7415  7415 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+51271-09-30 13:39:07.555  7415  7415 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+51272-09-30 13:39:07.559  7415  7415 W app_process: Unexpected CPU variant for x86: x86_64.
+51273-09-30 13:39:07.559  7415  7415 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+51274-09-30 13:39:07.571  7415  7415 W libc    : Access denied finding property "ro.product.name_for_attestation"
+51275-09-30 13:39:07.571  7415  7415 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+51276-09-30 13:39:07.571  7415  7415 W libc    : Access denied finding property "ro.product.model_for_attestation"
+51277:09-30 13:39:07.572  7415  7415 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+51278-09-30 13:39:07.574  7415  7415 D UiAutomationConnection: Created on user UserHandle{0}
+51279-09-30 13:39:07.569  7415  7415 W main    : type=1400 audit(0.0:76): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+51280-09-30 13:39:07.574   526  2237 I ActivityManager: Force stopping app.offgrow appid=10192 user=0: start instr
+51281-09-30 13:39:07.576   526  2237 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+51282-09-30 13:39:07.576   526   558 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+51283-09-30 13:39:07.569  7415  7415 W main    : type=1400 audit(0.0:77): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+51284-09-30 13:39:07.580   337   337 D Zygote  : Forked child process 7429
+51285-09-30 13:39:07.582   526   612 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10192; state: ENABLED
+51286-09-30 13:39:07.582   526   558 I ActivityManager: Start proc 7429:app.offgrow/u0a192 for added application app.offgrow
+51287-09-30 13:39:07.569  7415  7415 W main    : type=1400 audit(0.0:78): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+51288-09-30 13:39:07.603  7429  7429 I app.offgrow: Late-enabling -Xcheck:jni
+51289-09-30 13:39:07.611  7429  7429 I app.offgrow: Using CollectorTypeCC GC.
+51290-09-30 13:39:07.612  7429  7429 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+51291-09-30 13:39:07.612  7429  7429 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+51292-09-30 13:39:07.634   412   425 I adbd    : jdwp connection from 7429
+51293-09-30 13:39:07.642  7429  7429 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10192; state: ENABLED
+51294-09-30 13:39:07.642  7429  7429 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10192; state: ENABLED
+51295-09-30 13:39:07.644   526  2237 D CompatibilityChangeReporter: Compat change id reported: 170503758; UID 10192; state: ENABLED
+51296-09-30 13:39:07.646  7429  7429 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+51297-09-30 13:39:07.648  7429  7429 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*836642756]#PCL[/system/framework/android.test.mock.jar*3186112116]} | PCL[])
+51298-09-30 13:39:07.648  7429  7429 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247])
+51299-09-30 13:39:07.649  7429  7429 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247:/system/framework/android.test.mock.jar*3186112116])
+51300-09-30 13:39:07.649  7429  7429 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+51301-09-30 13:39:07.649  7429  7429 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+51302-09-30 13:39:07.666  7429  7429 W ziparchive: Unable to open '/data/app/~~LZ5BLq52_h6I_MvL92uMgg==/app.offgrow-ib8aYkRRrV413G_Qz_1s8A==/base.dm': No such file or directory
+--
+54672:09-30 13:40:26.007  7415  7415 I AndroidRuntime: VM exiting with result code 0.
+54673-09-30 13:40:26.008  1799  2846 I A       : Using proto config with mendel
+54674-09-30 13:40:26.017  1799  2846 I A       : Using proto config with mendel
+54675-09-30 13:40:26.067  1799  2365 I A       : NGA enabled in interactor.
+54676-09-30 13:40:26.068  1799  2365 I A       : Nga state changed to NgaStateDetails{state=ENABLED, isSpecialExperience=false}
+54677-09-30 13:40:26.069  1100  1115 I s.nexuslauncher: NativeAlloc concurrent copying GC freed 56620(2423KB) AllocSpace objects, 4(280KB) LOS objects, 49% free, 6774KB/13MB, paused 20us,13us total 738.670ms
+54678-09-30 13:40:26.081   526   539 D CompatibilityChangeReporter: Compat change id reported: 161252188; UID 10192; state: DISABLED
+54679-09-30 13:40:26.089  5803  5882 I Icing   : Usage reports ok 1, Failed Usage reports 0, indexed 0, rejected 0
+54680-09-30 13:40:26.101  1684  1731 I A       : Initializing all components
+54681-09-30 13:40:26.102  1684  1731 I A       : APA or Classic session decision: SessionDecision(sessionVariance=CLASSIC, platformVariance=CLASSIC, justification=CURRENT_PLATFORM_VARIANCE).
+54682-09-30 13:40:26.102  1684  1731 I A       : [Memory] eligibility: StashEligibility{6}
+54683-09-30 13:40:26.108  1100  1117 W System  : A resource failed to call release. 
+54684-09-30 13:40:26.108  1100  1117 W System  : A resource failed to call release. 
+54685-09-30 13:40:26.108  1100  1117 W System  : A resource failed to call release. 
+54686-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54687-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54688-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54689-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54690-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54691-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54692-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54693-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54694-09-30 13:40:26.109  1100  1117 W System  : A resource failed to call release. 
+54695-09-30 13:40:26.110  1100  1117 W System  : A resource failed to call release. 
+54696-09-30 13:40:26.110  1100  1117 W System  : A resource failed to call release. 
+54697-09-30 13:40:26.110  1100  1117 W System  : A resource failed to call release. 
+--
+54845:09-30 13:40:26.355  7725  7725 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+54846:09-30 13:40:26.359  7725  7725 I AndroidRuntime: Using default boot image
+54847:09-30 13:40:26.359  7725  7725 I AndroidRuntime: Leaving lock profiling enabled
+54848-09-30 13:40:26.360   526   536 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.wm.ActivityRecord$$ExternalSyntheticLambda0
+54849-09-30 13:40:26.360   526   536 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+54850-09-30 13:40:26.362  7725  7725 I app_process: Core platform API reporting enabled, enforcing=false
+54851-09-30 13:40:26.363  7725  7725 I app_process: Using CollectorTypeCC GC.
+54852-09-30 13:40:26.375  5714  5970 I HeterodyneSyncer: Removed 0 invalid users [CONTEXT service_id=51 ]
+54853-09-30 13:40:26.393  5714  5787 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.languageprofile.GcmTaskService started execution. cause:7 exec_start_elapsed_seconds: 418 [CONTEXT service_id=218 ]
+54854-09-30 13:40:26.413  5714  5719 I .gms.persistent: Compiler allocated 4906KB to compile void bwhy.D(java.util.Set, java.util.List, dmtw, java.lang.String, boolean, dzew, bwhx, java.util.LinkedHashMap, dhlq, boolean, edam)
+54855-09-30 13:40:26.416  7725  7725 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+54856-09-30 13:40:26.425  7725  7725 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+54857-09-30 13:40:26.425  7725  7725 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+54858-09-30 13:40:26.429  7725  7725 W app_process: Unexpected CPU variant for x86: x86_64.
+54859-09-30 13:40:26.429  7725  7725 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+54860-09-30 13:40:26.440  5714  7715 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.languageprofile.GcmTaskService finished executing. cause:7 result: 1 elapsed_millis: 57 uptime_millis: 57 exec_start_elapsed_seconds: 418 [CONTEXT service_id=218 ]
+54861-09-30 13:40:26.442  7725  7725 W libc    : Access denied finding property "ro.product.name_for_attestation"
+54862-09-30 13:40:26.442  7725  7725 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+54863-09-30 13:40:26.442  7725  7725 W libc    : Access denied finding property "ro.product.model_for_attestation"
+54864:09-30 13:40:26.443  7725  7725 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+54865-09-30 13:40:26.443   336  7753 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+54866-09-30 13:40:26.443   336  7756 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+54867-09-30 13:40:26.441  7725  7725 W main    : type=1400 audit(0.0:81): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+54868-09-30 13:40:26.441  7725  7725 W main    : type=1400 audit(0.0:82): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+54869-09-30 13:40:26.455   336  7757 I resolv  : res_nmkquery: (QUERY, IN, A)
+54870-09-30 13:40:26.455  7725  7725 D UiAutomationConnection: Created on user UserHandle{0}
+54871-09-30 13:40:26.441  7725  7725 W main    : type=1400 audit(0.0:83): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+54872-09-30 13:40:26.456   526  1944 I ActivityManager: Force stopping app.offgrow appid=10192 user=0: start instr
+54873-09-30 13:40:26.457  5714  5719 I .gms.persistent: Compiler allocated 5850KB to compile void bwhy.D(java.util.Set, java.util.List, dmtw, java.lang.String, boolean, dzew, bwhx, java.util.LinkedHashMap, dhlq, boolean, edam)
+54874-09-30 13:40:26.458   526  1944 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+54875-09-30 13:40:26.458   526   558 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+54876-09-30 13:40:26.459   526   612 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10192; state: ENABLED
+54877-09-30 13:40:26.463   337   337 D Zygote  : Forked child process 7758
+54878-09-30 13:40:26.463   526   558 I ActivityManager: Start proc 7758:app.offgrow/u0a192 for added application app.offgrow
+54879-09-30 13:40:26.474   526   612 D ActivityManager: sync unfroze 3948 com.google.android.projection.gearhead:shared for 6
+54880-09-30 13:40:26.476  3948  3948 I GH.IconVerifyService: triggerSource = BOOT_COMPLETE, componentState = 2
+54881-09-30 13:40:26.492  7758  7758 I app.offgrow: Late-enabling -Xcheck:jni
+54882-09-30 13:40:26.500  7758  7758 I app.offgrow: Using CollectorTypeCC GC.
+54883-09-30 13:40:26.500  7758  7758 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+54884-09-30 13:40:26.500  7758  7758 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+54885-09-30 13:40:26.501   336  7757 I resolv  : res_nsend: used send_dg 164 terrno: 0
+54886-09-30 13:40:26.501   336  7756 I resolv  : res_nsend: used send_dg 260 terrno: 0
+54887-09-30 13:40:26.501   336  7756 I resolv  : doQuery: rcode=0, ancount=8, return value=260
+54888-09-30 13:40:26.501   336  7757 I resolv  : doQuery: rcode=0, ancount=8, return value=164
+54889-09-30 13:40:26.503  5714  5992 D TrafficStats: tagSocket(263) with statsTag=0x1203, statsUid=10132
+--
+57568:09-30 13:42:07.152  7725  7725 I AndroidRuntime: VM exiting with result code 0.
+57569-09-30 13:42:07.153  1683  1994 I AiAiEcho: Predicting[0]: 
+57570-09-30 13:42:07.153  1683  1994 I AiAiEcho: EchoTargets: 
+57571-09-30 13:42:07.153  1683  1994 I AiAiEcho: Filtered by AiAi flag check: 
+57572-09-30 13:42:07.153  1683  1994 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+57573-09-30 13:42:07.155  1684  2407 I A       : onIsEnabledChanged, isEnabled: false
+57574-09-30 13:42:07.157  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57575-09-30 13:42:07.157  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57576-09-30 13:42:07.161  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57577-09-30 13:42:07.161  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57578-09-30 13:42:07.161  1684  2363 I A       : State changed: IDLE => IDLE by NGA_STATE_CHANGED and N/A with Optional.empty
+57579-09-30 13:42:07.162  1684  2363 I A       : Recognizer choice: (recognizer_type: 1, recognizer_mode: 1, choice_reason: 4)
+57580-09-30 13:42:07.166  1684  2363 I A       : onActiveStateChangeEvent: IDLE => IDLE
+57581-09-30 13:42:07.167  1683  1994 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+57582-09-30 13:42:07.168  1684  2363 I A       : #onActiveStateChangeEvent, newState: IDLE, previousState: IDLE.
+57583-09-30 13:42:07.168  1683  1994 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+57584-09-30 13:42:07.168   844   844 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+57585-09-30 13:42:07.169  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57586-09-30 13:42:07.169  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57587-09-30 13:42:07.169  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57588-09-30 13:42:07.169  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57589-09-30 13:42:07.169  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57590-09-30 13:42:07.169  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57591-09-30 13:42:07.169  1684  2407 I A       : onOpaVisibilityChanged: false
+57592-09-30 13:42:07.170  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+57593-09-30 13:42:07.170  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+--
+57647:09-30 13:42:07.374  8202  8202 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+57648:09-30 13:42:07.377  8202  8202 I AndroidRuntime: Using default boot image
+57649:09-30 13:42:07.377  8202  8202 I AndroidRuntime: Leaving lock profiling enabled
+57650-09-30 13:42:07.379  8202  8202 I app_process: Core platform API reporting enabled, enforcing=false
+57651-09-30 13:42:07.379  8202  8202 I app_process: Using CollectorTypeCC GC.
+57652-09-30 13:42:07.425  8202  8202 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+57653-09-30 13:42:07.433  8202  8202 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+57654-09-30 13:42:07.433  8202  8202 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+57655-09-30 13:42:07.437  8202  8202 W app_process: Unexpected CPU variant for x86: x86_64.
+57656-09-30 13:42:07.437  8202  8202 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+57657-09-30 13:42:07.448  8202  8202 W libc    : Access denied finding property "ro.product.name_for_attestation"
+57658-09-30 13:42:07.449  8202  8202 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+57659-09-30 13:42:07.449  8202  8202 W libc    : Access denied finding property "ro.product.model_for_attestation"
+57660:09-30 13:42:07.450  8202  8202 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+57661-09-30 13:42:07.445  8202  8202 W main    : type=1400 audit(0.0:84): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+57662-09-30 13:42:07.445  8202  8202 W main    : type=1400 audit(0.0:85): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+57663-09-30 13:42:07.445  8202  8202 W main    : type=1400 audit(0.0:86): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+57664-09-30 13:42:07.460  8202  8202 D UiAutomationConnection: Created on user UserHandle{0}
+57665-09-30 13:42:07.461   526   832 I ActivityManager: Force stopping app.offgrow appid=10192 user=0: start instr
+57666-09-30 13:42:07.462   526   832 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+57667-09-30 13:42:07.463   526   558 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+57668-09-30 13:42:07.466   526   612 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10192; state: ENABLED
+57669-09-30 13:42:07.468   337   337 D Zygote  : Forked child process 8215
+57670-09-30 13:42:07.468   526   558 I ActivityManager: Start proc 8215:app.offgrow/u0a192 for added application app.offgrow
+57671-09-30 13:42:07.487  8215  8215 I app.offgrow: Late-enabling -Xcheck:jni
+57672-09-30 13:42:07.496  8215  8215 I app.offgrow: Using CollectorTypeCC GC.
+57673-09-30 13:42:07.496  8215  8215 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+57674-09-30 13:42:07.496  8215  8215 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+57675-09-30 13:42:07.518   412   425 I adbd    : jdwp connection from 8215
+57676-09-30 13:42:07.525  8215  8215 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10192; state: ENABLED
+57677-09-30 13:42:07.526  8215  8215 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10192; state: ENABLED
+57678-09-30 13:42:07.528   526   832 D CompatibilityChangeReporter: Compat change id reported: 170503758; UID 10192; state: ENABLED
+57679-09-30 13:42:07.530  8215  8215 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+57680-09-30 13:42:07.532  8215  8215 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*836642756]#PCL[/system/framework/android.test.mock.jar*3186112116]} | PCL[])
+57681-09-30 13:42:07.532  8215  8215 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247])
+57682-09-30 13:42:07.533  8215  8215 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247:/system/framework/android.test.mock.jar*3186112116])
+57683-09-30 13:42:07.533  8215  8215 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+57684-09-30 13:42:07.533  8215  8215 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+57685-09-30 13:42:07.551  8215  8215 W ziparchive: Unable to open '/data/app/~~LZ5BLq52_h6I_MvL92uMgg==/app.offgrow-ib8aYkRRrV413G_Qz_1s8A==/base.dm': No such file or directory
+--
+58569:09-30 13:42:11.138  8329  8329 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+58570:09-30 13:42:11.143  8329  8329 I AndroidRuntime: Using default boot image
+58571:09-30 13:42:11.143  8329  8329 I AndroidRuntime: Leaving lock profiling enabled
+58572-09-30 13:42:11.145  8329  8329 I app_process: Core platform API reporting enabled, enforcing=false
+58573-09-30 13:42:11.145  8329  8329 I app_process: Using CollectorTypeCC GC.
+58574-09-30 13:42:11.196  8329  8329 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+58575-09-30 13:42:11.203  8329  8329 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+58576-09-30 13:42:11.204  8329  8329 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+58577-09-30 13:42:11.208  8329  8329 W app_process: Unexpected CPU variant for x86: x86_64.
+58578-09-30 13:42:11.208  8329  8329 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+58579-09-30 13:42:11.220  8329  8329 W libc    : Access denied finding property "ro.product.name_for_attestation"
+58580-09-30 13:42:11.221  8329  8329 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+58581-09-30 13:42:11.221  8329  8329 W libc    : Access denied finding property "ro.product.model_for_attestation"
+58582:09-30 13:42:11.222  8329  8329 D AndroidRuntime: Calling main entry com.android.commands.appwidget.AppWidget
+58583:09-30 13:42:11.223  8329  8329 D AndroidRuntime: Shutting down VM
+58584-09-30 13:42:11.217  8329  8329 W main    : type=1400 audit(0.0:87): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+58585-09-30 13:42:11.228  8329  8343 W app_process: Thread attaching while runtime is shutting down: binder:8329_1
+58586:09-30 13:42:11.228  8329  8343 I AndroidRuntime: NOTE: attach of thread 'binder:8329_1' failed
+58587-09-30 13:42:11.217  8329  8329 W main    : type=1400 audit(0.0:88): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+58588-09-30 13:42:11.217  8329  8329 W main    : type=1400 audit(0.0:89): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+58589-09-30 13:42:12.045  8215  8235 I OffgrowQA:   grantbind: 
+58590-09-30 13:42:12.051   526  1850 I AppWidgetServiceImpl: Bound widget 2 to provider ProviderId{user:0, app:10192, cmp:ComponentInfo{app.offgrow/app.offgrow.widget.GardenWidgetProvider}}
+58591-09-30 13:42:12.052  8215  8235 I OffgrowQA: - PASS Widget square 2×2 can be placed
+58592-09-30 13:42:12.054   526   540 I AppWidgetServiceImpl: Bound widget 3 to provider ProviderId{user:0, app:10192, cmp:ComponentInfo{app.offgrow/app.offgrow.widget.GardenWidgetProvider}}
+58593-09-30 13:42:12.054  8215  8235 I OffgrowQA: - PASS Widget square 3×3 can be placed
+58594-09-30 13:42:12.056   526   540 I AppWidgetServiceImpl: Bound widget 4 to provider ProviderId{user:0, app:10192, cmp:ComponentInfo{app.offgrow/app.offgrow.widget.GardenWidgetProvider}}
+58595-09-30 13:42:12.056  8215  8235 I OffgrowQA: - PASS Widget square 4×4 can be placed
+58596-09-30 13:42:12.057   526   540 I AppWidgetServiceImpl: Bound widget 5 to provider ProviderId{user:0, app:10192, cmp:ComponentInfo{app.offgrow/app.offgrow.widget.GardenWideWidgetProvider}}
+58597-09-30 13:42:12.057  8215  8235 I OffgrowQA: - PASS Widget wide 4×2 can be placed
+58598-09-30 13:42:12.058   526   540 I AppWidgetServiceImpl: Bound widget 6 to provider ProviderId{user:0, app:10192, cmp:ComponentInfo{app.offgrow/app.offgrow.widget.GardenWideWidgetProvider}}
+58599-09-30 13:42:12.058  8215  8235 I OffgrowQA: - PASS Widget wide 5×2 can be placed
+58600-09-30 13:42:12.062   526   540 I AppWidgetServiceImpl: Bound widget 7 to provider ProviderId{user:0, app:10192, cmp:ComponentInfo{app.offgrow/app.offgrow.widget.GardenWidgetProvider}}
+58601-09-30 13:42:12.062  8215  8235 I OffgrowQA: - PASS Widget square resized wide can be placed
+58602-09-30 13:42:12.084  8215  8234 D WM-SystemJobScheduler: Scheduling work ID eef2609b-78bf-4c7a-8c08-e22978645aa1Job ID 6
+58603-09-30 13:42:12.089  8215  8215 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=eef2609b-78bf-4c7a-8c08-e22978645aa1, generation=0)
+58604-09-30 13:42:12.089  8215  8234 D WM-GreedyScheduler: Starting work for eef2609b-78bf-4c7a-8c08-e22978645aa1
+58605-09-30 13:42:12.095  8215  8236 D WM-SystemJobScheduler: Scheduling work ID 240d31af-6644-469c-b185-4d306d54c31aJob ID 7
+58606-09-30 13:42:12.097  8215  8215 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=240d31af-6644-469c-b185-4d306d54c31a, generation=0)
+58607-09-30 13:42:12.097  8215  8236 D WM-GreedyScheduler: Starting work for 240d31af-6644-469c-b185-4d306d54c31a
+58608-09-30 13:42:12.099  8215  8236 D WM-Processor: Processor cancelling 240d31af-6644-469c-b185-4d306d54c31a
+58609-09-30 13:42:12.099  8215  8236 D WM-Processor: WorkerWrapper could not be found for 240d31af-6644-469c-b185-4d306d54c31a
+58610-09-30 13:42:12.101  8215  8215 D WM-SystemJobService: onStopJob for WorkGenerationalId(workSpecId=240d31af-6644-469c-b185-4d306d54c31a, generation=0)
+58611-09-30 13:42:12.101   526  1850 W JobScheduler: Job didn't exist in JobStore: c5faf58 {androidx.work.systemjobscheduler} #u0a192/7 @androidx.work.systemjobscheduler@app.offgrow/androidx.work.impl.background.systemjob.SystemJobService
+--
+59343:09-30 13:42:23.471  8202  8202 I AndroidRuntime: VM exiting with result code 0.
+59344-09-30 13:42:23.487  1684  2363 I A       : Initialize
+59345-09-30 13:42:23.488  1684  2363 I A       : stopListening(NGA_PAUSED_UNKNOWN_REASON, NGA_CREATE), idleOverride=NOT_LISTENING
+59346-09-30 13:42:23.488  1684  2363 I A       : on opa visibility changed false
+59347-09-30 13:42:23.489  1684  2363 I A       : on opa visibility changed false
+59348-09-30 13:42:23.492  1684  2363 I A       : State changed: IDLE => IDLE by NGA_STATE_CHANGED and N/A with Optional.empty
+59349-09-30 13:42:23.492  1684  2363 I A       : Recognizer choice: (recognizer_type: 1, recognizer_mode: 1, choice_reason: 4)
+59350-09-30 13:42:23.492  1684  2363 I A       : onActiveStateChangeEvent: IDLE => IDLE
+59351-09-30 13:42:23.493  1684  2363 I A       : #onActiveStateChangeEvent, newState: IDLE, previousState: IDLE.
+59352-09-30 13:42:23.493  1684  2363 I NgaEntryPointEventSendr: setupConnection
+59353-09-30 13:42:23.495  1684  2363 I NgaEntryPointEventSendr: State changed: Disconnected => Connecting
+59354-09-30 13:42:23.502  1799  1799 I A       : Creating pss binder().
+59355-09-30 13:42:23.502  5803  5803 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.safetynet.service.START pkg=com.google.android.gms }
+59356-09-30 13:42:23.509  1684  2407 I NgaEntryPointEventSendr: onServiceConnected
+59357-09-30 13:42:23.511  1799  2801 I A       : Calling beginBinderSession().
+59358-09-30 13:42:23.519  1799  2801 I A       : beginBinderSession(): calling binder
+59359-09-30 13:42:23.521  1684  2407 I NgaEntryPointEventSendr: State changed: Connecting => Ready
+59360-09-30 13:42:23.521  1684  2407 I A       : Successfully initialized all components
+59361-09-30 13:42:23.527   526  2274 W ActivityManager: Unable to start service Intent { cmp=com.google.android.apps.tachyon/.clientapi.ClientApiService } U=0: not found
+59362-09-30 13:42:23.531  1799  3431 I PBSessionCacheImpl: Deleted sessionId[7913876448726727] from persistence.
+59363-09-30 13:42:23.541  1799  2846 I A       : Using proto config with mendel
+59364-09-30 13:42:23.544  1799  2846 I A       : Using proto config with mendel
+59365-09-30 13:42:23.545  1799  2846 W A       : UiCallbackStub-onGenericEvent[ServiceEvent = 241] task was not run. Callback from Service received after client was disposed.
+59366-09-30 13:42:23.546  1799  2846 W A       : UiCallbackStub-onGenericEvent[ServiceEvent = 241] task was not run. Callback from Service received after client was disposed.
+59367-09-30 13:42:23.546  1799  2846 I PBSessionCacheImpl: Deleted sessionId[7913876448726730] from persistence.
+59368-09-30 13:42:23.547  1799  2846 W A       : UiCallbackStub-onGenericEvent[ServiceEvent = 60] task was not run. Callback from Service received after client was disposed.
+--
+59375:09-30 13:42:23.635  8386  8386 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+59376:09-30 13:42:23.638  8386  8386 I AndroidRuntime: Using default boot image
+59377:09-30 13:42:23.638  8386  8386 I AndroidRuntime: Leaving lock profiling enabled
+59378-09-30 13:42:23.642  8386  8386 I app_process: Core platform API reporting enabled, enforcing=false
+59379-09-30 13:42:23.643   844   844 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+59380-09-30 13:42:23.643  8386  8386 I app_process: Using CollectorTypeCC GC.
+59381-09-30 13:42:23.691  8386  8386 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+59382-09-30 13:42:23.699  8386  8386 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+59383-09-30 13:42:23.699  8386  8386 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+59384-09-30 13:42:23.703  8386  8386 W app_process: Unexpected CPU variant for x86: x86_64.
+59385-09-30 13:42:23.703  8386  8386 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+59386-09-30 13:42:23.714  8386  8386 W libc    : Access denied finding property "ro.product.name_for_attestation"
+59387-09-30 13:42:23.714  8386  8386 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+59388-09-30 13:42:23.714  8386  8386 W libc    : Access denied finding property "ro.product.model_for_attestation"
+59389:09-30 13:42:23.715  8386  8386 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+59390-09-30 13:42:23.713  8386  8386 W main    : type=1400 audit(0.0:90): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+59391-09-30 13:42:23.719  8386  8386 D UiAutomationConnection: Created on user UserHandle{0}
+59392-09-30 13:42:23.720   526  2002 I ActivityManager: Force stopping app.offgrow appid=10192 user=0: start instr
+59393-09-30 13:42:23.721   526  2002 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+59394-09-30 13:42:23.713  8386  8386 W main    : type=1400 audit(0.0:91): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+59395-09-30 13:42:23.721   526   558 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+59396-09-30 13:42:23.725   337   337 D Zygote  : Forked child process 8400
+59397-09-30 13:42:23.726   526   612 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10192; state: ENABLED
+59398-09-30 13:42:23.726   526   558 I ActivityManager: Start proc 8400:app.offgrow/u0a192 for added application app.offgrow
+59399-09-30 13:42:23.713  8386  8386 W main    : type=1400 audit(0.0:92): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+59400-09-30 13:42:23.747  8400  8400 I app.offgrow: Late-enabling -Xcheck:jni
+59401-09-30 13:42:23.756  8400  8400 I app.offgrow: Using CollectorTypeCC GC.
+59402-09-30 13:42:23.756  8400  8400 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+59403-09-30 13:42:23.756  8400  8400 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+59404-09-30 13:42:23.782   412   425 I adbd    : jdwp connection from 8400
+59405-09-30 13:42:23.788  8400  8400 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10192; state: ENABLED
+59406-09-30 13:42:23.789  8400  8400 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10192; state: ENABLED
+59407-09-30 13:42:23.791   526  2002 D CompatibilityChangeReporter: Compat change id reported: 170503758; UID 10192; state: ENABLED
+59408-09-30 13:42:23.793  8400  8400 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+59409-09-30 13:42:23.795  8400  8400 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*836642756]#PCL[/system/framework/android.test.mock.jar*3186112116]} | PCL[])
+59410-09-30 13:42:23.795  8400  8400 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247])
+59411-09-30 13:42:23.796  8400  8400 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247:/system/framework/android.test.mock.jar*3186112116])
+59412-09-30 13:42:23.796  8400  8400 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+59413-09-30 13:42:23.797  8400  8400 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+59414-09-30 13:42:23.814  8400  8400 W ziparchive: Unable to open '/data/app/~~LZ5BLq52_h6I_MvL92uMgg==/app.offgrow-ib8aYkRRrV413G_Qz_1s8A==/base.dm': No such file or directory
+--
+60291:09-30 13:42:30.496  8386  8386 I AndroidRuntime: VM exiting with result code 0.
+60292-09-30 13:42:30.694     0     0 I binder  : 526:2002 ioctl 400c620e 7e378fe04930 returned -11
+60293-09-30 13:42:30.695     0     0 I binder  : 526:2002 ioctl 400c620e 7e378fe04930 returned -11
+60294-09-30 13:42:30.502   526  2002 I ActivityManager: Killing 8400:app.offgrow/u0a192 (adj 0): stop app.offgrow due to finished inst
+60295-09-30 13:42:30.503   526   546 D DisplayManagerService: Drop pending events for gone uid 10192
+60296-09-30 13:42:30.504   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {970, 0, 227, 0}
+60297-09-30 13:42:30.504   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {182, 0, 142, 0}
+60298-09-30 13:42:30.518   993   993 I Zygote  : Process 8532 exited due to signal 9 (Killed)
+60299-09-30 13:42:30.518   526   546 D DisplayManagerService: Drop pending events for gone uid 99049
+60300-09-30 13:42:30.525   526  1906 V ActivityManager: Got obituary of 8400:app.offgrow
+60301-09-30 13:42:30.525   337   337 I Zygote  : Process 8400 exited due to signal 9 (Killed)
+60302-09-30 13:42:30.724     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+60303-09-30 13:42:30.725     0     0 I binder  : undelivered transaction 811338, process died.
+60304:09-30 13:42:30.571  8561  8561 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+60305:09-30 13:42:30.574  8561  8561 I AndroidRuntime: Using default boot image
+60306:09-30 13:42:30.574  8561  8561 I AndroidRuntime: Leaving lock profiling enabled
+60307-09-30 13:42:30.576  8561  8561 I app_process: Core platform API reporting enabled, enforcing=false
+60308-09-30 13:42:30.576  8561  8561 I app_process: Using CollectorTypeCC GC.
+60309-09-30 13:42:30.621  8561  8561 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+60310-09-30 13:42:30.628  8561  8561 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+60311-09-30 13:42:30.628  8561  8561 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+60312-09-30 13:42:30.632  8561  8561 W app_process: Unexpected CPU variant for x86: x86_64.
+60313-09-30 13:42:30.632  8561  8561 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+60314-09-30 13:42:30.643  8561  8561 W libc    : Access denied finding property "ro.product.name_for_attestation"
+60315-09-30 13:42:30.644  8561  8561 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+60316-09-30 13:42:30.644  8561  8561 W libc    : Access denied finding property "ro.product.model_for_attestation"
+60317:09-30 13:42:30.644  8561  8561 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+60318-09-30 13:42:30.646  8561  8561 D UiAutomationConnection: Created on user UserHandle{0}
+60319-09-30 13:42:30.646   526  2002 I ActivityManager: Force stopping app.offgrow appid=10192 user=0: start instr
+60320-09-30 13:42:30.641  8561  8561 W main    : type=1400 audit(0.0:93): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+60321-09-30 13:42:30.647   526  2002 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+60322-09-30 13:42:30.648   526   558 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+60323-09-30 13:42:30.641  8561  8561 W main    : type=1400 audit(0.0:94): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+60324-09-30 13:42:30.652   337   337 D Zygote  : Forked child process 8573
+60325-09-30 13:42:30.652   526   558 I ActivityManager: Start proc 8573:app.offgrow/u0a192 for added application app.offgrow
+60326-09-30 13:42:30.641  8561  8561 W main    : type=1400 audit(0.0:95): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+60327-09-30 13:42:30.671  8573  8573 I app.offgrow: Late-enabling -Xcheck:jni
+60328-09-30 13:42:30.680  8573  8573 I app.offgrow: Using CollectorTypeCC GC.
+60329-09-30 13:42:30.680  8573  8573 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+60330-09-30 13:42:30.680  8573  8573 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+60331-09-30 13:42:30.698   412   425 I adbd    : jdwp connection from 8573
+60332-09-30 13:42:30.705  8573  8573 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10192; state: ENABLED
+60333-09-30 13:42:30.705  8573  8573 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10192; state: ENABLED
+60334-09-30 13:42:30.708  8573  8573 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+60335-09-30 13:42:30.710  8573  8573 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*836642756]#PCL[/system/framework/android.test.mock.jar*3186112116]} | PCL[])
+60336-09-30 13:42:30.711  8573  8573 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247])
+60337-09-30 13:42:30.711  8573  8573 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247:/system/framework/android.test.mock.jar*3186112116])
+60338-09-30 13:42:30.712  8573  8573 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+60339-09-30 13:42:30.712  8573  8573 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+60340-09-30 13:42:30.730  8573  8573 W ziparchive: Unable to open '/data/app/~~LZ5BLq52_h6I_MvL92uMgg==/app.offgrow-ib8aYkRRrV413G_Qz_1s8A==/base.dm': No such file or directory
+60341-09-30 13:42:30.730  8573  8573 W ziparchive: Unable to open '/data/app/~~LZ5BLq52_h6I_MvL92uMgg==/app.offgrow-ib8aYkRRrV413G_Qz_1s8A==/base.dm': No such file or directory
+60342-09-30 13:42:30.879   526  2002 I AppsFilter: interaction: PackageSetting{5e988c8 app.offgrow/10192} -> PackageSetting{640ffca com.android.cts.priv.ctsshim/10178} BLOCKED
+--
+63130:09-30 13:45:09.301  8561  8561 I AndroidRuntime: VM exiting with result code 0.
+63131-09-30 13:45:09.303   526   601 E ActivityManager: Unable to freeze binder for 8573: -11
+63132-09-30 13:45:09.304   526   546 D DisplayManagerService: Drop pending events for gone uid 10192
+63133-09-30 13:45:09.500     0     0 I binder  : 526:601 ioctl 400c620e 7e37a185f930 returned -11
+63134-09-30 13:45:09.503     0     0 I binder  : 526:601 ioctl 400c620e 7e37a185f930 returned -11
+63135-09-30 13:45:09.312  1684  2407 I A       : Initialize
+63136-09-30 13:45:09.318   526   601 I ActivityManager: Killing 8573:app.offgrow/u0a192 (adj 0): stop app.offgrow due to finished inst
+63137-09-30 13:45:09.322   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {313, 0, 1043, 0}
+63138-09-30 13:45:09.323   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {452, 0, 824, 0}
+63139-09-30 13:45:09.323   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {242, 0, 1023, 0}
+63140-09-30 13:45:09.323   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {184, 0, 390, 0}
+63141-09-30 13:45:09.323   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {976, 0, 374, 0}
+63142-09-30 13:45:09.323   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {910, 0, 315, 0}
+63143-09-30 13:45:09.324   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {854, 0, 226, 0}
+63144-09-30 13:45:09.324   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {241, 0, 312, 0}
+63145-09-30 13:45:09.324   526   563 E system_server: updateValue is called with a value {0, 0, 0, 0}, which is lower than the previous value {244, 0, 1015, 0}
+63146-09-30 13:45:09.324  1684  2363 I NgaEntryPointEventSendr: State changed: Disconnected => Connecting
+63147-09-30 13:45:09.325  1684  2363 I NgaEntryPointEventSendr: onServiceConnected
+63148-09-30 13:45:09.325  1799  4396 I A       : Calling beginBinderSession().
+63149-09-30 13:45:09.327  1799  4396 I A       : beginBinderSession(): calling binder
+63150-09-30 13:45:09.328  1684  2407 I A       : Successfully initialized all components
+63151-09-30 13:45:09.329  1684  2363 I NgaEntryPointEventSendr: State changed: Connecting => Ready
+63152-09-30 13:45:09.334  1799  4709 I PBSessionCacheImpl: Deleted sessionId[7913876448726731] from persistence.
+63153-09-30 13:45:09.349  1799  2846 I A       : Using proto config with mendel
+63154-09-30 13:45:09.362  1799  2846 I A       : Using proto config with mendel
+63155-09-30 13:45:09.562     0     0 W binder_debug: 201 callbacks suppressed
+--
+63171:09-30 13:45:09.445  8796  8796 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+63172:09-30 13:45:09.448  8796  8796 I AndroidRuntime: Using default boot image
+63173:09-30 13:45:09.448  8796  8796 I AndroidRuntime: Leaving lock profiling enabled
+63174-09-30 13:45:09.449  8796  8796 I app_process: Core platform API reporting enabled, enforcing=false
+63175-09-30 13:45:09.450  8796  8796 I app_process: Using CollectorTypeCC GC.
+63176-09-30 13:45:09.496  8796  8796 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+63177-09-30 13:45:09.503  8796  8796 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+63178-09-30 13:45:09.503  8796  8796 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+63179-09-30 13:45:09.507  8796  8796 W app_process: Unexpected CPU variant for x86: x86_64.
+63180-09-30 13:45:09.507  8796  8796 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+63181-09-30 13:45:09.521  8796  8796 W libc    : Access denied finding property "ro.product.name_for_attestation"
+63182-09-30 13:45:09.521  8796  8796 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+63183-09-30 13:45:09.521  8796  8796 W libc    : Access denied finding property "ro.product.model_for_attestation"
+63184:09-30 13:45:09.523  8796  8796 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+63185-09-30 13:45:09.525  8796  8796 D UiAutomationConnection: Created on user UserHandle{0}
+63186-09-30 13:45:09.517  8796  8796 W main    : type=1400 audit(0.0:98): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+63187-09-30 13:45:09.526   526   601 I ActivityManager: Force stopping app.offgrow appid=10192 user=0: start instr
+63188-09-30 13:45:09.529   526   601 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+63189-09-30 13:45:09.529   526   558 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+63190-09-30 13:45:09.517  8796  8796 W main    : type=1400 audit(0.0:99): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+63191-09-30 13:45:09.535   337   337 D Zygote  : Forked child process 8809
+63192-09-30 13:45:09.536   526   612 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10192; state: ENABLED
+63193-09-30 13:45:09.517  8796  8796 W main    : type=1400 audit(0.0:100): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+63194-09-30 13:45:09.536   526   558 I ActivityManager: Start proc 8809:app.offgrow/u0a192 for added application app.offgrow
+63195-09-30 13:45:09.555  8809  8809 I app.offgrow: Late-enabling -Xcheck:jni
+63196-09-30 13:45:09.564  8809  8809 I app.offgrow: Using CollectorTypeCC GC.
+63197-09-30 13:45:09.564  8809  8809 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+63198-09-30 13:45:09.564  8809  8809 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+63199-09-30 13:45:09.586   412   425 I adbd    : jdwp connection from 8809
+63200-09-30 13:45:09.590   526   601 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10192; state: DISABLED
+63201-09-30 13:45:09.590   526   601 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10192; state: DISABLED
+63202-09-30 13:45:09.595  8809  8809 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10192; state: ENABLED
+63203-09-30 13:45:09.595  8809  8809 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10192; state: ENABLED
+63204-09-30 13:45:09.597   526   601 D CompatibilityChangeReporter: Compat change id reported: 170503758; UID 10192; state: ENABLED
+63205-09-30 13:45:09.599  8809  8809 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+63206-09-30 13:45:09.601  8809  8809 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*836642756]#PCL[/system/framework/android.test.mock.jar*3186112116]} | PCL[])
+63207-09-30 13:45:09.602  8809  8809 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247])
+63208-09-30 13:45:09.603  8809  8809 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*4168958247:/system/framework/android.test.mock.jar*3186112116])
+63209-09-30 13:45:09.603  8809  8809 W ziparchive: Unable to open '/data/app/~~tKqKcaOtgrsZlPzGF_PahQ==/app.offgrow.test-KDRUGaveQ0w4UiL-x7D70Q==/base.dm': No such file or directory
+--
+70179:09-30 13:46:17.727  8796  8796 I AndroidRuntime: VM exiting with result code 0.
+70180-09-30 13:46:17.727  1683  1994 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+70181-09-30 13:46:17.728  1683  1994 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+70182-09-30 13:46:17.720  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70183-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70184-09-30 13:46:17.729  1684  2407 I A       : Setting session to type: NO_SESSION
+70185-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70186-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70187-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70188-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70189-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70190-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70191-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70192-09-30 13:46:17.729  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70193-09-30 13:46:17.729  1684  2407 I A       : setNavBarVisible: GestureNavBarVisible{navbarVisible=true}
+70194-09-30 13:46:17.730  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70195-09-30 13:46:17.730  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70196-09-30 13:46:17.730  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70197-09-30 13:46:17.730  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70198-09-30 13:46:17.730  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70199-09-30 13:46:17.730  1684  2407 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+70200-09-30 13:46:17.730  1684  2407 I A       : onDisabled. Registered: false
+70201-09-30 13:46:17.730  1684  2407 I A       : State changed: IDLE => IDLE by NGA_STATE_CHANGED and N/A with Optional.empty
+70202-09-30 13:46:17.730  1684  2407 I A       : Recognizer choice: (recognizer_type: 1, recognizer_mode: 1, choice_reason: 4)
+70203-09-30 13:46:17.731  1684  2407 I A       : onActiveStateChangeEvent: IDLE => IDLE
+70204-09-30 13:46:17.731  1684  2407 I A       : #onActiveStateChangeEvent, newState: IDLE, previousState: IDLE.
+--
+70511:09-30 13:46:18.600  9310  9310 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+70512:09-30 13:46:18.605  9310  9310 I AndroidRuntime: Using default boot image
+70513:09-30 13:46:18.606  9310  9310 I AndroidRuntime: Leaving lock profiling enabled
+70514-09-30 13:46:18.608  9310  9310 I app_process: Core platform API reporting enabled, enforcing=false
+70515-09-30 13:46:18.609  9310  9310 I app_process: Using CollectorTypeCC GC.
+70516-09-30 13:46:18.623  1799  2677 W A       : Fetch failed. Renderable stream failure reason: USER_SIGNED_OUT
+70517-09-30 13:46:18.623  1799  2677 W A       : DiscoverPrecheckException(precheckFailureReason=com.google.android.apps.search.googleapp.discover.w.a.c@3bc53fc)
+70518-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.apps.search.googleapp.discover.w.bb.d(PG:16)
+70519-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.apps.search.googleapp.discover.w.ax.invokeSuspend(PG:5)
+70520-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.apps.search.googleapp.discover.w.ax.invoke(PG:1)
+70521-09-30 13:46:18.623  1799  2677 W A       : 	at kotlinx.coroutines.f.b.a(PG:1)
+70522-09-30 13:46:18.623  1799  2677 W A       : 	at kotlinx.coroutines.m.a(PG:11)
+70523-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.apps.search.googleapp.discover.w.bb.c(PG:2)
+70524-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.apps.search.googleapp.discover.v.am.invokeSuspend(PG:5)
+70525-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.apps.search.googleapp.discover.v.am.invoke(PG:1)
+70526-09-30 13:46:18.623  1799  2677 W A       : 	at kotlinx.coroutines.f.b.a(PG:1)
+70527-09-30 13:46:18.623  1799  2677 W A       : 	at kotlinx.coroutines.m.a(PG:11)
+70528-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.apps.search.googleapp.discover.v.al.invokeSuspend(PG:4)
+70529-09-30 13:46:18.623  1799  2677 W A       : 	at i.c.b.a.a.resumeWith(PG:4)
+70530-09-30 13:46:18.623  1799  2677 W A       : 	at kotlinx.coroutines.bk.run(PG:14)
+70531-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.apps.tiktok.coroutines.f.run(PG:1)
+70532-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+70533-09-30 13:46:18.623  1799  2677 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+70534-09-30 13:46:18.623  1799  2677 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+70535-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+70536-09-30 13:46:18.623  1799  2677 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+70537-09-30 13:46:18.623  1799  2677 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+70538-09-30 13:46:18.627  1799  1799 W A       : Failed RenderableStream callback; SubscriptionCallbacks#onError(Throwable) called.
+--
+70616:09-30 13:46:18.910  9310  9310 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+70617-09-30 13:46:18.911  9310  9310 W Monkey  : args: [-p, app.offgrow, --throttle, 80, --pct-syskeys, 0, --pct-appswitch, 5, -s, 20261007, -v, 3000]
+70618-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "-p"
+70619-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "app.offgrow"
+70620-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "--throttle"
+70621-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "80"
+70622-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "--pct-syskeys"
+70623-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "0"
+70624-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "--pct-appswitch"
+70625-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "5"
+70626-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "-s"
+70627-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "20261007"
+70628-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "-v"
+70629-09-30 13:46:18.911  9310  9310 W Monkey  :  arg: "3000"
+70630-09-30 13:46:18.911  9310  9310 W Monkey  : data="app.offgrow"
+70631-09-30 13:46:18.911  9310  9310 W Monkey  : arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="80"
+70632-09-30 13:46:18.911  9310  9310 W Monkey  : data="80"
+70633-09-30 13:46:18.911  9310  9310 W Monkey  : arg="--pct-syskeys" mCurArgData="null" mNextArg=5 argwas="--pct-syskeys" nextarg="0"
+70634-09-30 13:46:18.911  9310  9310 W Monkey  : data="0"
+70635-09-30 13:46:18.911  9310  9310 W Monkey  : arg="--pct-appswitch" mCurArgData="null" mNextArg=7 argwas="--pct-appswitch" nextarg="5"
+70636-09-30 13:46:18.912  9310  9310 W Monkey  : data="5"
+70637-09-30 13:46:18.912  9310  9310 W Monkey  : data="20261007"
+70638-09-30 13:46:18.901  9310  9310 W main    : type=1400 audit(0.0:102): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+70639-09-30 13:46:18.905  9310  9310 W main    : type=1400 audit(0.0:103): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+70640-09-30 13:46:18.928  9310  9310 I Monkey  : :Monkey: seed=20261007 count=3000
+70641-09-30 13:46:18.928  9310  9310 I Monkey  : :AllowPackage: app.offgrow
+--
+76074:09-30 13:47:34.822  9310  9310 I AndroidRuntime: VM exiting with result code 0.
+76075-09-30 13:47:34.916  9568  9568 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+76076-09-30 13:47:34.917  1681  5060 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10184; state: ENABLED
+76077-09-30 13:47:34.918   526  2002 D CompatibilityChangeReporter: Compat change id reported: 149924527; UID 2000; state: ENABLED
+76078-09-30 13:47:34.919   526  2002 D CompatibilityChangeReporter: Compat change id reported: 132649864; UID 2000; state: DISABLED
+76079-09-30 13:47:34.921  1681  5060 W MediaProvider: isAppCloneUserPair for user 0: false
+76080-09-30 13:47:34.926  9568  9568 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+76081-09-30 13:47:34.927   402   414 W ServiceManagerCppClient: Permission failure: android.permission.CAPTURE_BLACKOUT_CONTENT from uid=2000 pid=9568
+76082-09-30 13:47:34.927   402   414 D PermissionCache: checking android.permission.CAPTURE_BLACKOUT_CONTENT for uid=2000 => denied (244 us)
+76083-09-30 13:47:34.938   136   136 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+76084-09-30 13:47:34.939  9568  9570 I Gralloc4: mapper 4.x is not supported
+76085-09-30 13:47:34.941   526  2271 D CompatibilityChangeReporter: Compat change id reported: 161145287; UID 10131; state: DISABLED
+76086-09-30 13:47:34.941   526  2271 D CompatibilityChangeReporter: Compat change id reported: 161145287; UID 10131; state: ENABLED
+76087-09-30 13:47:35.134     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+76088-09-30 13:47:34.983  5714  8798 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 847 [CONTEXT service_id=218 ]
+76089-09-30 13:47:34.999  5714  8754 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 50 uptime_millis: 50 exec_start_elapsed_seconds: 847 [CONTEXT service_id=218 ]
+76090-09-30 13:47:35.576   526  2002 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+76091-09-30 13:47:35.576   526  2002 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+76092-09-30 13:47:35.579   526   545 I ActivityManager: Broadcast completed: result=0
+76093-09-30 13:47:35.580  1681  2286 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+76094-09-30 13:47:35.600  1681  2286 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+76095-09-30 13:47:35.620  5714  9571 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 848 [CONTEXT service_id=218 ]
+76096-09-30 13:47:35.621  5714  8754 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 848 [CONTEXT service_id=218 ]
+76097-09-30 13:47:35.832     0     0 I logd    : logdr: UID=2000 GID=2000 PID=9577 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns

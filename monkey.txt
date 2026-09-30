@@ -1,0 +1,853 @@
+  bash arg: -p
+  bash arg: app.offgrow
+  bash arg: --throttle
+  bash arg: 80
+  bash arg: --pct-syskeys
+  bash arg: 0
+  bash arg: --pct-appswitch
+  bash arg: 5
+  bash arg: -s
+  bash arg: 20261007
+  bash arg: -v
+  bash arg: 3000
+args: [-p, app.offgrow, --throttle, 80, --pct-syskeys, 0, --pct-appswitch, 5, -s, 20261007, -v, 3000]
+ arg: "-p"
+ arg: "app.offgrow"
+ arg: "--throttle"
+ arg: "80"
+ arg: "--pct-syskeys"
+ arg: "0"
+ arg: "--pct-appswitch"
+ arg: "5"
+ arg: "-s"
+ arg: "20261007"
+ arg: "-v"
+ arg: "3000"
+data="app.offgrow"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="80"
+data="80"
+arg="--pct-syskeys" mCurArgData="null" mNextArg=5 argwas="--pct-syskeys" nextarg="0"
+data="0"
+arg="--pct-appswitch" mCurArgData="null" mNextArg=7 argwas="--pct-appswitch" nextarg="5"
+data="5"
+data="20261007"
+:Monkey: seed=20261007 count=3000
+:AllowPackage: app.offgrow
+:IncludeCategory: android.intent.category.LAUNCHER
+:IncludeCategory: android.intent.category.MONKEY
+// Event percentages:
+//   0: 14.84375%
+//   1: 9.895833%
+//   2: 1.9791666%
+//   3: 14.84375%
+//   4: -0.0%
+//   5: -0.0%
+//   6: 24.739582%
+//   7: 14.84375%
+//   8: -0.0%
+//   9: 5.0%
+//   10: 0.9895833%
+//   11: 12.864583%
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(4.0,1.0)
+:Sending Touch (ACTION_DOWN): 0:(1014.0,1627.0)
+:Sending Touch (ACTION_UP): 0:(952.2412,1674.5146)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,2.0)
+:Sending Touch (ACTION_DOWN): 0:(1027.0,1840.0)
+:Sending Touch (ACTION_UP): 0:(1026.9033,1832.9336)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(1072.0,530.0)
+:Sending Touch (ACTION_UP): 0:(1080.0,512.5117)
+:Sending Touch (ACTION_DOWN): 0:(892.0,624.0)
+:Sending Touch (ACTION_UP): 0:(868.1572,602.58496)
+:Sending Touch (ACTION_DOWN): 0:(493.0,2006.0)
+:Sending Touch (ACTION_UP): 0:(483.98828,2006.0908)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.google.android.apps.messaging/.ui.ConversationListActivity } in package com.google.android.apps.messaging
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(855.0,1258.0)
+:Sending Touch (ACTION_UP): 0:(787.7334,1213.6465)
+:Sending Touch (ACTION_DOWN): 0:(648.0,1315.0)
+:Sending Touch (ACTION_UP): 0:(656.6494,1314.3096)
+    //[calendar_time:2026-09-30 13:46:23.214  system_uptime:775695]
+    // Sending event #100
+    //[calendar_time:2026-09-30 13:46:23.346  system_uptime:775812]
+    // Sending event #100
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(236.0,2086.0)
+:Sending Touch (ACTION_UP): 0:(229.22168,2086.7012)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-5.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(478.0,678.0)
+:Sending Touch (ACTION_UP): 0:(437.79785,662.124)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(638.0,870.0)
+:Sending Touch (ACTION_UP): 0:(648.0947,865.3633)
+:Sending Touch (ACTION_DOWN): 0:(696.0,936.0)
+:Sending Touch (ACTION_UP): 0:(683.6123,936.30664)
+:Sending Touch (ACTION_DOWN): 0:(405.0,1498.0)
+:Sending Touch (ACTION_UP): 0:(420.61426,1483.5127)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-5.0)
+    //[calendar_time:2026-09-30 13:46:28.209  system_uptime:780676]
+    // Sending event #200
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-3.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(309.0,1671.0)
+:Sending Touch (ACTION_UP): 0:(325.83496,1669.8574)
+:Sending Touch (ACTION_DOWN): 0:(1060.0,7.0)
+:Sending Touch (ACTION_UP): 0:(1049.9541,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(223.0,2160.0)
+:Sending Touch (ACTION_UP): 0:(220.24121,2175.8613)
+:Sending Touch (ACTION_DOWN): 0:(25.0,1364.0)
+:Sending Touch (ACTION_UP): 0:(24.694336,1351.0244)
+:Sending Touch (ACTION_DOWN): 0:(392.0,356.0)
+:Sending Touch (ACTION_UP): 0:(386.23047,361.89355)
+:Sending Touch (ACTION_DOWN): 0:(761.0,708.0)
+:Sending Touch (ACTION_UP): 0:(762.5469,705.4795)
+:Sending Touch (ACTION_DOWN): 0:(321.0,1390.0)
+:Sending Touch (ACTION_UP): 0:(325.6289,1387.79)
+:Sending Touch (ACTION_DOWN): 0:(712.0,1341.0)
+:Sending Touch (ACTION_UP): 0:(706.75586,1353.0078)
+:Sending Touch (ACTION_DOWN): 0:(640.0,1551.0)
+:Sending Touch (ACTION_UP): 0:(637.2197,1544.8662)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(102.0,2206.0)
+:Sending Touch (ACTION_UP): 0:(17.030273,2168.1035)
+:Sending Touch (ACTION_DOWN): 0:(395.0,1501.0)
+:Sending Touch (ACTION_UP): 0:(398.26172,1500.8447)
+:Sending Touch (ACTION_DOWN): 0:(760.0,318.0)
+    //[calendar_time:2026-09-30 13:46:30.271  system_uptime:782737]
+    // Sending event #300
+:Sending Touch (ACTION_UP): 0:(749.2168,316.54492)
+:Sending Touch (ACTION_DOWN): 0:(83.0,44.0)
+:Sending Touch (ACTION_UP): 0:(79.52832,47.191406)
+:Sending Touch (ACTION_DOWN): 0:(111.0,2139.0)
+:Sending Touch (ACTION_UP): 0:(107.7041,2150.88)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(796.0,1081.0)
+:Sending Touch (ACTION_UP): 0:(796.4717,1079.5684)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(882.0,1647.0)
+:Sending Touch (ACTION_UP): 0:(881.5869,1644.7988)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(1075.0,2051.0)
+:Sending Touch (ACTION_UP): 0:(1080.0,1975.2637)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,1.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(36.0,936.0)
+:Sending Touch (ACTION_UP): 0:(27.49121,939.41016)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(239.0,1016.0)
+:Sending Touch (ACTION_UP): 0:(226.74121,1021.0156)
+:Sending Touch (ACTION_DOWN): 0:(294.0,728.0)
+:Sending Touch (ACTION_UP): 0:(295.0127,737.1865)
+:Sending Touch (ACTION_DOWN): 0:(847.0,295.0)
+    //[calendar_time:2026-09-30 13:46:32.709  system_uptime:785175]
+    // Sending event #400
+:Sending Touch (ACTION_UP): 0:(856.5166,294.37402)
+:Sending Touch (ACTION_DOWN): 0:(76.0,1731.0)
+:Sending Touch (ACTION_UP): 0:(68.42383,1723.3662)
+:Sending Touch (ACTION_DOWN): 0:(736.0,280.0)
+:Sending Touch (ACTION_UP): 0:(731.5176,279.15332)
+:Sending Touch (ACTION_DOWN): 0:(7.0,1204.0)
+:Sending Touch (ACTION_UP): 0:(7.359375,1192.209)
+:Sending Touch (ACTION_DOWN): 0:(329.0,1697.0)
+:Sending Touch (ACTION_UP): 0:(339.52832,1704.0859)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(215.0,2022.0)
+:Sending Touch (ACTION_UP): 0:(218.68066,2025.2686)
+:Sending Touch (ACTION_DOWN): 0:(999.0,2086.0)
+:Sending Touch (ACTION_UP): 0:(995.44727,2085.4912)
+:Sending Touch (ACTION_DOWN): 0:(183.0,526.0)
+:Sending Touch (ACTION_UP): 0:(170.9082,509.3086)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(1.0,0.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+    // Rejecting start of Intent { act=launcher.intent_action_all_apps_toggle cat=[android.intent.category.HOME] cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity } in package com.google.android.apps.nexuslauncher
+:Sending Touch (ACTION_DOWN): 0:(1045.0,1360.0)
+:Sending Touch (ACTION_UP): 0:(1080.0,1384.3359)
+:Sending Touch (ACTION_DOWN): 0:(696.0,610.0)
+:Sending Touch (ACTION_UP): 0:(684.1699,606.62695)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-5.0)
+:Sending Touch (ACTION_DOWN): 0:(255.0,1669.0)
+:Sending Touch (ACTION_UP): 0:(270.47266,1664.1738)
+:Sending Touch (ACTION_DOWN): 0:(268.0,1632.0)
+:Sending Touch (ACTION_UP): 0:(265.53418,1634.2891)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(991.0,1462.0)
+:Sending Touch (ACTION_UP): 0:(989.2969,1461.669)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(39.0,159.0)
+:Sending Touch (ACTION_UP): 0:(15.803711,175.78027)
+:Sending Touch (ACTION_DOWN): 0:(761.0,1627.0)
+:Sending Touch (ACTION_UP): 0:(759.2549,1623.2646)
+:Sending Touch (ACTION_DOWN): 0:(728.0,38.0)
+    //[calendar_time:2026-09-30 13:46:35.452  system_uptime:787918]
+    // Sending event #500
+:Sending Touch (ACTION_UP): 0:(643.69336,45.538086)
+:Sending Touch (ACTION_DOWN): 0:(344.0,583.0)
+:Sending Touch (ACTION_UP): 0:(358.1162,567.6221)
+:Sending Touch (ACTION_DOWN): 0:(21.0,415.0)
+:Sending Touch (ACTION_UP): 0:(20.259766,421.20996)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(712.0,577.0)
+:Sending Touch (ACTION_UP): 0:(701.52344,583.7471)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-5.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(476.0,688.0)
+:Sending Touch (ACTION_UP): 0:(422.4961,642.89355)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(536.0,1932.0)
+:Sending Touch (ACTION_UP): 0:(514.98535,1960.4834)
+:Sending Touch (ACTION_DOWN): 0:(85.0,488.0)
+:Sending Touch (ACTION_UP): 0:(94.34961,477.10156)
+:Sending Touch (ACTION_DOWN): 0:(358.0,1123.0)
+:Sending Touch (ACTION_UP): 0:(362.27344,1133.4326)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(31.0,2097.0)
+:Sending Touch (ACTION_UP): 0:(34.49121,2102.998)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,4.0)
+:Sending Touch (ACTION_DOWN): 0:(339.0,1082.0)
+:Sending Touch (ACTION_UP): 0:(299.74707,1111.6904)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,2.0)
+    //[calendar_time:2026-09-30 13:46:37.928  system_uptime:790394]
+    // Sending event #600
+:Sending Trackball (ACTION_MOVE): 0:(0.0,0.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(2.0,1.0)
+:Sending Touch (ACTION_DOWN): 0:(787.0,1674.0)
+:Sending Touch (ACTION_UP): 0:(790.7617,1681.0234)
+:Sending Touch (ACTION_DOWN): 0:(232.0,2184.0)
+:Sending Touch (ACTION_UP): 0:(227.9873,2189.211)
+:Sending Touch (ACTION_DOWN): 0:(72.0,1631.0)
+:Sending Touch (ACTION_UP): 0:(153.68457,1620.0391)
+:Sending Touch (ACTION_DOWN): 0:(943.0,1738.0)
+:Sending Touch (ACTION_UP): 0:(942.62305,1752.1445)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(440.0,136.0)
+:Sending Touch (ACTION_UP): 0:(433.86328,133.16699)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-1.0)
+    //[calendar_time:2026-09-30 13:46:41.081  system_uptime:793548]
+    // Sending event #700
+:Sending Touch (ACTION_DOWN): 0:(350.0,2189.0)
+:Sending Touch (ACTION_UP): 0:(356.27344,2185.12)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,2.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,2.0)
+:Sending Touch (ACTION_DOWN): 0:(821.0,1190.0)
+:Sending Touch (ACTION_UP): 0:(820.2246,1171.0615)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-2.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(48.0,726.0)
+:Sending Touch (ACTION_UP): 0:(51.61328,732.3828)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-2.0)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(768.0,1370.0)
+:Sending Touch (ACTION_UP): 0:(763.04004,1374.5371)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(464.0,109.0)
+:Sending Touch (ACTION_UP): 0:(469.3916,100.2168)
+    //[calendar_time:2026-09-30 13:46:44.410  system_uptime:796877]
+    // Sending event #800
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(480.0,535.0)
+:Sending Touch (ACTION_UP): 0:(477.3203,536.9248)
+:Sending Touch (ACTION_DOWN): 0:(344.0,2098.0)
+:Sending Touch (ACTION_UP): 0:(307.0498,2090.3662)
+:Sending Touch (ACTION_DOWN): 0:(75.0,1224.0)
+:Sending Touch (ACTION_UP): 0:(71.109375,1220.8232)
+:Sending Touch (ACTION_DOWN): 0:(838.0,1121.0)
+:Sending Touch (ACTION_UP): 0:(845.2998,1135.2783)
+:Sending Touch (ACTION_DOWN): 0:(913.0,305.0)
+:Sending Touch (ACTION_UP): 0:(915.9248,288.46777)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(626.0,1089.0)
+:Sending Touch (ACTION_UP): 0:(658.7471,1099.0518)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(718.0,1501.0)
+:Sending Touch (ACTION_UP): 0:(732.74023,1506.5029)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(57.0,90.0)
+:Sending Touch (ACTION_UP): 0:(44.61133,89.61719)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(154.0,1086.0)
+:Sending Touch (ACTION_UP): 0:(194.09668,1012.05273)
+:Sending Touch (ACTION_DOWN): 0:(844.0,1630.0)
+:Sending Touch (ACTION_UP): 0:(876.4717,1652.6934)
+:Sending Touch (ACTION_DOWN): 0:(927.0,1735.0)
+:Sending Touch (ACTION_UP): 0:(914.9619,1745.2686)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,4.0)
+    //[calendar_time:2026-09-30 13:46:47.815  system_uptime:800282]
+    // Sending event #900
+:Sending Touch (ACTION_DOWN): 0:(851.0,1490.0)
+:Sending Touch (ACTION_UP): 0:(843.87305,1485.2354)
+:Sending Touch (ACTION_DOWN): 0:(358.0,1331.0)
+:Sending Touch (ACTION_UP): 0:(336.49316,1311.2373)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,1.0)
+:Sending Touch (ACTION_DOWN): 0:(136.0,211.0)
+:Sending Touch (ACTION_UP): 0:(138.07812,218.64941)
+:Sending Touch (ACTION_DOWN): 0:(152.0,1997.0)
+:Sending Touch (ACTION_UP): 0:(156.70215,1985.8545)
+:Sending Touch (ACTION_DOWN): 0:(746.0,944.0)
+:Sending Touch (ACTION_UP): 0:(742.8047,943.45215)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(66.0,1207.0)
+:Sending Touch (ACTION_UP): 0:(66.07324,1203.8867)
+:Sending Touch (ACTION_DOWN): 0:(434.0,1204.0)
+:Sending Touch (ACTION_UP): 0:(445.83203,1213.7891)
+:Sending Touch (ACTION_DOWN): 0:(4.0,1934.0)
+:Sending Touch (ACTION_UP): 0:(9.350586,1930.2832)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,3.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-1.0)
+    //[calendar_time:2026-09-30 13:46:50.049  system_uptime:802515]
+    // Sending event #1000
+    //[calendar_time:2026-09-30 13:46:50.129  system_uptime:802596]
+    // Sending event #1000
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,4.0)
+:Sending Touch (ACTION_DOWN): 0:(188.0,988.0)
+:Sending Touch (ACTION_UP): 0:(186.47559,991.834)
+:Sending Touch (ACTION_DOWN): 0:(943.0,975.0)
+:Sending Touch (ACTION_UP): 0:(948.91504,972.7783)
+:Sending Touch (ACTION_DOWN): 0:(927.0,1256.0)
+:Sending Touch (ACTION_UP): 0:(928.1699,1239.8477)
+:Sending Touch (ACTION_DOWN): 0:(493.0,1479.0)
+:Sending Touch (ACTION_UP): 0:(502.32812,1480.3242)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-2.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-1.0)
+:Sending Touch (ACTION_DOWN): 0:(88.0,377.0)
+:Sending Touch (ACTION_UP): 0:(86.94141,382.4287)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(337.0,381.0)
+:Sending Touch (ACTION_UP): 0:(326.63477,380.7871)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(864.0,424.0)
+:Sending Touch (ACTION_UP): 0:(907.8203,436.26074)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,1.0)
+    //[calendar_time:2026-09-30 13:46:51.664  system_uptime:804130]
+    // Sending event #1100
+    //[calendar_time:2026-09-30 13:46:51.744  system_uptime:804211]
+    // Sending event #1100
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(681.0,100.0)
+:Sending Touch (ACTION_UP): 0:(668.63086,93.42383)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-1.0)
+:Sending Touch (ACTION_DOWN): 0:(526.0,1694.0)
+:Sending Touch (ACTION_UP): 0:(559.6533,1721.1455)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,1.0)
+:Sending Touch (ACTION_DOWN): 0:(315.0,2014.0)
+:Sending Touch (ACTION_UP): 0:(316.34277,2030.1299)
+:Sending Touch (ACTION_DOWN): 0:(526.0,1346.0)
+:Sending Touch (ACTION_UP): 0:(521.8467,1343.8574)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(278.0,1808.0)
+:Sending Touch (ACTION_UP): 0:(273.17676,1819.5137)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Trackball (ACTION_MOVE): 0:(2.0,2.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(120.0,890.0)
+:Sending Touch (ACTION_UP): 0:(164.15723,911.8721)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-4.0)
+    //[calendar_time:2026-09-30 13:46:53.828  system_uptime:806295]
+    // Sending event #1200
+:Sending Touch (ACTION_DOWN): 0:(307.0,940.0)
+:Sending Touch (ACTION_UP): 0:(308.61133,940.1211)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(616.0,1604.0)
+:Sending Touch (ACTION_UP): 0:(619.0166,1595.2549)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(862.0,1300.0)
+:Sending Touch (ACTION_UP): 0:(851.334,1306.1738)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,4.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+    // Rejecting start of Intent { act=com.android.intent.action.SHOW_BRIGHTNESS_DIALOG cmp=com.android.systemui/.settings.brightness.BrightnessDialog } in package com.android.systemui
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(689.0,1546.0)
+:Sending Touch (ACTION_UP): 0:(716.5127,1517.7236)
+:Sending Touch (ACTION_DOWN): 0:(730.0,1258.0)
+:Sending Touch (ACTION_UP): 0:(691.2705,1289.0449)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,0.0)
+    //[calendar_time:2026-09-30 13:46:55.503  system_uptime:807969]
+    // Sending event #1300
+:Sending Touch (ACTION_DOWN): 0:(624.0,746.0)
+:Sending Touch (ACTION_UP): 0:(627.0469,753.1719)
+:Sending Touch (ACTION_DOWN): 0:(792.0,1989.0)
+:Sending Touch (ACTION_UP): 0:(764.2578,2011.8613)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,2.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-2.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(404.0,969.0)
+:Sending Touch (ACTION_UP): 0:(427.39844,964.2617)
+:Sending Touch (ACTION_DOWN): 0:(905.0,1011.0)
+:Sending Touch (ACTION_UP): 0:(906.6406,1025.9326)
+    //[calendar_time:2026-09-30 13:46:58.713  system_uptime:811179]
+    // Sending event #1400
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(1027.0,8.0)
+:Sending Touch (ACTION_UP): 0:(1011.4795,4.861328)
+:Sending Touch (ACTION_DOWN): 0:(793.0,1339.0)
+:Sending Touch (ACTION_UP): 0:(810.52637,1324.043)
+:Sending Touch (ACTION_DOWN): 0:(244.0,175.0)
+:Sending Touch (ACTION_UP): 0:(261.08203,197.5791)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-1.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(628.0,183.0)
+:Sending Touch (ACTION_UP): 0:(660.91113,148.35352)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(735.0,1036.0)
+:Sending Touch (ACTION_UP): 0:(745.6113,1035.6143)
+:Sending Touch (ACTION_DOWN): 0:(649.0,1749.0)
+:Sending Touch (ACTION_UP): 0:(650.83594,1756.0029)
+:Sending Touch (ACTION_DOWN): 0:(1074.0,1720.0)
+:Sending Touch (ACTION_UP): 0:(1079.0801,1706.7363)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(738.0,1937.0)
+:Sending Touch (ACTION_UP): 0:(747.5625,1932.7441)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(208.0,536.0)
+:Sending Touch (ACTION_UP): 0:(337.00977,644.0459)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-1.0)
+    //[calendar_time:2026-09-30 13:47:01.253  system_uptime:813719]
+    // Sending event #1500
+    //[calendar_time:2026-09-30 13:47:01.333  system_uptime:813800]
+    // Sending event #1500
+:Sending Touch (ACTION_DOWN): 0:(399.0,843.0)
+:Sending Touch (ACTION_UP): 0:(406.45508,843.4033)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-5.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(120.0,31.0)
+:Sending Touch (ACTION_UP): 0:(133.81543,32.335938)
+:Sending Touch (ACTION_DOWN): 0:(364.0,918.0)
+:Sending Touch (ACTION_UP): 0:(364.1416,913.2539)
+:Sending Touch (ACTION_DOWN): 0:(321.0,316.0)
+:Sending Touch (ACTION_UP): 0:(325.02148,323.54785)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(123.0,1564.0)
+:Sending Touch (ACTION_UP): 0:(126.243164,1550.127)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,3.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(0.0,4.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(534.0,54.0)
+:Sending Touch (ACTION_UP): 0:(524.41113,63.15625)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-5.0)
+    //[calendar_time:2026-09-30 13:47:02.916  system_uptime:815383]
+    // Sending event #1600
+:Sending Touch (ACTION_DOWN): 0:(402.0,637.0)
+:Sending Touch (ACTION_UP): 0:(413.85645,585.9834)
+:Sending Touch (ACTION_DOWN): 0:(582.0,454.0)
+:Sending Touch (ACTION_UP): 0:(598.2793,482.4414)
+:Sending Touch (ACTION_DOWN): 0:(49.0,1122.0)
+:Sending Touch (ACTION_UP): 0:(90.50781,1059.9629)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(412.0,66.0)
+:Sending Touch (ACTION_UP): 0:(470.5869,105.055664)
+:Sending Touch (ACTION_DOWN): 0:(1004.0,1209.0)
+:Sending Touch (ACTION_UP): 0:(1007.2578,1198.4023)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-2.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-1.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(87.0,97.0)
+:Sending Touch (ACTION_UP): 0:(21.999023,110.799805)
+    // Rejecting start of Intent { act=android.intent.action.SHOW_ALARMS cmp=com.google.android.deskclock/com.android.deskclock.HandleApiCalls } in package com.google.android.deskclock
+:Sending Touch (ACTION_DOWN): 0:(996.0,1198.0)
+:Sending Touch (ACTION_UP): 0:(1031.6904,1285.335)
+:Sending Touch (ACTION_DOWN): 0:(291.0,219.0)
+:Sending Touch (ACTION_UP): 0:(274.07227,200.23828)
+    //[calendar_time:2026-09-30 13:47:05.439  system_uptime:817905]
+    // Sending event #1700
+:Sending Touch (ACTION_DOWN): 0:(202.0,1184.0)
+:Sending Touch (ACTION_UP): 0:(204.36133,1216.669)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(999.0,497.0)
+:Sending Touch (ACTION_UP): 0:(997.333,498.99707)
+:Sending Touch (ACTION_DOWN): 0:(399.0,1351.0)
+:Sending Touch (ACTION_UP): 0:(361.77148,1451.9873)
+:Sending Touch (ACTION_DOWN): 0:(307.0,517.0)
+:Sending Touch (ACTION_UP): 0:(307.1543,498.05078)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-2.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(474.0,1634.0)
+:Sending Touch (ACTION_UP): 0:(479.59766,1628.8809)
+:Sending Touch (ACTION_DOWN): 0:(966.0,1830.0)
+:Sending Touch (ACTION_UP): 0:(966.94336,1838.5938)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-5.0)
+:Sending Touch (ACTION_DOWN): 0:(1.0,2.0)
+:Sending Touch (ACTION_UP): 0:(5.963867,0.84472656)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,3.0)
+    //[calendar_time:2026-09-30 13:47:07.547  system_uptime:820013]
+    // Sending event #1800
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,0.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(83.0,742.0)
+:Sending Touch (ACTION_UP): 0:(84.78613,744.8369)
+:Sending Touch (ACTION_DOWN): 0:(973.0,915.0)
+:Sending Touch (ACTION_UP): 0:(874.75,855.26855)
+:Sending Touch (ACTION_DOWN): 0:(498.0,23.0)
+:Sending Touch (ACTION_UP): 0:(491.90234,0.0)
+:Sending Touch (ACTION_DOWN): 0:(663.0,690.0)
+:Sending Touch (ACTION_UP): 0:(662.80176,699.5762)
+:Sending Touch (ACTION_DOWN): 0:(987.0,1212.0)
+:Sending Touch (ACTION_UP): 0:(994.38965,1219.7148)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,2.0)
+:Sending Touch (ACTION_DOWN): 0:(88.0,456.0)
+:Sending Touch (ACTION_UP): 0:(90.90332,458.66504)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(4.0,1.0)
+    //[calendar_time:2026-09-30 13:47:09.285  system_uptime:821752]
+    // Sending event #1900
+:Sending Touch (ACTION_DOWN): 0:(918.0,1629.0)
+:Sending Touch (ACTION_UP): 0:(914.89355,1628.0312)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(971.0,1980.0)
+:Sending Touch (ACTION_UP): 0:(984.1748,1983.1367)
+:Sending Touch (ACTION_DOWN): 0:(409.0,1935.0)
+:Sending Touch (ACTION_UP): 0:(394.63672,1932.4658)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(880.0,1597.0)
+:Sending Touch (ACTION_UP): 0:(971.95605,1521.2705)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(841.0,2159.0)
+:Sending Touch (ACTION_UP): 0:(852.78613,2150.417)
+:Sending Touch (ACTION_DOWN): 0:(721.0,279.0)
+:Sending Touch (ACTION_UP): 0:(720.2256,266.65625)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Trackball (ACTION_MOVE): 0:(1.0,4.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-2.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(677.0,633.0)
+    //[calendar_time:2026-09-30 13:47:11.102  system_uptime:823569]
+    // Sending event #2000
+:Sending Touch (ACTION_UP): 0:(676.81445,643.1426)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,1.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(89.0,1279.0)
+:Sending Touch (ACTION_UP): 0:(95.291016,1278.457)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-3.0)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-1.0)
+:Sending Touch (ACTION_DOWN): 0:(879.0,1009.0)
+:Sending Touch (ACTION_UP): 0:(875.97656,1017.7324)
+:Sending Touch (ACTION_DOWN): 0:(582.0,1023.0)
+:Sending Touch (ACTION_UP): 0:(580.85547,1023.1279)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(386.0,615.0)
+:Sending Touch (ACTION_UP): 0:(396.5664,610.6123)
+:Sending Touch (ACTION_DOWN): 0:(252.0,1172.0)
+:Sending Touch (ACTION_UP): 0:(261.1631,1139.1943)
+:Sending Touch (ACTION_DOWN): 0:(1007.0,1882.0)
+:Sending Touch (ACTION_UP): 0:(995.4385,1768.8291)
+:Sending Touch (ACTION_DOWN): 0:(419.0,1275.0)
+:Sending Touch (ACTION_UP): 0:(403.0166,1272.7529)
+:Sending Touch (ACTION_DOWN): 0:(485.0,1369.0)
+:Sending Touch (ACTION_UP): 0:(488.28027,1374.5762)
+:Sending Touch (ACTION_DOWN): 0:(484.0,1325.0)
+:Sending Touch (ACTION_UP): 0:(497.00488,1330.5547)
+    //[calendar_time:2026-09-30 13:47:15.219  system_uptime:827686]
+    // Sending event #2100
+:Sending Touch (ACTION_DOWN): 0:(28.0,1643.0)
+:Sending Touch (ACTION_UP): 0:(28.975586,1657.8516)
+:Sending Touch (ACTION_DOWN): 0:(536.0,1563.0)
+:Sending Touch (ACTION_UP): 0:(521.83984,1524.3174)
+:Sending Touch (ACTION_DOWN): 0:(23.0,413.0)
+:Sending Touch (ACTION_UP): 0:(0.0,452.65234)
+:Sending Touch (ACTION_DOWN): 0:(995.0,546.0)
+:Sending Touch (ACTION_UP): 0:(998.3115,558.41797)
+:Sending Touch (ACTION_DOWN): 0:(365.0,1570.0)
+:Sending Touch (ACTION_UP): 0:(363.33984,1569.3525)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(181.0,369.0)
+:Sending Touch (ACTION_UP): 0:(185.48047,371.28223)
+:Sending Touch (ACTION_DOWN): 0:(991.0,907.0)
+:Sending Touch (ACTION_UP): 0:(997.29297,919.27734)
+:Sending Touch (ACTION_DOWN): 0:(638.0,1200.0)
+:Sending Touch (ACTION_UP): 0:(637.875,1192.7139)
+:Sending Touch (ACTION_DOWN): 0:(291.0,480.0)
+:Sending Touch (ACTION_UP): 0:(295.43652,480.07422)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(2.0,2.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(395.0,506.0)
+:Sending Touch (ACTION_UP): 0:(459.12598,474.98438)
+:Sending Touch (ACTION_DOWN): 0:(619.0,556.0)
+    //[calendar_time:2026-09-30 13:47:18.660  system_uptime:831126]
+    // Sending event #2200
+:Sending Touch (ACTION_UP): 0:(632.9199,603.42285)
+:Sending Touch (ACTION_DOWN): 0:(140.0,1140.0)
+:Sending Touch (ACTION_UP): 0:(139.69629,1134.5176)
+:Sending Touch (ACTION_DOWN): 0:(24.0,751.0)
+:Sending Touch (ACTION_UP): 0:(0.0,718.958)
+:Sending Touch (ACTION_DOWN): 0:(55.0,1019.0)
+:Sending Touch (ACTION_UP): 0:(55.99121,995.9121)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-4.0)
+    //[calendar_time:2026-09-30 13:47:20.723  system_uptime:833189]
+    // Sending event #2300
+:Sending Trackball (ACTION_MOVE): 0:(3.0,4.0)
+:Sending Touch (ACTION_DOWN): 0:(893.0,595.0)
+:Sending Touch (ACTION_UP): 0:(889.3457,590.99316)
+:Sending Touch (ACTION_DOWN): 0:(57.0,1939.0)
+:Sending Touch (ACTION_UP): 0:(47.79492,1969.7109)
+:Sending Touch (ACTION_DOWN): 0:(947.0,2046.0)
+:Sending Touch (ACTION_UP): 0:(946.3164,2045.3789)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(591.0,1943.0)
+:Sending Touch (ACTION_UP): 0:(592.126,1941.1045)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-1.0)
+:Sending Touch (ACTION_DOWN): 0:(235.0,218.0)
+:Sending Touch (ACTION_UP): 0:(206.52734,234.7334)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-3.0)
+    //[calendar_time:2026-09-30 13:47:22.696  system_uptime:835163]
+    // Sending event #2400
+    // Rejecting start of Intent { act=launcher.intent_action_all_apps_toggle cat=[android.intent.category.HOME] cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity } in package com.google.android.apps.nexuslauncher
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(710.0,535.0)
+:Sending Touch (ACTION_UP): 0:(698.0654,530.13184)
+:Sending Touch (ACTION_DOWN): 0:(425.0,1515.0)
+:Sending Touch (ACTION_UP): 0:(424.43262,1523.9023)
+:Sending Touch (ACTION_DOWN): 0:(276.0,274.0)
+:Sending Touch (ACTION_UP): 0:(259.0791,272.56934)
+:Sending Touch (ACTION_DOWN): 0:(472.0,1439.0)
+:Sending Touch (ACTION_UP): 0:(507.30762,1517.7236)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(25.0,1515.0)
+:Sending Touch (ACTION_UP): 0:(44.867188,1531.3438)
+:Sending Touch (ACTION_DOWN): 0:(536.0,471.0)
+:Sending Touch (ACTION_UP): 0:(534.8584,474.8838)
+:Sending Touch (ACTION_DOWN): 0:(596.0,1128.0)
+:Sending Touch (ACTION_UP): 0:(587.11816,1127.9951)
+:Sending Touch (ACTION_DOWN): 0:(268.0,1337.0)
+:Sending Touch (ACTION_UP): 0:(260.1377,1354.2031)
+:Sending Touch (ACTION_DOWN): 0:(946.0,766.0)
+:Sending Touch (ACTION_UP): 0:(933.60156,766.8545)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-5.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(43.0,848.0)
+    //[calendar_time:2026-09-30 13:47:24.967  system_uptime:837433]
+    // Sending event #2500
+:Sending Touch (ACTION_UP): 0:(50.24707,967.41016)
+:Sending Touch (ACTION_DOWN): 0:(144.0,550.0)
+:Sending Touch (ACTION_UP): 0:(143.63574,550.13965)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,0.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(336.0,1749.0)
+:Sending Touch (ACTION_UP): 0:(337.3545,1747.0088)
+:Sending Touch (ACTION_DOWN): 0:(444.0,1727.0)
+:Sending Touch (ACTION_UP): 0:(573.52637,1787.2822)
+:Sending Touch (ACTION_DOWN): 0:(104.0,1423.0)
+:Sending Touch (ACTION_UP): 0:(125.671875,1488.0635)
+    // Rejecting start of Intent { act=com.android.intent.action.SHOW_BRIGHTNESS_DIALOG cmp=com.android.systemui/.settings.brightness.BrightnessDialog } in package com.android.systemui
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,2.0)
+:Sending Touch (ACTION_DOWN): 0:(618.0,763.0)
+:Sending Touch (ACTION_UP): 0:(610.13477,762.4619)
+:Sending Touch (ACTION_DOWN): 0:(959.0,1596.0)
+:Sending Touch (ACTION_UP): 0:(967.1543,1595.7012)
+:Sending Touch (ACTION_DOWN): 0:(147.0,868.0)
+:Sending Touch (ACTION_UP): 0:(140.60547,879.50977)
+:Sending Touch (ACTION_DOWN): 0:(188.0,1568.0)
+:Sending Touch (ACTION_UP): 0:(170.91211,1601.999)
+:Sending Touch (ACTION_DOWN): 0:(651.0,1640.0)
+:Sending Touch (ACTION_UP): 0:(655.14746,1648.9053)
+:Sending Touch (ACTION_DOWN): 0:(847.0,635.0)
+:Sending Touch (ACTION_UP): 0:(835.15234,615.6201)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,2.0)
+    //[calendar_time:2026-09-30 13:47:26.789  system_uptime:839256]
+    // Sending event #2600
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,3.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Touch (ACTION_DOWN): 0:(385.0,1167.0)
+:Sending Touch (ACTION_UP): 0:(385.19922,1158.502)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,4.0)
+:Sending Touch (ACTION_DOWN): 0:(890.0,1702.0)
+:Sending Touch (ACTION_UP): 0:(885.5957,1699.1992)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(966.0,1398.0)
+:Sending Touch (ACTION_UP): 0:(957.33105,1399.5527)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+    //[calendar_time:2026-09-30 13:47:28.288  system_uptime:840755]
+    // Sending event #2700
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(641.0,2075.0)
+:Sending Touch (ACTION_UP): 0:(706.34375,2136.586)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-1.0)
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity } in package com.google.android.apps.nexuslauncher
+:Sending Touch (ACTION_DOWN): 0:(436.0,4.0)
+:Sending Touch (ACTION_UP): 0:(364.76855,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,0.0)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(250.0,1083.0)
+:Sending Touch (ACTION_UP): 0:(210.05762,1075.6787)
+:Sending Touch (ACTION_DOWN): 0:(785.0,1067.0)
+:Sending Touch (ACTION_UP): 0:(730.3086,1083.7207)
+    // Rejecting start of Intent { act=android.intent.action.APPLICATION_PREFERENCES pkg=com.google.android.apps.nexuslauncher cmp=com.google.android.apps.nexuslauncher/com.android.launcher3.settings.SettingsActivity } in package com.google.android.apps.nexuslauncher
+:Sending Touch (ACTION_DOWN): 0:(227.0,755.0)
+:Sending Touch (ACTION_UP): 0:(225.11816,770.47656)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,2.0)
+    //[calendar_time:2026-09-30 13:47:30.629  system_uptime:843095]
+    // Sending event #2800
+:Sending Touch (ACTION_DOWN): 0:(935.0,472.0)
+:Sending Touch (ACTION_UP): 0:(981.1992,524.0586)
+:Sending Touch (ACTION_DOWN): 0:(404.0,1776.0)
+:Sending Touch (ACTION_UP): 0:(403.92383,1773.6553)
+:Sending Touch (ACTION_DOWN): 0:(44.0,791.0)
+:Sending Touch (ACTION_UP): 0:(47.82617,803.16895)
+:Sending Touch (ACTION_DOWN): 0:(667.0,2121.0)
+:Sending Touch (ACTION_UP): 0:(667.4824,2132.58)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(158.0,413.0)
+:Sending Touch (ACTION_UP): 0:(160.67676,414.59473)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-4.0)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(196.0,1052.0)
+:Sending Touch (ACTION_UP): 0:(128.94043,1053.7842)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(348.0,859.0)
+:Sending Touch (ACTION_UP): 0:(346.5537,851.7256)
+    //[calendar_time:2026-09-30 13:47:32.253  system_uptime:844720]
+    // Sending event #2900
+:Sending Touch (ACTION_DOWN): 0:(924.0,1941.0)
+:Sending Touch (ACTION_UP): 0:(916.90234,1960.248)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(676.0,657.0)
+:Sending Touch (ACTION_UP): 0:(675.7656,669.375)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,4.0)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.google.android.gm/.ConversationListActivityGmail } in package com.google.android.gm
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(787.0,1899.0)
+:Sending Touch (ACTION_UP): 0:(789.02344,1902.8486)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=app.offgrow/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=app.offgrow/.MainActivity } in package app.offgrow
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(770.0,1298.0)
+:Sending Touch (ACTION_UP): 0:(762.6787,1288.7412)
+:Sending Touch (ACTION_DOWN): 0:(273.0,184.0)
+:Sending Touch (ACTION_UP): 0:(273.1084,175.60449)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-2.0)
+Events injected: 3000
+:Sending rotation degree=0, persist=false
+:Dropped: keys=1 pointers=0 trackballs=0 flips=17 rotations=0
+## Network stats: elapsed time=75880ms (0ms mobile, 0ms wifi, 75880ms not connected)
+// Monkey finished

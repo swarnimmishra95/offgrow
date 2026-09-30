@@ -373,7 +373,7 @@ fun FlowerScreen(
                     val days = ChronoUnit.DAYS.between(planted, AppClock.today()).coerceAtLeast(0)
                     val text = if (flower.alive) {
                         val span = if (days == 0L) "Planted today" else "Blooming for $days ${if (days == 1L) "day" else "days"}"
-                        "$span. Flowers droop when you go over your limit, and one is lost after 3 wilted days in a row."
+                        "$span. Flowers droop when you go over your limit. After 3 rough days in a row, your newest flower is lost."
                     } else {
                         "Lost on ${longDay(flower.lostDay ?: "")}. The garden let it go, but the memory stays here."
                     }

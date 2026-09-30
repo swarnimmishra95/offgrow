@@ -14,6 +14,12 @@ adb shell dumpsys package com.google.android.webview | grep -m1 versionName >> "
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 adb install -r app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
 
+# Let the freshly booted emulator settle, and stop Google Play services from pushing
+# config flags mid-run (a flag push can restart apps under test).
+adb shell 'while [ "$(getprop sys.boot_completed)" != "1" ]; do sleep 2; done'
+adb shell device_config set_sync_disabled_for_tests persistent || true
+sleep 60
+adb shell am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS || true
 adb shell svc power stayon true
 adb shell input keyevent KEYCODE_WAKEUP
 adb shell wm dismiss-keyguard
@@ -24,7 +30,16 @@ adb logcat -c
 CLASSES="app.offgrow.qa.A1_OnboardingTest,app.offgrow.qa.A2_HomeStatesTest,app.offgrow.qa.A3_WeeksSimulationTest,app.offgrow.qa.A4_FocusTest,app.offgrow.qa.A5_ScreensTest,app.offgrow.qa.A6_WidgetTest,app.offgrow.qa.A7_BackgroundTest,app.offgrow.qa.A8_RealUsageTest,app.offgrow.qa.A9_DeviceConditionsTest"
 for c in ${CLASSES//,/ }; do
   echo "=== $c" >> "$OUT/instrument.txt"
-  timeout 1500 adb shell am instrument -w -e class "$c" app.offgrow.test/androidx.test.runner.AndroidJUnitRunner >> "$OUT/instrument.txt" 2>&1
+  timeout 1500 adb shell am instrument -w -e class "$c" app.offgrow.test/androidx.test.runner.AndroidJUnitRunner > /tmp/one.txt 2>&1
+  cat /tmp/one.txt >> "$OUT/instrument.txt"
+  if grep -qE "FAILURES!!!|Process crashed|INSTRUMENTATION_FAILED|shortMsg" /tmp/one.txt; then
+    # One retry, clearly marked, to tell emulator hiccups from real bugs.
+    echo "=== RETRY $c" >> "$OUT/instrument.txt"
+    adb shell am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS || true
+    adb shell input keyevent KEYCODE_HOME
+    adb shell run-as app.offgrow sh -c "'echo \"RETRY-MARKER $c\" >> files/qa/report.md'" || true
+    timeout 1500 adb shell am instrument -w -e class "$c" app.offgrow.test/androidx.test.runner.AndroidJUnitRunner >> "$OUT/instrument.txt" 2>&1
+  fi
 done
 
 # Pull the report and screenshots the tests wrote inside the app.
@@ -32,12 +47,13 @@ adb exec-out run-as app.offgrow tar -cf - files/qa > "$OUT/qa.tar" 2>/dev/null
 (cd "$OUT" && tar -xf qa.tar && rm -f qa.tar && mv files/qa/* . && rm -rf files) || echo "pull failed" >> "$OUT/instrument.txt"
 
 # Random tapping through the real app (real clock, real usage data).
-adb shell monkey -p app.offgrow --throttle 80 --pct-syskeys 0 --pct-appswitch 5 -s 20261007 -v 3000 > "$OUT/monkey.txt" 2>&1
+adb shell monkey -p app.offgrow --throttle 80 --pct-syskeys 0 --pct-appswitch 5 --ignore-crashes --ignore-timeouts --ignore-security-exceptions -s 20261007 -v 3000 > "$OUT/monkey.txt" 2>&1
 adb shell screencap -p /sdcard/after_monkey.png && adb pull /sdcard/after_monkey.png "$OUT/after_monkey.png"
 
 adb logcat -d > "$OUT/logcat.txt"
 adb logcat -d -b crash > "$OUT/crash.txt"
 grep -n -E "FATAL EXCEPTION|AndroidRuntime" -A 25 "$OUT/logcat.txt" > "$OUT/fatal.txt" || true
+grep -c "Process: app.offgrow" "$OUT/crash.txt" > "$OUT/app-crashes.txt" || echo 0 > "$OUT/app-crashes.txt"
 grep -E "OffgrowQA|GardenRenderer|GardenEngine|WidgetUpdater|RefreshWorker|AppViewModel|UsageReader" "$OUT/logcat.txt" > "$OUT/app-log.txt" || true
 ls -la "$OUT"
 exit 0

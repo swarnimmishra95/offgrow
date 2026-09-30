@@ -220,7 +220,8 @@ object Rules {
         val end = clamp(state.vitality + delta)
 
         var flowers = state.flowers
-        var lowDays = if (end < LOW_VITALITY) state.lowDays + 1 else 0
+        // A good day always saves the flowers, even if vitality is still low.
+        var lowDays = if (end < LOW_VITALITY && !good) state.lowDays + 1 else 0
         if (lowDays >= LOST_AFTER_LOW_DAYS) {
             val victim = flowers.lastOrNull { it.alive }
             if (victim != null) {

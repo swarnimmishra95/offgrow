@@ -1,5 +1,6 @@
 package app.offgrow.ui
 
+import app.offgrow.garden.AppClock
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -48,7 +49,7 @@ private data class ChartDay(val label: String, val delta: Int, val today: Boolea
 @Composable
 fun JournalScreen(ui: UiState, onOpenFlower: (String) -> Unit) {
     val state = ui.state ?: return
-    val today = LocalDate.now()
+    val today = AppClock.today()
     val weekStart = today.minusDays(6)
     val recent = state.days.filter { d ->
         try {

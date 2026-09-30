@@ -1,5 +1,6 @@
 package app.offgrow.ui
 
+import app.offgrow.garden.AppClock
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
@@ -101,7 +102,7 @@ fun HomeScreen(
                 Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                         val kicker = if (state.lowDays >= 2) "${state.lowDays} rough days in a row"
-                        else LocalDate.now().format(DateTimeFormatter.ofPattern("EEEE, d MMM", Locale.getDefault()))
+                        else AppClock.today().format(DateTimeFormatter.ofPattern("EEEE, d MMM", Locale.getDefault()))
                         Text(kicker, style = body(13, FontWeight.SemiBold, Palette.Muted))
                         Text(ui.band.headline, style = display(24, lineHeight = 1.1))
                     }
@@ -146,9 +147,10 @@ fun HomeScreen(
                 }
 
                 if (ui.band == Band.WILTING) {
+                    val left = Rules.LOST_AFTER_LOW_DAYS - state.lowDays.coerceIn(0, Rules.LOST_AFTER_LOW_DAYS - 1)
                     Notice(
                         title = "Your flowers can still be saved",
-                        text = "One good day revives them. After ${Rules.LOST_AFTER_LOW_DAYS - state.lowDays.coerceAtMost(2)} more wilted days, one is lost.",
+                        text = "One good day revives them. After $left more wilted ${if (left == 1) "day" else "days"}, one is lost.",
                         action = "Start a focus session",
                         onClick = onFocus,
                         tone = Palette.Wilt,

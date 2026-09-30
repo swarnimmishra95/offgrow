@@ -1,5 +1,6 @@
 package app.offgrow.data
 
+import app.offgrow.garden.AppClock
 import android.content.Context
 import android.content.SharedPreferences
 import app.offgrow.garden.CareItem
@@ -89,7 +90,7 @@ class Store(context: Context) {
 
         fun newState(): GardenState {
             val id = UUID.randomUUID().toString()
-            val today = LocalDate.now()
+            val today = AppClock.today()
             return GardenState(
                 installId = id,
                 seed = (id.hashCode() and 0x7fffffff) % 1_000_000,
@@ -122,7 +123,7 @@ class Store(context: Context) {
         fun stateFromJson(o: JSONObject): GardenState = GardenState(
             installId = o.getString("installId"),
             seed = o.optInt("seed", 11),
-            createdDay = o.optString("createdDay", LocalDate.now().toString()),
+            createdDay = o.optString("createdDay", AppClock.today().toString()),
             name = o.optString("name", ""),
             limitMin = o.optInt("limitMin", 60),
             vitality = o.optInt("vitality", 70),

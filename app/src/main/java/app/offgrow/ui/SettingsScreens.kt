@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -44,6 +45,8 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -126,7 +129,8 @@ fun SettingsScreen(
                             .clip(CircleShape)
                             .background(color)
                             .border(if (selected) 3.dp else 1.dp, if (selected) Palette.Moss else Palette.Border, CircleShape)
-                            .clickable(role = Role.RadioButton) { vm.setFence(key) },
+                            .clickable(role = Role.RadioButton, onClickLabel = "Use the $key fence") { vm.setFence(key) }
+                            .semantics { contentDescription = "${key.replaceFirstChar { it.uppercase() }} fence" },
                     )
                 }
             }
@@ -231,16 +235,17 @@ fun AppsScreen(vm: AppViewModel, onBack: () -> Unit) {
                     Row(
                         Modifier
                             .fillMaxWidth()
-                            .height(56.dp),
+                            .height(56.dp)
+                            .toggleable(value = app.counted, role = Role.Switch) { on ->
+                                apps = list.map { if (it.pkg == app.pkg) it.copy(counted = on) else it }
+                                vm.setCounted(app.pkg, on)
+                            },
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(app.label, style = body(15, FontWeight.SemiBold), modifier = Modifier.weight(1f), maxLines = 1, overflow = TextOverflow.Ellipsis)
                         Switch(
                             checked = app.counted,
-                            onCheckedChange = { on ->
-                                apps = list.map { if (it.pkg == app.pkg) it.copy(counted = on) else it }
-                                vm.setCounted(app.pkg, on)
-                            },
+                            onCheckedChange = null,
                             colors = SwitchDefaults.colors(
                                 checkedThumbColor = Palette.Paper,
                                 checkedTrackColor = Palette.Moss,

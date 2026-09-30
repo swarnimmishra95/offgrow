@@ -1,5 +1,7 @@
 package app.offgrow.ui
 
+import app.offgrow.garden.FocusConfig
+import app.offgrow.garden.AppClock
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
@@ -55,7 +57,7 @@ import app.offgrow.garden.Rules
 import kotlinx.coroutines.delay
 import java.time.LocalDate
 
-private const val DURATION_MS = Rules.FOCUS_MINUTES * 60_000L
+private val DURATION_MS: Long get() = FocusConfig.durationMs
 
 @Composable
 fun FocusScreen(state: GardenState, onComplete: () -> Unit, onExit: () -> Unit, onRunningChange: (Boolean) -> Unit) {
@@ -66,7 +68,7 @@ fun FocusScreen(state: GardenState, onComplete: () -> Unit, onExit: () -> Unit, 
     val running = startedAt > 0L && outcome.isEmpty()
     val kind = state.aliveFlowers.lastOrNull()?.kind ?: "sunflower"
     val flowerLabel = Rules.plantable(kind).label
-    val doneToday = state.focusToday(LocalDate.now())
+    val doneToday = state.focusToday(AppClock.today())
     val complete by rememberUpdatedState(onComplete)
 
     LaunchedEffect(running) { onRunningChange(running) }

@@ -5,7 +5,7 @@ import android.util.Log
 import app.offgrow.data.Store
 import app.offgrow.data.WidgetInfo
 import app.offgrow.usage.DayStats
-import app.offgrow.usage.UsageReader
+import app.offgrow.usage.Usage
 import app.offgrow.widget.WidgetUpdater
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
@@ -46,14 +46,30 @@ object GardenEngine {
         render: Boolean = true,
         onScored: (suspend (Snapshot) -> Unit)? = null,
     ): Snapshot {
+        busy.incrementAndGet()
+        try {
+            return refreshInner(context, render, onScored)
+        } finally {
+            busy.decrementAndGet()
+        }
+    }
+
+    /** How many refreshes are running right now. Tests wait for this to reach zero. */
+    val busy = java.util.concurrent.atomic.AtomicInteger(0)
+
+    private suspend fun refreshInner(
+        context: Context,
+        render: Boolean,
+        onScored: (suspend (Snapshot) -> Unit)?,
+    ): Snapshot {
         val app = context.applicationContext
         val store = Store(app)
-        val reader = UsageReader(app)
+        val reader = Usage.source(app)
 
         // Scoring holds the lock; drawing happens after, so taps never wait on the renderer.
         val snap = mutex.withLock { withContext(Dispatchers.IO) {
             val access = reader.hasAccess()
-            val today = LocalDate.now()
+            val today = AppClock.today()
             var state = store.load()
             if (state.onboarded && access) {
                 state = Rules.catchUp(state, today) { d ->
@@ -88,7 +104,7 @@ object GardenEngine {
 
         var result = snap
         if (render) renderMutex.withLock {
-            val cfg = config(snap.state, snap.live, LocalTime.now())
+            val cfg = config(snap.state, snap.live, AppClock.time())
             val key = renderKey(cfg)
             val file = imageFile(app)
             if (key != store.renderKey || !file.exists()) {
@@ -188,8 +204,8 @@ object GardenEngine {
         val created = try {
             LocalDate.parse(state.createdDay)
         } catch (_: Exception) {
-            LocalDate.now()
+            AppClock.today()
         }
-        return java.time.temporal.ChronoUnit.DAYS.between(created, LocalDate.now()) + 1
+        return java.time.temporal.ChronoUnit.DAYS.between(created, AppClock.today()) + 1
     }
 }

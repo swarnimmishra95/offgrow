@@ -1,5 +1,6 @@
 package app.offgrow.ui
 
+import app.offgrow.garden.AppClock
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -103,7 +104,7 @@ fun PlantScreen(state: GardenState, onClose: () -> Unit, onPlant: (kind: String,
         ) {
             IconButton44(R.drawable.ic_close, "Close", onClose)
             Text(
-                LocalDate.now().format(LONG_DAY),
+                AppClock.today().format(LONG_DAY),
                 style = body(13, FontWeight.Bold, Palette.Muted),
             )
         }
@@ -196,7 +197,7 @@ fun PlantScreen(state: GardenState, onClose: () -> Unit, onPlant: (kind: String,
 
 private fun dayName(day: String): String = try {
     val d = LocalDate.parse(day)
-    if (d == LocalDate.now().minusDays(1)) "Yesterday" else d.format(DateTimeFormatter.ofPattern("EEEE", Locale.getDefault()))
+    if (d == AppClock.today().minusDays(1)) "Yesterday" else d.format(DateTimeFormatter.ofPattern("EEEE", Locale.getDefault()))
 } catch (_: Exception) {
     "Yesterday"
 }
@@ -280,7 +281,7 @@ fun FlowerScreen(
     val planted = try {
         LocalDate.parse(flower.plantedDay)
     } catch (_: Exception) {
-        LocalDate.now()
+        AppClock.today()
     }
     val record = state.days.lastOrNull { it.day == planted.minusDays(1).toString() }
 
@@ -369,7 +370,7 @@ fun FlowerScreen(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
                     Icon(painterResource(R.drawable.ic_info), contentDescription = null, tint = Palette.Moss, modifier = Modifier.size(20.dp))
-                    val days = ChronoUnit.DAYS.between(planted, LocalDate.now()).coerceAtLeast(0)
+                    val days = ChronoUnit.DAYS.between(planted, AppClock.today()).coerceAtLeast(0)
                     val text = if (flower.alive) {
                         val span = if (days == 0L) "Planted today" else "Blooming for $days ${if (days == 1L) "day" else "days"}"
                         "$span. Flowers droop when you go over your limit, and one is lost after 3 wilted days in a row."

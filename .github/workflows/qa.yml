@@ -1,0 +1,73 @@
+name: QA on emulator
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        api: [34]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Unit tests and build test APKs
+        run: |
+          chmod +x gradlew
+          mkdir -p qa-out
+          set -o pipefail
+          ./gradlew testDebugUnitTest assembleDebug assembleDebugAndroidTest --no-daemon --stacktrace 2>&1 | tee qa-out/build.log
+          mkdir -p qa-out/unit
+          cp -r app/build/test-results/testDebugUnitTest/*.xml qa-out/unit/ 2>/dev/null || true
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Run QA on the emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api }}
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          ram-size: 4096M
+          disk-size: 6000M
+          disable-animations: true
+          emulator-boot-timeout: 900
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot
+          script: bash scripts/qa.sh
+
+      - name: Publish results to the qa-results branch
+        if: always()
+        run: |
+          mkdir -p /tmp/qa && cp -r qa-out/. /tmp/qa/ 2>/dev/null || true
+          echo "${{ github.sha }} ${{ job.status }} run ${{ github.run_number }} api ${{ matrix.api }}" > /tmp/qa/status.txt
+          cd /tmp/qa
+          git init -q -b qa-results
+          git config user.name "offgrow-ci"
+          git config user.email "ci@offgrow.invalid"
+          git add -A
+          git commit -qm "QA results for ${{ github.sha }} (api ${{ matrix.api }})"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" qa-results

@@ -1,5 +1,6 @@
 package app.offgrow.ui
 
+import app.offgrow.garden.AppClock
 import android.app.Application
 import android.graphics.BitmapFactory
 import androidx.compose.ui.graphics.ImageBitmap
@@ -15,6 +16,7 @@ import app.offgrow.garden.GardenState
 import app.offgrow.garden.Rules
 import app.offgrow.garden.Snapshot
 import app.offgrow.usage.DayStats
+import app.offgrow.usage.Usage
 import app.offgrow.usage.UsageReader
 import android.util.Log
 import kotlinx.coroutines.CancellationException
@@ -57,7 +59,7 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             // Show the saved garden straight away, then bring it up to date.
             val saved = withContext(Dispatchers.IO) { Store(app).load() }
-            val access = withContext(Dispatchers.IO) { UsageReader(app).hasAccess() }
+            val access = withContext(Dispatchers.IO) { Usage.source(app).hasAccess() }
             val bmp = loadImage()
             _ui.update {
                 it.copy(
@@ -148,7 +150,7 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
     }
 
     fun startGarden(name: String, limitMin: Int) = change { s ->
-        val today = LocalDate.now()
+        val today = AppClock.today()
         s.copy(
             onboarded = true,
             name = name.trim().take(40),
@@ -163,7 +165,7 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
     /** Plant a flower from a pending seed. Calls back with the new flower's id, or null if there was no seed. */
     fun plant(kind: String, note: String, onPlanted: (String?) -> Unit) {
         val id = UUID.randomUUID().toString()
-        val today = LocalDate.now()
+        val today = AppClock.today()
         val label = Rules.plantable(kind).label
         val flower = Flower(
             id = id,
@@ -179,7 +181,7 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
         s.copy(flowers = s.flowers.map { if (it.id == id) it.copy(name = name.trim().take(60).ifEmpty { it.name }) else it })
     }
 
-    fun completeFocus() = change { s -> Rules.completeFocus(s, LocalDate.now()) }
+    fun completeFocus() = change { s -> Rules.completeFocus(s, AppClock.today()) }
 
     fun setLimit(min: Int) = change { s -> s.copy(limitMin = min) }
 
@@ -189,7 +191,7 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
 
     fun onAccessMaybeChanged() {
         viewModelScope.launch {
-            val access = withContext(Dispatchers.IO) { UsageReader(app).hasAccess() }
+            val access = withContext(Dispatchers.IO) { Usage.source(app).hasAccess() }
             _ui.update { it.copy(hasAccess = access) }
             refresh()
         }
@@ -222,7 +224,7 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
 
     suspend fun preview(vitality: Int, tod: String): ImageBitmap? {
         val s = _ui.value.state ?: return null
-        val cfg = GardenEngine.config(s, vitality, LocalTime.now(), overrideTod = tod)
+        val cfg = GardenEngine.config(s, vitality, AppClock.time(), overrideTod = tod)
         return GardenEngine.renderPreview(app, cfg, 900)?.asImageBitmap()
     }
 }

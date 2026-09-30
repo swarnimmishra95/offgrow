@@ -9,45 +9,31 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Process
+import android.util.Log
 import app.offgrow.data.Store
-import app.offgrow.garden.DayUsage
+import app.offgrow.garden.AppClock
 import java.time.LocalDate
-import java.time.ZoneId
-import kotlin.math.max
-import kotlin.math.min
 
-/** Raw measurements for one day. All of it stays on the phone. */
-data class DayStats(
-    val socialMin: Int,
-    val screenMin: Int,
-    val phoneFreeMin: Int,
-    val pickups: Int,
-    val wakeAt: Long?,
-    val socialInWakeHour: Boolean,
-    val nightScreenMin: Int,
-    val nightDone: Boolean,
-    val wakeHourDone: Boolean,
-) {
-    fun toUsage(closed: Boolean): DayUsage = DayUsage(
-        socialMin = socialMin,
-        screenMin = screenMin,
-        phoneFreeMin = phoneFreeMin,
-        pickups = pickups,
-        sunlight = when {
-            socialInWakeHour -> false
-            wakeHourDone || closed -> true
-            else -> null
-        },
-        nightClean = if (nightDone || closed) nightScreenMin < app.offgrow.garden.Rules.NIGHT_LIMIT_MIN else null,
-    )
+/** Where usage numbers come from. The real phone, or a scripted source in tests. */
+interface UsageSource {
+    fun hasAccess(): Boolean
+    fun readDay(date: LocalDate, now: Long = AppClock.now()): DayStats
 }
 
-class UsageReader(private val context: Context) {
+object Usage {
+    /** Tests set this to feed scripted days. */
+    @Volatile
+    var override: UsageSource? = null
+
+    fun source(context: Context): UsageSource = override ?: UsageReader(context.applicationContext)
+}
+
+class UsageReader(private val context: Context) : UsageSource {
     private val store = Store(context)
     private val pm: PackageManager = context.packageManager
     private val socialCache = HashMap<String, Boolean>()
 
-    fun hasAccess(): Boolean {
+    override fun hasAccess(): Boolean {
         val ops = context.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
         val mode = if (Build.VERSION.SDK_INT >= 29) {
             ops.unsafeCheckOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS, Process.myUid(), context.packageName)
@@ -65,11 +51,9 @@ class UsageReader(private val context: Context) {
 
     fun isSocial(pkg: String): Boolean {
         socialCache[pkg]?.let { return it }
-        val included = store.includedApps
-        val excluded = store.excludedApps
-        val v = when {
-            pkg in excluded -> false
-            pkg in included -> true
+        val v = when (pkg) {
+            in store.excludedApps -> false
+            in store.includedApps -> true
             else -> isSocialByDefault(pkg)
         }
         socialCache[pkg] = v
@@ -102,127 +86,29 @@ class UsageReader(private val context: Context) {
     }
 
     /** Read one calendar day. For today, figures are "so far". */
-    fun readDay(date: LocalDate, now: Long = System.currentTimeMillis()): DayStats {
-        val zone = ZoneId.systemDefault()
-        val dayStart = date.atStartOfDay(zone).toInstant().toEpochMilli()
+    override fun readDay(date: LocalDate, now: Long): DayStats {
+        val zone = AppClock.zone()
         val dayEnd = date.plusDays(1).atStartOfDay(zone).toInstant().toEpochMilli()
-        val nightStart = date.minusDays(1).atTime(23, 0).atZone(zone).toInstant().toEpochMilli()
-        val nightEnd = date.atTime(6, 0).atZone(zone).toInstant().toEpochMilli()
-        val wakeFloor = date.atTime(4, 0).atZone(zone).toInstant().toEpochMilli()
-        val end = min(dayEnd, now)
-        val queryStart = nightStart - 3 * HOUR
-
-        var socialMs = 0L
-        var screenMs = 0L
-        var nightMs = 0L
-        var pickups = 0
-        var sawKeyguardEvent = false
-        var firstUnlockAfterFloor: Long? = null
-        var firstUseAfterFloor: Long? = null
-        val socialSpans = ArrayList<LongArray>()
-
-        fun overlap(a: Long, b: Long, lo: Long, hi: Long): Long = max(0L, min(b, hi) - max(a, lo))
-
-        fun addSpan(pkg: String, a: Long, b: Long, unlocked: Boolean) {
-            if (b <= a) return
-            val inDay = overlap(a, b, dayStart, end)
-            if (inDay > 0) {
-                screenMs += inDay
-                if (isSocial(pkg)) {
-                    socialMs += inDay
-                    socialSpans += longArrayOf(max(a, dayStart), min(b, end))
-                }
-            }
-            // Alarms and incoming calls show over the lock screen; only count night use after an unlock.
-            if (unlocked) nightMs += overlap(a, b, nightStart, min(nightEnd, end))
-            if (b > wakeFloor && a < end) {
-                val s = max(a, wakeFloor)
-                if (firstUseAfterFloor == null || s < firstUseAfterFloor!!) firstUseAfterFloor = s
-            }
-        }
-
-        val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
-        var curPkg: String? = null
-        var curCls: String? = null
-        var curStart = 0L
-        var curUnlocked = true
-        var unlocked = true
-        fun closeCurrent(t: Long) {
-            val p = curPkg
-            if (p != null) addSpan(p, curStart, t, curUnlocked)
-            curPkg = null
-            curCls = null
-        }
-
+        val end = minOf(dayEnd, now)
+        val events = ArrayList<UsageEvent>(2048)
         try {
-            val events = usm.queryEvents(queryStart, end)
+            val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
+            val stream = usm.queryEvents(UsageMath.queryStart(date, zone), end)
             val e = UsageEvents.Event()
-            while (events.hasNextEvent()) {
-                events.getNextEvent(e)
-                val t = e.timeStamp
-                val pkg = e.packageName ?: continue
-                when (e.eventType) {
-                    EVENT_RESUMED -> {
-                        if (curPkg != pkg) {
-                            closeCurrent(t)
-                            curPkg = pkg
-                            curStart = t
-                            curUnlocked = unlocked
-                        }
-                        curCls = e.className
-                    }
-                    // Within one app, screen A pauses, screen B resumes, then A stops.
-                    // Only the pause of the screen that's actually showing ends the span.
-                    EVENT_PAUSED -> if (curPkg == pkg && (curCls == null || e.className == curCls)) closeCurrent(t)
-                    EVENT_SCREEN_OFF, EVENT_SHUTDOWN -> closeCurrent(t)
-                    EVENT_KEYGUARD_SHOWN -> {
-                        sawKeyguardEvent = true
-                        unlocked = false
-                    }
-                    EVENT_KEYGUARD_HIDDEN -> {
-                        sawKeyguardEvent = true
-                        unlocked = true
-                        if (curPkg != null) curUnlocked = true
-                        if (t in dayStart until end) pickups++
-                        if (t >= wakeFloor && t < end && firstUnlockAfterFloor == null) firstUnlockAfterFloor = t
-                    }
+            while (stream.hasNextEvent()) {
+                stream.getNextEvent(e)
+                val type = e.eventType
+                if (type == UsageMath.RESUMED || type == UsageMath.PAUSED || type == UsageMath.SCREEN_OFF ||
+                    type == UsageMath.KEYGUARD_SHOWN || type == UsageMath.KEYGUARD_HIDDEN || type == UsageMath.SHUTDOWN
+                ) {
+                    events += UsageEvent(e.timeStamp, type, e.packageName ?: "", e.className)
                 }
             }
-            closeCurrent(end)
-        } catch (_: Exception) {
-            // Permission revoked mid-read or a platform quirk: return what we have.
+        } catch (ex: Exception) {
+            // Permission revoked mid-read or a platform quirk: work with what we have.
+            Log.w("UsageReader", "queryEvents failed", ex)
         }
-
-        val wakeAt = firstUnlockAfterFloor ?: firstUseAfterFloor
-        val wakeHourEnd = wakeAt?.plus(HOUR)
-        val socialInWakeHour = wakeAt != null && socialSpans.any { it[1] > wakeAt && it[0] < wakeHourEnd!! }
-        val screenMin = (screenMs / MINUTE).toInt()
-        val phoneFreeMin = if (wakeAt == null) 0 else max(0L, (end - wakeAt) / MINUTE - screenMin).toInt()
-
-        return DayStats(
-            socialMin = (socialMs / MINUTE).toInt(),
-            screenMin = screenMin,
-            phoneFreeMin = phoneFreeMin,
-            pickups = if (sawKeyguardEvent || Build.VERSION.SDK_INT >= 28) pickups else -1,
-            wakeAt = wakeAt,
-            socialInWakeHour = socialInWakeHour,
-            nightScreenMin = (nightMs / MINUTE).toInt(),
-            nightDone = end >= nightEnd,
-            wakeHourDone = wakeHourEnd != null && end >= wakeHourEnd,
-        )
-    }
-
-    companion object {
-        private const val MINUTE = 60_000L
-        private const val HOUR = 60 * MINUTE
-
-        // UsageEvents.Event types, as plain numbers so they work on every Android version we support.
-        private const val EVENT_RESUMED = 1       // ACTIVITY_RESUMED / MOVE_TO_FOREGROUND
-        private const val EVENT_PAUSED = 2        // ACTIVITY_PAUSED / MOVE_TO_BACKGROUND
-        private const val EVENT_SCREEN_OFF = 16   // SCREEN_NON_INTERACTIVE (API 28)
-        private const val EVENT_KEYGUARD_SHOWN = 17  // lock screen showing (API 28)
-        private const val EVENT_KEYGUARD_HIDDEN = 18 // phone unlocked (API 28)
-        private const val EVENT_SHUTDOWN = 26     // DEVICE_SHUTDOWN (API 29)
+        return UsageMath.compute(events, date, now, zone, Build.VERSION.SDK_INT) { isSocial(it) }
     }
 }
 

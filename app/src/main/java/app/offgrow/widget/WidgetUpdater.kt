@@ -75,30 +75,43 @@ object WidgetUpdater {
         try {
             val opts = mgr.getAppWidgetOptions(id)
             // Portrait: widest is min width, tallest is max height.
-            var wDp = opts.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH, if (wide) 250 else 150)
-            var hDp = opts.getInt(AppWidgetManager.OPTION_APPWIDGET_MAX_HEIGHT, if (wide) 120 else 150)
-            if (wDp <= 0) wDp = if (wide) 250 else 150
-            if (hDp <= 0) hDp = if (wide) 120 else 150
-
-            val density = context.resources.displayMetrics.density
-            // Cap the bitmap so it fits comfortably through the widget host.
-            val longest = max(wDp, hDp) * density
-            val scale = min(1f, 720f / longest)
-            val wPx = max(120, (wDp * density * scale).roundToInt())
-            val hPx = max(120, (hDp * density * scale).roundToInt())
-
-            val art = WidgetArt.draw(context, wPx, hPx, density * scale, info, garden, preferWide = wide)
-            val views = RemoteViews(context.packageName, R.layout.widget_garden)
-            views.setImageViewBitmap(R.id.widget_image, art)
-            val desc = if (info == null || !info.onboarded) "Offgrow garden. Tap to plant your garden."
-            else "Offgrow garden: ${info.title}, vitality ${info.vitality}. ${info.status}"
-            views.setContentDescription(R.id.widget_image, desc)
-            views.setOnClickPendingIntent(R.id.widget_image, openApp(context))
-            mgr.updateAppWidget(id, views)
+            val wDp = opts.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH, 0)
+            val hDp = opts.getInt(AppWidgetManager.OPTION_APPWIDGET_MAX_HEIGHT, 0)
+            mgr.updateAppWidget(id, buildViews(context, wDp, hDp, wide, info, garden))
         } catch (e: Exception) {
             Log.w(TAG, "update $id failed", e)
         }
     }
+
+    /** The widget's content for a given size in dp. Public so tests can check every size. */
+    fun buildViews(
+        context: Context,
+        widthDp: Int,
+        heightDp: Int,
+        wide: Boolean,
+        info: app.offgrow.data.WidgetInfo?,
+        garden: Bitmap?,
+    ): RemoteViews {
+        val wDp = if (widthDp > 0) widthDp else if (wide) 250 else 150
+        val hDp = if (heightDp > 0) heightDp else if (wide) 120 else 150
+        val density = context.resources.displayMetrics.density
+        // Cap the bitmap so it fits comfortably through the widget host.
+        val longest = max(wDp, hDp) * density
+        val scale = min(1f, 720f / longest)
+        val wPx = max(120, (wDp * density * scale).roundToInt())
+        val hPx = max(120, (hDp * density * scale).roundToInt())
+
+        val art = WidgetArt.draw(context, wPx, hPx, density * scale, info, garden, preferWide = wide)
+        val views = RemoteViews(context.packageName, R.layout.widget_garden)
+        views.setImageViewBitmap(R.id.widget_image, art)
+        val desc = if (info == null || !info.onboarded) "Offgrow garden. Tap to plant your garden."
+        else "Offgrow garden: ${info.title}, vitality ${info.vitality}. ${info.status}"
+        views.setContentDescription(R.id.widget_image, desc)
+        views.setOnClickPendingIntent(R.id.widget_image, openApp(context))
+        return views
+    }
+
+    fun loadGardenForWidget(context: Context): Bitmap? = loadGarden(context)
 
     private fun openApp(context: Context): PendingIntent {
         val intent = Intent(context, MainActivity::class.java)

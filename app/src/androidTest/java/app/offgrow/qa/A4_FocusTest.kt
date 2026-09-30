@@ -21,6 +21,10 @@ class A4_FocusTest {
     @get:Rule
     val compose = createEmptyComposeRule()
 
+    init {
+        Qa.compose = compose
+    }
+
     private fun sessions() = Qa.state().focusToday(AppClock.today())
 
     @Test

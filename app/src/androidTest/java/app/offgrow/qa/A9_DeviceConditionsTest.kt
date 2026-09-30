@@ -19,6 +19,10 @@ class A9_DeviceConditionsTest {
     @get:Rule
     val compose = createEmptyComposeRule()
 
+    init {
+        Qa.compose = compose
+    }
+
     private val today = LocalDate.of(2026, 10, 14)
 
     private fun home() {
@@ -86,6 +90,7 @@ class A9_DeviceConditionsTest {
         Qa.launchApp()
         Qa.waitText(compose, "Grow what you don't scroll.")
         Qa.check("Welcome button visible on a small screen", displayed("Plant my garden"))
+        Qa.check("Headline visible on a small screen", displayed("Grow what you don't scroll."))
         Qa.shot("small_welcome", "Welcome on a small phone")
         compose.onNodeWithText("Plant my garden").performClick()
         Qa.waitText(compose, "Make it yours.")

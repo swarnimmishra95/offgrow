@@ -4,7 +4,10 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.view.View
 import android.widget.FrameLayout
+import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithText
@@ -33,6 +36,10 @@ import java.time.LocalDate
 class A3_WeeksSimulationTest {
     @get:Rule
     val compose = createEmptyComposeRule()
+
+    init {
+        Qa.compose = compose
+    }
 
     class Plan(val stats: DayStats, val focus: Int = 0, val access: Boolean = true)
 
@@ -197,7 +204,7 @@ class A3_WeeksSimulationTest {
         Qa.waitText(compose, "Garden journal")
         Qa.shot("${title.substringBefore(' ').lowercase()}_journal", "$title · journal")
         if (Qa.exists(compose, "Yesterday")) {
-            compose.onNodeWithText("Yesterday").performScrollTo()
+            compose.onAllNodes(hasScrollAction()).onFirst().performTouchInput { swipeUp(durationMillis = 300) }
             Qa.shot("${title.substringBefore(' ').lowercase()}_journal_days", "$title · journal, day list")
         }
         Qa.closeApp()

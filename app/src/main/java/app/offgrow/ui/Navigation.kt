@@ -20,6 +20,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.offgrow.garden.AppClock
+import app.offgrow.garden.GardenEngine
 
 private object Screen {
     const val WELCOME = "welcome"
@@ -47,15 +49,19 @@ fun OffgrowRoot(vm: AppViewModel, openUsageSettings: () -> Unit, openAppInfo: ()
     var screen by rememberSaveable { mutableStateOf(if (state.onboarded) Screen.HOME else Screen.WELCOME) }
     var flowerId by rememberSaveable { mutableStateOf("") }
     var flowerBack by rememberSaveable { mutableStateOf(Screen.HOME) }
-    var focusRunning by remember { mutableStateOf(false) }
+    val focus by vm.focus.collectAsStateWithLifecycle()
+    val focusRunning = focus.running
 
-    // Dark status-bar icons everywhere except the dark focus screen.
+    // Light status-bar icons over dark backgrounds: the focus screen, and the garden at dusk or night.
     val view = LocalView.current
     val activity = LocalContext.current as? Activity
+    val darkGarden = GardenEngine.timeOfDay(AppClock.time()).let { it == "night" || it == "dusk" }
+    val darkTop = screen == Screen.FOCUS || (darkGarden && (screen == Screen.HOME || screen == Screen.FLOWER))
     SideEffect {
         val window = activity?.window ?: return@SideEffect
-        WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = screen != Screen.FOCUS
-        WindowCompat.getInsetsController(window, view).isAppearanceLightNavigationBars = screen != Screen.FOCUS
+        val controller = WindowCompat.getInsetsController(window, view)
+        controller.isAppearanceLightStatusBars = !darkTop
+        controller.isAppearanceLightNavigationBars = screen != Screen.FOCUS
     }
 
     // Once usage access is granted, move on from the permission step by itself.
@@ -133,9 +139,11 @@ fun OffgrowRoot(vm: AppViewModel, openUsageSettings: () -> Unit, openAppInfo: ()
                 )
                 Screen.FOCUS -> FocusScreen(
                     state = state,
-                    onComplete = { vm.completeFocus() },
+                    focus = focus,
+                    onStart = { vm.startFocus() },
+                    onFail = { vm.failFocus() },
+                    onReset = { vm.resetFocus() },
                     onExit = { screen = Screen.HOME },
-                    onRunningChange = { focusRunning = it },
                 )
                 Screen.JOURNAL -> JournalScreen(ui = ui, onOpenFlower = { openFlower(it, Screen.JOURNAL) })
                 Screen.SETTINGS -> SettingsScreen(
@@ -152,6 +160,7 @@ fun OffgrowRoot(vm: AppViewModel, openUsageSettings: () -> Unit, openAppInfo: ()
         }
         if (tab != null && !(screen == Screen.FOCUS && focusRunning)) {
             BottomNav(current = tab, dark = screen == Screen.FOCUS, onSelect = { t ->
+                if (!focus.running && focus.outcome.isNotEmpty()) vm.resetFocus()
                 screen = when (t) {
                     Tab.GARDEN -> Screen.HOME
                     Tab.FOCUS -> Screen.FOCUS

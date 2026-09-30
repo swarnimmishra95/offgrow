@@ -1,6 +1,7 @@
 package app.offgrow.qa
 
 import android.os.SystemClock
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.compose.ui.test.onNodeWithText
@@ -20,6 +21,10 @@ import java.time.LocalDate
 class A1_OnboardingTest {
     @get:Rule
     val compose = createEmptyComposeRule()
+
+    init {
+        Qa.compose = compose
+    }
 
     @Test
     fun firstRunFlow() {
@@ -51,7 +56,12 @@ class A1_OnboardingTest {
         if (Qa.device.currentPackageName != "app.offgrow") Qa.bringToFront()
         Qa.check("Back in the app on the permission step", Qa.waitText(compose, "Grant usage access"))
         Qa.check("Help for greyed-out switch appears after a try", Qa.waitText(compose, "Switch greyed out?"))
-        compose.onNodeWithText("Switch greyed out?").performScrollTo()
+        Qa.check("Help is on screen without scrolling", try {
+            compose.onNodeWithText("Switch greyed out?").assertIsDisplayed()
+            true
+        } catch (_: Throwable) {
+            false
+        })
         Qa.shot("permission_help", "After returning without access")
 
         // Now the user turns it on.

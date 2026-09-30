@@ -6,11 +6,13 @@ import android.graphics.BitmapFactory
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import app.offgrow.data.Store
 import app.offgrow.garden.Band
 import app.offgrow.garden.CareItem
 import app.offgrow.garden.Flower
+import app.offgrow.garden.FocusConfig
 import app.offgrow.garden.GardenEngine
 import app.offgrow.garden.GardenState
 import app.offgrow.garden.Rules
@@ -22,6 +24,7 @@ import android.util.Log
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -48,7 +51,17 @@ data class UiState(
 
 data class AppChoice(val pkg: String, val label: String, val counted: Boolean)
 
-class AppViewModel(private val app: Application) : AndroidViewModel(app) {
+/** A focus session. Lives in the view model so it survives rotation and keeps real time. */
+data class FocusUi(val startedAt: Long = 0L, val outcome: String = "", val now: Long = 0L) {
+    val running: Boolean get() = startedAt > 0L && outcome.isEmpty()
+    val remainingMs: Long get() = when {
+        running -> (FocusConfig.durationMs - (now - startedAt)).coerceIn(0L, FocusConfig.durationMs)
+        outcome == "done" -> 0L
+        else -> FocusConfig.durationMs
+    }
+}
+
+class AppViewModel(private val app: Application, private val saved: SavedStateHandle) : AndroidViewModel(app) {
     private val _ui = MutableStateFlow(UiState())
     val ui: StateFlow<UiState> = _ui.asStateFlow()
 
@@ -58,20 +71,73 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
     init {
         viewModelScope.launch {
             // Show the saved garden straight away, then bring it up to date.
-            val saved = withContext(Dispatchers.IO) { Store(app).load() }
+            val stored = withContext(Dispatchers.IO) { Store(app).load() }
             val access = withContext(Dispatchers.IO) { Usage.source(app).hasAccess() }
             val bmp = loadImage()
             _ui.update {
                 it.copy(
                     ready = true,
-                    state = saved,
+                    state = stored,
                     hasAccess = access,
-                    live = saved.vitality,
-                    band = Band.of(saved.vitality),
+                    live = stored.vitality,
+                    band = Band.of(stored.vitality),
                     garden = bmp ?: it.garden,
                 )
             }
             refresh()
+        }
+    }
+
+    // ---------- focus sessions ----------
+
+    private val _focus = MutableStateFlow(
+        FocusUi(saved.get<Long>(KEY_FOCUS_START) ?: 0L, saved.get<String>(KEY_FOCUS_OUTCOME) ?: "", System.currentTimeMillis()),
+    )
+    val focus: StateFlow<FocusUi> = _focus.asStateFlow()
+    private var ticker: Job? = null
+
+    init {
+        if (_focus.value.running) startTicker()
+    }
+
+    private fun setFocus(f: FocusUi) {
+        _focus.value = f
+        saved[KEY_FOCUS_START] = f.startedAt
+        saved[KEY_FOCUS_OUTCOME] = f.outcome
+    }
+
+    fun startFocus() {
+        val now = System.currentTimeMillis()
+        setFocus(FocusUi(startedAt = now, outcome = "", now = now))
+        startTicker()
+    }
+
+    /** The user left the app or gave up: the session ends without a reward. */
+    fun failFocus() {
+        val f = _focus.value
+        if (f.running) setFocus(f.copy(outcome = "failed", now = System.currentTimeMillis()))
+    }
+
+    fun resetFocus() {
+        ticker?.cancel()
+        setFocus(FocusUi())
+    }
+
+    private fun startTicker() {
+        ticker?.cancel()
+        ticker = viewModelScope.launch {
+            while (true) {
+                val f = _focus.value
+                if (!f.running) break
+                val now = System.currentTimeMillis()
+                if (now - f.startedAt >= FocusConfig.durationMs) {
+                    setFocus(f.copy(outcome = "done", now = now))
+                    completeFocus()
+                    break
+                }
+                _focus.value = f.copy(now = now)
+                delay(250)
+            }
         }
     }
 
@@ -226,5 +292,10 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
         val s = _ui.value.state ?: return null
         val cfg = GardenEngine.config(s, vitality, AppClock.time(), overrideTod = tod)
         return GardenEngine.renderPreview(app, cfg, 900)?.asImageBitmap()
+    }
+
+    companion object {
+        private const val KEY_FOCUS_START = "focus_start"
+        private const val KEY_FOCUS_OUTCOME = "focus_outcome"
     }
 }

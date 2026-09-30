@@ -20,6 +20,10 @@ class A8_RealUsageTest {
     @get:Rule
     val compose = createEmptyComposeRule()
 
+    init {
+        Qa.compose = compose
+    }
+
     @Test
     fun realUsageStats() {
         Qa.closeApp()

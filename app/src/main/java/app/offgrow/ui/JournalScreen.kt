@@ -59,7 +59,15 @@ fun JournalScreen(ui: UiState, onOpenFlower: (String) -> Unit) {
         }
     }
     val todayDelta = Rules.liveDelta(ui.todayItems)
-    val weekDelta = recent.sumOf { it.delta } + todayDelta
+    // Net change this week: where vitality is now versus where it stood before the week began.
+    val baseline = state.days.lastOrNull { d ->
+        try {
+            LocalDate.parse(d.day).isBefore(weekStart)
+        } catch (_: Exception) {
+            false
+        }
+    }?.vitalityEnd ?: Rules.START_VITALITY
+    val weekDelta = ui.live - baseline
     val newPlants = state.flowers.count { f ->
         try {
             !LocalDate.parse(f.plantedDay).isBefore(weekStart)

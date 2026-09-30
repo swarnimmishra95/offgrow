@@ -19,6 +19,10 @@ class A2_HomeStatesTest {
     @get:Rule
     val compose = createEmptyComposeRule()
 
+    init {
+        Qa.compose = compose
+    }
+
     private val today = LocalDate.of(2026, 10, 14)
 
     private fun open(caption: String, name: String) {

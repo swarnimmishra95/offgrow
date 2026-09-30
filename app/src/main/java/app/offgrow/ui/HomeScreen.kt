@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -259,20 +260,21 @@ private fun NextSeedRow(pending: Int, socialMin: Int?, limit: Int, onPlant: () -
         )
         socialMin == null -> Triple("Next seed", "Stay under ${Rules.fmtMin(limit)} today to earn one", "")
         socialMin <= limit -> Triple("Next seed", "Stay under ${Rules.fmtMin(limit)} today to earn one", "tonight")
-        else -> Triple("Next seed", "Today's over the limit. Tomorrow is a fresh start.", "tomorrow")
+        else -> Triple("Next seed", "Over the limit today. Fresh start tomorrow.", "tomorrow")
     }
     Row(
         Modifier
             .fillMaxWidth()
-            .height(48.dp)
-            .clickable(enabled = pending > 0, role = Role.Button, onClick = onPlant),
+            .heightIn(min = 48.dp)
+            .clickable(enabled = pending > 0, role = Role.Button, onClick = onPlant)
+            .padding(vertical = 3.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         CareIcon("seed")
         Column(Modifier.weight(1f)) {
             Text(label, style = body(15, FontWeight.SemiBold), maxLines = 1)
-            Text(detail, style = body(13, color = Palette.Muted), maxLines = 1)
+            Text(detail, style = body(13, color = Palette.Muted, lineHeight = 1.3), maxLines = 2)
         }
         Text(right, style = body(15, FontWeight.Bold, if (pending > 0) Palette.Moss else Palette.Muted))
     }

@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -228,14 +229,15 @@ fun CareRow(item: CareItem, modifier: Modifier = Modifier) {
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .height(48.dp),
+            .heightIn(min = 48.dp)
+            .padding(vertical = 3.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         CareIcon(item.key, pending = item.pending)
         Column(Modifier.weight(1f)) {
             Text(item.label, style = body(15, FontWeight.SemiBold), maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Text(item.detail, style = body(13, color = Palette.Muted), maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(item.detail, style = body(13, color = Palette.Muted, lineHeight = 1.3), maxLines = 2, overflow = TextOverflow.Ellipsis)
         }
         val txt = when {
             item.pending -> "+${item.delta}"

@@ -62,6 +62,8 @@ class UsageReader(private val context: Context) : UsageSource {
 
     fun isSocialByDefault(pkg: String): Boolean {
         if (pkg in SocialApps.KNOWN) return true
+        // Phones label some messengers "social"; talking to people isn't scrolling.
+        if (pkg in SocialApps.MESSAGING) return false
         return try {
             val info = pm.getApplicationInfo(pkg, 0)
             info.category == ApplicationInfo.CATEGORY_SOCIAL
@@ -113,6 +115,31 @@ class UsageReader(private val context: Context) : UsageSource {
 }
 
 object SocialApps {
+    /** Messaging and calling apps. Not counted unless the user switches them on. */
+    val MESSAGING = setOf(
+        "com.google.android.apps.messaging",
+        "com.samsung.android.messaging",
+        "com.android.mms",
+        "com.android.messaging",
+        "com.whatsapp",
+        "com.whatsapp.w4b",
+        "org.telegram.messenger",
+        "org.thoughtcrime.securesms",
+        "com.facebook.orca",
+        "jp.naver.line.android",
+        "com.viber.voip",
+        "com.skype.raider",
+        "com.microsoft.teams",
+        "com.Slack",
+        "com.google.android.apps.dynamite",
+        "com.google.android.dialer",
+        "com.samsung.android.dialer",
+        "com.truecaller",
+        "com.google.android.apps.tachyon",
+        "us.zoom.videomeetings",
+        "com.discord",
+    )
+
     /** Well-known social and short-video apps. Anything the phone labels "social" also counts. */
     val KNOWN = setOf(
         "com.instagram.android",

@@ -160,7 +160,7 @@ fun SettingsScreen(
             RuleLine("Phone used in your night window", signed(Rules.WEEDS))
             RuleLine("Over your limit (by up to 30m, 60m, more)", "−5 / −10 / −20")
             Text(
-                "Every good day earns a seed to plant. After ${Rules.LOST_AFTER_LOW_DAYS} days in a row below ${Rules.LOW_VITALITY} vitality, your newest flower is lost.",
+                "Every good day earns a seed to plant. After ${Rules.LOST_AFTER_LOW_DAYS} rough days in a row with vitality under ${Rules.LOW_VITALITY}, your newest flower is lost. One good day resets the count.",
                 style = body(13, color = Palette.Muted),
             )
         }

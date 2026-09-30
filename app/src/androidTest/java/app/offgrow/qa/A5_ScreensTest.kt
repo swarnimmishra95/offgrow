@@ -4,7 +4,10 @@ import android.os.SystemClock
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.isToggleable
+import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -32,6 +35,10 @@ import java.time.LocalDate
 class A5_ScreensTest {
     @get:Rule
     val compose = createEmptyComposeRule()
+
+    init {
+        Qa.compose = compose
+    }
 
     private val today = LocalDate.of(2026, 10, 14)
 
@@ -107,6 +114,7 @@ class A5_ScreensTest {
         Qa.waitText(compose, "Name this flower")
         compose.onNode(hasSetTextAction()).performTextClearance()
         compose.onNode(hasSetTextAction()).performTextInput("Cousins' lavender")
+        Qa.check("Typed name shows in the field", Qa.waitText(compose, "Cousins' lavender"))
         Qa.shot("flower_rename", "Rename dialog")
         compose.onNodeWithText("Save").performClick()
         Qa.check("New name on screen", Qa.waitText(compose, "Cousins' lavender"))
@@ -121,8 +129,17 @@ class A5_ScreensTest {
         Qa.check("Week summary", Qa.exists(compose, "vitality"))
         Qa.check("Flowers row", Qa.exists(compose, "Your flowers".uppercase()))
         Qa.check("Yesterday listed", Qa.exists(compose, "Yesterday"))
+        run {
+            val st = Qa.state()
+            val weekStart = today.minusDays(6)
+            val baseline = st.days.lastOrNull { LocalDate.parse(it.day).isBefore(weekStart) }?.vitalityEnd ?: Rules.START_VITALITY
+            val live = Store(Qa.ctx).widgetInfo()?.vitality ?: 0
+            val net = live - baseline
+            val shown = if (net > 0) "+$net" else if (net < 0) "−${-net}" else "0"
+            Qa.check("Week change is the real net change ($shown)", Qa.exists(compose, shown), "live $live, before the week $baseline")
+        }
         Qa.shot("journal", "Journal")
-        compose.onNodeWithText("Yesterday").performScrollTo()
+        compose.onAllNodes(hasScrollAction()).onFirst().performTouchInput { swipeUp(durationMillis = 300) }
         Qa.shot("journal_days", "Journal, day by day")
         compose.onNodeWithText("Poppy, ${today.minusDays(10).dayOfMonth} Oct").performScrollTo().performClick()
         Qa.check("Opens an older flower", Qa.waitText(compose, "“Walked to the lake instead”"))
@@ -162,6 +179,8 @@ class A5_ScreensTest {
         val target = apps.firstOrNull { it.second in listOf("Clock", "Calendar", "Chrome", "Contacts", "Files", "Camera") && !reader.isSocialByDefault(it.first) }
             ?: apps.firstOrNull { !reader.isSocialByDefault(it.first) }
         Qa.check("Found a non-social app to toggle", target != null, "${apps.size} apps listed")
+        Qa.check("Messaging apps aren't counted by default", !reader.isSocialByDefault("com.google.android.apps.messaging") && !reader.isSocialByDefault("com.whatsapp"))
+        Qa.check("YouTube is counted by default", reader.isSocialByDefault("com.google.android.youtube"))
         if (target != null) {
             compose.onAllNodes(hasScrollToNodeAction()).onFirst().performScrollToNode(hasText(target.second))
             compose.onAllNodesWithText(target.second).onFirst().performClick()

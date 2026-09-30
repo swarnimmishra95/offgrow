@@ -6,6 +6,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -42,6 +43,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.min
 import app.offgrow.R
 
 @Composable
@@ -77,9 +79,12 @@ fun WelcomeScreen(onStart: () -> Unit) {
             .navigationBarsPadding()
             .padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 24.dp),
     ) {
+        BoxWithConstraints(Modifier.weight(1f)) {
+        // On small phones the picture gives way so the headline stays in view.
+        val heroHeight = min(maxWidth / 0.9f, maxHeight * 0.52f)
         Column(
             Modifier
-                .weight(1f)
+                .fillMaxSize()
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
@@ -90,7 +95,7 @@ fun WelcomeScreen(onStart: () -> Unit) {
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .aspectRatio(0.9f)
+                    .height(heroHeight)
                     .clip(RoundedCornerShape(topStart = 171.dp, topEnd = 171.dp, bottomStart = 28.dp, bottomEnd = 28.dp)),
             )
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -100,6 +105,7 @@ fun WelcomeScreen(onStart: () -> Unit) {
                     style = body(16, color = Palette.Body, lineHeight = 1.45),
                 )
             }
+        }
         }
         PrimaryButton("Plant my garden", onStart, modifier = Modifier.padding(top = 16.dp))
     }
@@ -151,6 +157,23 @@ fun PermissionScreen(onBack: () -> Unit, onGrant: () -> Unit, onAppInfo: () -> U
                     style = body(16, color = Palette.Body, lineHeight = 1.5),
                 )
             }
+            if (tried && !granted) {
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(20.dp))
+                        .background(Palette.Butter)
+                        .padding(18.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Text("Switch greyed out?", style = display(18, FontWeight.Bold, tracking = 0.0))
+                    Text(
+                        "Android may block this for apps installed outside the Play Store. Open App info, tap the ⋮ menu, choose \"Allow restricted settings\", then try again.",
+                        style = body(14, color = Palette.InkSoft),
+                    )
+                    OutlineButton("Open App info", onAppInfo, Modifier.fillMaxWidth(), height = 46.dp)
+                }
+            }
             Column(
                 Modifier
                     .fillMaxWidth()
@@ -177,23 +200,6 @@ fun PermissionScreen(onBack: () -> Unit, onGrant: () -> Unit, onAppInfo: () -> U
                 CheckLine("What you watch, post or chat about", false)
                 CheckLine("Your contacts, photos or location", false)
                 CheckLine("Your app-by-app history, on any server", false)
-            }
-            if (tried && !granted) {
-                Column(
-                    Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(20.dp))
-                        .background(Palette.Butter)
-                        .padding(18.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    Text("Switch greyed out?", style = display(18, FontWeight.Bold, tracking = 0.0))
-                    Text(
-                        "Android may block this for apps installed outside the Play Store. Open App info, tap the ⋮ menu, choose \"Allow restricted settings\", then try again.",
-                        style = body(14, color = Palette.InkSoft),
-                    )
-                    OutlineButton("Open App info", onAppInfo, Modifier.fillMaxWidth(), height = 46.dp)
-                }
             }
             Spacer(Modifier.height(8.dp))
         }

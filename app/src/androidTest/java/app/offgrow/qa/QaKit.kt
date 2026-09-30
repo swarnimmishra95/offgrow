@@ -88,7 +88,16 @@ object Qa {
 
     // ---------- screenshots ----------
 
+    /** The current test's Compose rule, so screenshots wait for the latest frame. */
+    @Volatile
+    var compose: ComposeTestRule? = null
+
     fun shot(name: String, caption: String = "") {
+        // Compose tests drive frames from a test clock; sync it so the screen shows the latest state.
+        try {
+            compose?.waitForIdle()
+        } catch (_: Throwable) {
+        }
         instrumentation.waitForIdleSync()
         SystemClock.sleep(700)
         val bmp = instrumentation.uiAutomation.takeScreenshot()

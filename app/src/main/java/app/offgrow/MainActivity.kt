@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             OffgrowTheme {
-                OffgrowRoot(vm = vm, openUsageSettings = ::openUsageSettings)
+                OffgrowRoot(vm = vm, openUsageSettings = ::openUsageSettings, openAppInfo = ::openAppInfo)
             }
         }
         // Lend our window to the garden renderer while the app is open.
@@ -44,6 +44,13 @@ class MainActivity : ComponentActivity() {
         val mine = findViewById<ViewGroup>(android.R.id.content)
         if (GardenRenderer.host?.get() === mine) GardenRenderer.host = null
         super.onDestroy()
+    }
+
+    private fun openAppInfo() {
+        try {
+            startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
+        } catch (_: Exception) {
+        }
     }
 
     private fun openUsageSettings() {

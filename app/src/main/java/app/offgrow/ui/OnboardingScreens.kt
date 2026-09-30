@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -75,26 +76,32 @@ fun WelcomeScreen(onStart: () -> Unit) {
             .statusBarsPadding()
             .navigationBarsPadding()
             .padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 24.dp),
-        verticalArrangement = Arrangement.spacedBy(20.dp),
     ) {
-        Box(Modifier.height(32.dp), contentAlignment = Alignment.CenterStart) { Wordmark() }
-        Image(
-            painter = painterResource(R.drawable.hero_garden),
-            contentDescription = "A cottage garden in full bloom with a picket fence, rose arch and stepping-stone path",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .fillMaxWidth()
+        Column(
+            Modifier
                 .weight(1f)
-                .clip(RoundedCornerShape(topStart = 171.dp, topEnd = 171.dp, bottomStart = 28.dp, bottomEnd = 28.dp)),
-        )
-        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Text("Grow what you don't scroll.", style = display(40, tracking = -0.035, lineHeight = 1.02))
-            Text(
-                "A garden that's yours. Every good day away from your phone plants a new flower. Doomscroll and it wilts.",
-                style = body(16, color = Palette.Body, lineHeight = 1.45),
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(20.dp),
+        ) {
+            Box(Modifier.height(32.dp), contentAlignment = Alignment.CenterStart) { Wordmark() }
+            Image(
+                painter = painterResource(R.drawable.hero_garden),
+                contentDescription = "A cottage garden in full bloom with a picket fence, rose arch and stepping-stone path",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .aspectRatio(0.9f)
+                    .clip(RoundedCornerShape(topStart = 171.dp, topEnd = 171.dp, bottomStart = 28.dp, bottomEnd = 28.dp)),
             )
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text("Grow what you don't scroll.", style = display(40, tracking = -0.035, lineHeight = 1.02))
+                Text(
+                    "A garden that's yours. Every good day away from your phone plants a new flower. Doomscroll and it wilts.",
+                    style = body(16, color = Palette.Body, lineHeight = 1.45),
+                )
+            }
         }
-        PrimaryButton("Plant my garden", onStart)
+        PrimaryButton("Plant my garden", onStart, modifier = Modifier.padding(top = 16.dp))
     }
 }
 
@@ -112,7 +119,8 @@ private fun CheckLine(text: String, good: Boolean) {
 }
 
 @Composable
-fun PermissionScreen(onBack: () -> Unit, onGrant: () -> Unit, granted: Boolean, onContinue: () -> Unit) {
+fun PermissionScreen(onBack: () -> Unit, onGrant: () -> Unit, onAppInfo: () -> Unit, granted: Boolean, onContinue: () -> Unit) {
+    var tried by rememberSaveable { mutableStateOf(false) }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -170,6 +178,23 @@ fun PermissionScreen(onBack: () -> Unit, onGrant: () -> Unit, granted: Boolean, 
                 CheckLine("Your contacts, photos or location", false)
                 CheckLine("Your app-by-app history, on any server", false)
             }
+            if (tried && !granted) {
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(20.dp))
+                        .background(Palette.Butter)
+                        .padding(18.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Text("Switch greyed out?", style = display(18, FontWeight.Bold, tracking = 0.0))
+                    Text(
+                        "Android may block this for apps installed outside the Play Store. Open App info, tap the ⋮ menu, choose \"Allow restricted settings\", then try again.",
+                        style = body(14, color = Palette.InkSoft),
+                    )
+                    OutlineButton("Open App info", onAppInfo, Modifier.fillMaxWidth(), height = 46.dp)
+                }
+            }
             Spacer(Modifier.height(8.dp))
         }
         Column(verticalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.padding(top = 12.dp)) {
@@ -182,7 +207,10 @@ fun PermissionScreen(onBack: () -> Unit, onGrant: () -> Unit, granted: Boolean, 
                     modifier = Modifier.fillMaxWidth(),
                 )
             } else {
-                PrimaryButton("Grant usage access", onGrant)
+                PrimaryButton("Grant usage access", {
+                    tried = true
+                    onGrant()
+                })
                 Text(
                     "Opens Android Settings. Find Offgrow, turn it on, then come back.",
                     style = body(13, color = Palette.Muted),

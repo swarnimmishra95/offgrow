@@ -83,6 +83,7 @@ fun PlantScreen(state: GardenState, onClose: () -> Unit, onPlant: (kind: String,
     val first = state.flowers.isEmpty()
     var selected by rememberSaveable { mutableStateOf("sunflower") }
     var note by rememberSaveable { mutableStateOf("") }
+    var planting by remember { mutableStateOf(false) }
     val seedRecord: DayRecord? = state.seedDay?.let { d -> state.days.lastOrNull { it.day == d } }
     val growing = state.aliveFlowers.map { it.kind }.toSet()
 
@@ -180,9 +181,15 @@ fun PlantScreen(state: GardenState, onClose: () -> Unit, onPlant: (kind: String,
             }
         }
         PrimaryButton(
-            "Plant ${Rules.plantable(selected).label.lowercase()}",
-            { onPlant(selected, note) },
+            if (planting) "Planting…" else "Plant ${Rules.plantable(selected).label.lowercase()}",
+            {
+                if (!planting) {
+                    planting = true
+                    onPlant(selected, note)
+                }
+            },
             modifier = Modifier.padding(top = 12.dp),
+            enabled = !planting && state.pendingSeeds > 0,
         )
     }
 }

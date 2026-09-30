@@ -16,6 +16,8 @@ import app.offgrow.garden.Rules
 import app.offgrow.garden.Snapshot
 import app.offgrow.usage.DayStats
 import app.offgrow.usage.UsageReader
+import android.util.Log
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -71,13 +73,30 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
         }
     }
 
+    /** Bumped on every change, so results computed from older data are dropped. */
+    private var generation = 0
+    private var refreshAgain = false
+
     fun refresh() {
-        if (refreshJob?.isActive == true) return
+        if (refreshJob?.isActive == true) {
+            refreshAgain = true
+            return
+        }
         refreshJob = viewModelScope.launch {
             _ui.update { it.copy(refreshing = true) }
             try {
-                val snap = GardenEngine.refresh(app, render = true)
-                show(snap)
+                do {
+                    refreshAgain = false
+                    val g = generation
+                    try {
+                        val snap = GardenEngine.refresh(app, render = true, onScored = { if (g == generation) show(it) })
+                        if (g == generation) show(snap) else refreshAgain = true
+                    } catch (e: CancellationException) {
+                        throw e
+                    } catch (e: Exception) {
+                        Log.w("AppViewModel", "refresh failed", e)
+                    }
+                } while (refreshAgain)
             } finally {
                 _ui.update { it.copy(refreshing = false) }
             }
@@ -111,13 +130,19 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
         }
     }
 
-    private fun change(then: (() -> Unit)? = null, f: (GardenState) -> GardenState) {
+    private fun change(then: ((GardenState) -> Unit)? = null, f: (GardenState) -> GardenState) {
         viewModelScope.launch {
-            val next = GardenEngine.update(app, f)
+            val next = try {
+                GardenEngine.update(app, f)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.w("AppViewModel", "change failed", e)
+                return@launch
+            }
+            generation++
             _ui.update { it.copy(state = next) }
-            then?.invoke()
-            refreshJob?.join()
-            refreshJob = null
+            then?.invoke(next)
             refresh()
         }
     }
@@ -135,8 +160,8 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
         )
     }
 
-    /** Plant a flower from a pending seed. Returns the new flower's id. */
-    fun plant(kind: String, note: String, onPlanted: (String) -> Unit) {
+    /** Plant a flower from a pending seed. Calls back with the new flower's id, or null if there was no seed. */
+    fun plant(kind: String, note: String, onPlanted: (String?) -> Unit) {
         val id = UUID.randomUUID().toString()
         val today = LocalDate.now()
         val label = Rules.plantable(kind).label
@@ -147,7 +172,7 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
             note = note.trim().take(160),
             plantedDay = today.toString(),
         )
-        change(then = { onPlanted(id) }) { s -> Rules.plant(s, flower) }
+        change(then = { next -> onPlanted(if (next.flowers.any { it.id == id }) id else null) }) { s -> Rules.plant(s, flower) }
     }
 
     fun renameFlower(id: String, name: String) = change { s ->

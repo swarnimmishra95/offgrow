@@ -36,7 +36,7 @@ private object Screen {
 }
 
 @Composable
-fun OffgrowRoot(vm: AppViewModel, openUsageSettings: () -> Unit) {
+fun OffgrowRoot(vm: AppViewModel, openUsageSettings: () -> Unit, openAppInfo: () -> Unit) {
     val ui by vm.ui.collectAsStateWithLifecycle()
     val state = ui.state
     if (!ui.ready || state == null) {
@@ -97,6 +97,7 @@ fun OffgrowRoot(vm: AppViewModel, openUsageSettings: () -> Unit) {
                 Screen.PERMISSION -> PermissionScreen(
                     onBack = { screen = Screen.WELCOME },
                     onGrant = openUsageSettings,
+                    onAppInfo = openAppInfo,
                     granted = ui.hasAccess,
                     onContinue = { screen = Screen.SETUP },
                 )
@@ -119,7 +120,7 @@ fun OffgrowRoot(vm: AppViewModel, openUsageSettings: () -> Unit) {
                     onPlant = { kind, note ->
                         val first = state.flowers.isEmpty()
                         vm.plant(kind, note) { id ->
-                            if (first) screen = Screen.HOME else openFlower(id, Screen.HOME)
+                            if (first || id == null) screen = Screen.HOME else openFlower(id, Screen.HOME)
                         }
                     },
                 )

@@ -224,7 +224,7 @@ fun AppsScreen(vm: AppViewModel, onBack: () -> Unit) {
             Text("Loading your apps…", style = body(15, color = Palette.Muted), modifier = Modifier.padding(24.dp))
         } else {
             LazyColumn(
-                Modifier.fillMaxSize(),
+                Modifier.fillMaxSize().navigationBarsPadding(),
                 contentPadding = androidx.compose.foundation.layout.PaddingValues(start = 24.dp, end = 24.dp, bottom = 24.dp),
             ) {
                 items(list, key = { it.pkg }) { app ->

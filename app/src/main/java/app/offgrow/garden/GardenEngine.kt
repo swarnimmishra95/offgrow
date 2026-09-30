@@ -41,7 +41,11 @@ object GardenEngine {
      * Close finished days, work out today's live vitality, redraw the garden if anything
      * visible changed, and refresh the widgets.
      */
-    suspend fun refresh(context: Context, render: Boolean = true): Snapshot {
+    suspend fun refresh(
+        context: Context,
+        render: Boolean = true,
+        onScored: (suspend (Snapshot) -> Unit)? = null,
+    ): Snapshot {
         val app = context.applicationContext
         val store = Store(app)
         val reader = UsageReader(app)
@@ -80,6 +84,7 @@ object GardenEngine {
             val file = imageFile(app)
             Snapshot(state, access, stats, items, live, Band.of(live), file.takeIf { it.exists() }, file.lastModified())
         } }
+        onScored?.invoke(snap)
 
         var result = snap
         if (render) renderMutex.withLock {

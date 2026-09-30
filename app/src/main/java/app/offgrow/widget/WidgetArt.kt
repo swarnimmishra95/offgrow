@@ -69,6 +69,25 @@ object WidgetArt {
         val full = RectF(0f, 0f, w.toFloat(), h.toFloat())
         val wide = w.toFloat() / h >= 1.5f
 
+        if (info != null && info.onboarded && garden == null) {
+            // Garden picture not drawn yet: show today's status on paper.
+            val bg = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = PAPER }
+            c.drawRoundRect(full, radius, radius, bg)
+            val left = 16f * s
+            val width = w - 32f * s
+            val t = textPaint(display, 20f * s, INK)
+            fitText(t, info.title, width)
+            val st = textPaint(bodyBold, 14f * s, INK)
+            fitText(st, info.status, width)
+            var y = h / 2f - 18f * s
+            c.drawText(info.title, left, y, t)
+            y += 24f * s
+            c.drawText(info.status, left, y, st)
+            y += 14f * s
+            drawBar(c, RectF(left, y, w - 16f * s, y + 6f * s), info)
+            return out
+        }
+
         if (garden == null || info == null || !info.onboarded) {
             val bg = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = PAPER }
             c.drawRoundRect(full, radius, radius, bg)

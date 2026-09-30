@@ -56,7 +56,14 @@ object GardenRenderer {
     private suspend fun renderOnMain(context: Context, engine: String, cfg: JSONObject, size: Int): ByteArray? =
         suspendCancellableCoroutine { cont ->
             val main = Handler(Looper.getMainLooper())
-            val web = WebView(context)
+            val web = try {
+                WebView(context)
+            } catch (t: Throwable) {
+                // Android System WebView missing, disabled or mid-update.
+                Log.w(TAG, "WebView unavailable", t)
+                cont.resume(null)
+                return@suspendCancellableCoroutine
+            }
             var finished = false
             val parent = host?.get()
 

@@ -123,7 +123,7 @@ class UsageReader(private val context: Context) {
 
         fun overlap(a: Long, b: Long, lo: Long, hi: Long): Long = max(0L, min(b, hi) - max(a, lo))
 
-        fun addSpan(pkg: String, a: Long, b: Long) {
+        fun addSpan(pkg: String, a: Long, b: Long, unlocked: Boolean) {
             if (b <= a) return
             val inDay = overlap(a, b, dayStart, end)
             if (inDay > 0) {
@@ -133,7 +133,8 @@ class UsageReader(private val context: Context) {
                     socialSpans += longArrayOf(max(a, dayStart), min(b, end))
                 }
             }
-            nightMs += overlap(a, b, nightStart, min(nightEnd, end))
+            // Alarms and incoming calls show over the lock screen; only count night use after an unlock.
+            if (unlocked) nightMs += overlap(a, b, nightStart, min(nightEnd, end))
             if (b > wakeFloor && a < end) {
                 val s = max(a, wakeFloor)
                 if (firstUseAfterFloor == null || s < firstUseAfterFloor!!) firstUseAfterFloor = s
@@ -142,11 +143,15 @@ class UsageReader(private val context: Context) {
 
         val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
         var curPkg: String? = null
+        var curCls: String? = null
         var curStart = 0L
+        var curUnlocked = true
+        var unlocked = true
         fun closeCurrent(t: Long) {
             val p = curPkg
-            if (p != null) addSpan(p, curStart, t)
+            if (p != null) addSpan(p, curStart, t, curUnlocked)
             curPkg = null
+            curCls = null
         }
 
         try {
@@ -162,12 +167,22 @@ class UsageReader(private val context: Context) {
                             closeCurrent(t)
                             curPkg = pkg
                             curStart = t
+                            curUnlocked = unlocked
                         }
+                        curCls = e.className
                     }
-                    EVENT_PAUSED, EVENT_STOPPED -> if (curPkg == pkg) closeCurrent(t)
+                    // Within one app, screen A pauses, screen B resumes, then A stops.
+                    // Only the pause of the screen that's actually showing ends the span.
+                    EVENT_PAUSED -> if (curPkg == pkg && (curCls == null || e.className == curCls)) closeCurrent(t)
                     EVENT_SCREEN_OFF, EVENT_SHUTDOWN -> closeCurrent(t)
+                    EVENT_KEYGUARD_SHOWN -> {
+                        sawKeyguardEvent = true
+                        unlocked = false
+                    }
                     EVENT_KEYGUARD_HIDDEN -> {
                         sawKeyguardEvent = true
+                        unlocked = true
+                        if (curPkg != null) curUnlocked = true
                         if (t in dayStart until end) pickups++
                         if (t >= wakeFloor && t < end && firstUnlockAfterFloor == null) firstUnlockAfterFloor = t
                     }
@@ -205,8 +220,8 @@ class UsageReader(private val context: Context) {
         private const val EVENT_RESUMED = 1       // ACTIVITY_RESUMED / MOVE_TO_FOREGROUND
         private const val EVENT_PAUSED = 2        // ACTIVITY_PAUSED / MOVE_TO_BACKGROUND
         private const val EVENT_SCREEN_OFF = 16   // SCREEN_NON_INTERACTIVE (API 28)
+        private const val EVENT_KEYGUARD_SHOWN = 17  // lock screen showing (API 28)
         private const val EVENT_KEYGUARD_HIDDEN = 18 // phone unlocked (API 28)
-        private const val EVENT_STOPPED = 23      // ACTIVITY_STOPPED (API 29)
         private const val EVENT_SHUTDOWN = 26     // DEVICE_SHUTDOWN (API 29)
     }
 }

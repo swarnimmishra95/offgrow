@@ -1,0 +1,5 @@
+11
+30
+Physical size: 1080x2400
+Physical density: 420
+    versionName=83.0.4103.106

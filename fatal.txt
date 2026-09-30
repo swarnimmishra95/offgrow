@@ -1,0 +1,667 @@
+9:09-30 18:22:19.018  5604  5604 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-09-30 18:22:19.019  5604  5604 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+11-09-30 18:22:19.019  5604  5604 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+12:09-30 18:22:19.019  5604  5604 I AndroidRuntime: Using default boot image
+13-09-30 18:22:19.019  5604  5604 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+14:09-30 18:22:19.019  5604  5604 I AndroidRuntime: Leaving lock profiling enabled
+15-09-30 18:22:19.019  5604  5604 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+16-09-30 18:22:19.020  5604  5604 I app_process: Core platform API reporting enabled, enforcing=false
+17-09-30 18:22:19.016  5604  5604 W app_process: type=1400 audit(0.0:53): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+18-09-30 18:22:19.016  5604  5604 I chatty  : uid=2000(shell) app_process identical 2 lines
+19-09-30 18:22:19.016  5604  5604 W app_process: type=1400 audit(0.0:56): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+20-09-30 18:22:19.062  5604  5604 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+21-09-30 18:22:19.062  5604  5604 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+22-09-30 18:22:19.066  5604  5604 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+23-09-30 18:22:19.067  5604  5604 I app_process: The ClassLoaderContext is a special shared library.
+24-09-30 18:22:19.072  5604  5604 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+25:09-30 18:22:19.074  5604  5604 D AndroidRuntime: Calling main entry com.android.commands.svc.Svc
+26:09-30 18:22:19.076  5604  5604 D AndroidRuntime: Shutting down VM
+27:09-30 18:22:19.519  5618  5618 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+28-09-30 18:22:19.520  5618  5618 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+29-09-30 18:22:19.520  5618  5618 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+30:09-30 18:22:19.520  5618  5618 I AndroidRuntime: Using default boot image
+31-09-30 18:22:19.520  5618  5618 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+32:09-30 18:22:19.520  5618  5618 I AndroidRuntime: Leaving lock profiling enabled
+33-09-30 18:22:19.520  5618  5618 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+34-09-30 18:22:19.521  5618  5618 I app_process: Core platform API reporting enabled, enforcing=false
+35-09-30 18:22:19.516  5618  5618 W app_process: type=1400 audit(0.0:57): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+36-09-30 18:22:19.516  5618  5618 I chatty  : uid=2000(shell) app_process identical 2 lines
+37-09-30 18:22:19.516  5618  5618 W app_process: type=1400 audit(0.0:60): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+38-09-30 18:22:19.552  5618  5618 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+39-09-30 18:22:19.552  5618  5618 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+40-09-30 18:22:19.555  5618  5618 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+41-09-30 18:22:19.555  5618  5618 I app_process: The ClassLoaderContext is a special shared library.
+42-09-30 18:22:19.560  5618  5618 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+43:09-30 18:22:19.562  5618  5618 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+44:09-30 18:22:19.563  5618  5618 D AndroidRuntime: Shutting down VM
+45-09-30 18:22:19.653   497   497 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10140; state: DISABLED
+46-09-30 18:22:19.653   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10140; state: DISABLED
+47-09-30 18:22:19.654  1496  5159 I Vision  : Requesting optional module download of ocr.
+48-09-30 18:22:19.654  1496  5159 I Vision  : Checking for download completion for 103020 -- ocr
+49-09-30 18:22:19.656   285   285 D Zygote  : Forked child process 5631
+50-09-30 18:22:19.657   497   537 I ActivityManager: Start proc 5631:com.google.android.apps.youtube.music/u0a140 for service {com.google.android.apps.youtube.music/androidx.work.impl.background.systemjob.SystemJobService}
+51-09-30 18:22:19.659  5631  5631 W s.youtube.musi: Unexpected CPU variant for X86 using defaults: x86_64
+52-09-30 18:22:19.660   400   409 I adbd    : jdwp connection from 5631
+53-09-30 18:22:19.665  5631  5631 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+54-09-30 18:22:19.666  5631  5631 I s.youtube.musi: The ClassLoaderContext is a special shared library.
+55-09-30 18:22:19.666  5631  5631 I s.youtube.musi: The ClassLoaderContext is a special shared library.
+56-09-30 18:22:19.667  5631  5631 D nativeloader: classloader namespace configured for unbundled product apk. library_path=/product/app/YouTubeMusicPrebuilt/lib/x86_64:/product/app/YouTubeMusicPrebuilt/YouTubeMusicPrebuilt.apk!/lib/x86_64:/product/lib64:/system/product/lib64
+57-09-30 18:22:19.668  5631  5631 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+58-09-30 18:22:19.668  5631  5631 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+59-09-30 18:22:19.708  5631  5660 W DynamiteModule: Local module descriptor class for providerinstaller not found.
+60-09-30 18:22:19.708  1166  3645 W ProviderHelper: Unknown dynamite feature providerinstaller
+61-09-30 18:22:19.711  5631  5664 I TetheringManager: registerTetheringEventCallback:com.google.android.apps.youtube.music
+62-09-30 18:22:19.711  5631  5660 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module found. Local version is 0 and remote version is 0.
+63-09-30 18:22:19.714  5631  5660 I s.youtube.musi: The ClassLoaderContext is a special shared library.
+64-09-30 18:22:19.720   497  1896 D ConnectivityService: requestNetwork for uid/pid:10140/5631 NetworkRequest [ TRACK_DEFAULT id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10140 AdministratorUids: [] RequestorUid: 10140 RequestorPackageName: com.google.android.apps.youtube.music] ]
+65-09-30 18:22:19.720   497   645 D ConnectivityService: NetReassign [40 : null → 101]
+66-09-30 18:22:19.720   497   641 D WifiNetworkFactory: got request NetworkRequest [ TRACK_DEFAULT id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10140 AdministratorUids: [] RequestorUid: 10140 RequestorPackageName: com.google.android.apps.youtube.music] ] with score 60 and providerId 3
+67-09-30 18:22:19.720   497   641 D UntrustedWifiNetworkFactory: got request NetworkRequest [ TRACK_DEFAULT id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10140 AdministratorUids: [] RequestorUid: 10140 RequestorPackageName: com.google.android.apps.youtube.music] ] with score 60 and providerId 3
+68-09-30 18:22:19.720  1027  1027 D PhoneSwitcherNetworkRequstListener: got request NetworkRequest [ TRACK_DEFAULT id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10140 AdministratorUids: [] RequestorUid: 10140 RequestorPackageName: com.google.android.apps.youtube.music] ] with score 60 and providerId 3
+69-09-30 18:22:19.721   497   645 D ConnectivityService: NetReassign [no changes]
+--
+128:09-30 18:22:20.076  5765  5765 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+129-09-30 18:22:20.077  5765  5765 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+130-09-30 18:22:20.078  5765  5765 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+131:09-30 18:22:20.078  5765  5765 I AndroidRuntime: Using default boot image
+132-09-30 18:22:20.078  5765  5765 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+133:09-30 18:22:20.078  5765  5765 I AndroidRuntime: Leaving lock profiling enabled
+134-09-30 18:22:20.078  5765  5765 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+135-09-30 18:22:20.078  5765  5765 I app_process: Core platform API reporting enabled, enforcing=false
+136-09-30 18:22:20.076  5765  5765 W app_process: type=1400 audit(0.0:61): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+137-09-30 18:22:20.076  5765  5765 I chatty  : uid=2000(shell) app_process identical 2 lines
+138-09-30 18:22:20.076  5765  5765 W app_process: type=1400 audit(0.0:64): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+139-09-30 18:22:20.108  5765  5765 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+140-09-30 18:22:20.108  5765  5765 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+141-09-30 18:22:20.111  5765  5765 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+142-09-30 18:22:20.112  5765  5765 I app_process: The ClassLoaderContext is a special shared library.
+143-09-30 18:22:20.118  5765  5765 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+144:09-30 18:22:20.120  5765  5765 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+145-09-30 18:22:20.122   497  1896 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+146-09-30 18:22:20.124   497  1896 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+147-09-30 18:22:20.124   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+148-09-30 18:22:20.128   285   285 D Zygote  : Forked child process 5778
+149-09-30 18:22:20.128   497   537 I ActivityManager: Start proc 5778:app.offgrow/u0a167 for added application app.offgrow
+150-09-30 18:22:20.130  5778  5778 I app.offgrow: Late-enabling -Xcheck:jni
+151-09-30 18:22:20.137  5778  5778 I app.offgrow: Unquickening 12 vdex files!
+152-09-30 18:22:20.137  5778  5778 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+153-09-30 18:22:20.139   400   409 I adbd    : jdwp connection from 5778
+154-09-30 18:22:20.150  5778  5778 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+155-09-30 18:22:20.152  5778  5778 I app.offgrow: The ClassLoaderContext is a special shared library.
+156-09-30 18:22:20.152  5778  5778 I chatty  : uid=10167(app.offgrow) identical 1 line
+157-09-30 18:22:20.153  5778  5778 I app.offgrow: The ClassLoaderContext is a special shared library.
+158-09-30 18:22:20.154  5778  5778 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+159-09-30 18:22:20.154  5778  5778 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+160-09-30 18:22:20.154  5778  5778 W app.offgrow: NOTE: This wastes RAM and hurts startup performance.
+161-09-30 18:22:20.154  5778  5778 W app.offgrow: Found duplicated class when checking oat files: 'Ljunit/framework/Assert;' in /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk and /system/framework/android.test.base.jar
+162-09-30 18:22:20.175  5778  5778 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk*576142575:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes2.dex*2726892929:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes3.dex*1612290671:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes4.dex*1062045889])
+163-09-30 18:22:20.181  5778  5778 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+164-09-30 18:22:20.181  5778  5778 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+165-09-30 18:22:20.181  5778  5778 I app.offgrow: The ClassLoaderContext is a special shared library.
+166-09-30 18:22:20.182  5778  5778 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+167-09-30 18:22:20.182  5778  5778 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+168-09-30 18:22:20.182  5778  5778 I app.offgrow: The ClassLoaderContext is a special shared library.
+169-09-30 18:22:20.183  5778  5778 I chatty  : uid=10167(app.offgrow) identical 2 lines
+--
+2125:09-30 18:23:09.211  5765  5765 I AndroidRuntime: VM exiting with result code 0.
+2126-09-30 18:23:09.459   348   348 E Layer   : [Surface(name=Task=1)/@0x8fe47ea - animation-leash#0] No local sync point found
+2127-09-30 18:23:09.459   348   348 E Layer   : [Surface(name=Task=9)/@0xdb21bf - animation-leash#0] No local sync point found
+2128-09-30 18:23:09.707     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+2129-09-30 18:23:09.710     0     0 I binder  : undelivered transaction 445829, process died.
+2130-09-30 18:23:09.720     0     0 I binder  : undelivered transaction 445843, process died.
+2131-09-30 18:23:09.503   497   530 W ActivityManager: setHasOverlayUi called on unknown pid: 5778
+2132-09-30 18:23:09.723     0     0 I binder  : undelivered transaction 445942, process died.
+2133-09-30 18:23:09.515   285   285 I Zygote  : Process 5778 exited due to signal 9 (Killed)
+2134-09-30 18:23:09.735     0     0 I binder  : undelivered transaction 445834, process died.
+2135-09-30 18:23:09.740     0     0 I binder  : undelivered transaction 445941, process died.
+2136-09-30 18:23:09.556   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 5778 in 365ms
+2137:09-30 18:23:09.621  6363  6363 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+2138-09-30 18:23:09.631  6363  6363 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+2139-09-30 18:23:09.631  6363  6363 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+2140:09-30 18:23:09.631  6363  6363 I AndroidRuntime: Using default boot image
+2141-09-30 18:23:09.631  6363  6363 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+2142:09-30 18:23:09.631  6363  6363 I AndroidRuntime: Leaving lock profiling enabled
+2143-09-30 18:23:09.632  6363  6363 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+2144-09-30 18:23:09.633  6363  6363 I app_process: Core platform API reporting enabled, enforcing=false
+2145-09-30 18:23:09.620  6363  6363 W app_process: type=1400 audit(0.0:67): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+2146-09-30 18:23:09.628  6363  6363 I chatty  : uid=2000(shell) app_process identical 2 lines
+2147-09-30 18:23:09.628  6363  6363 W app_process: type=1400 audit(0.0:70): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+2148-09-30 18:23:09.701  6363  6363 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+2149-09-30 18:23:09.701  6363  6363 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+2150-09-30 18:23:09.704  6363  6363 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+2151-09-30 18:23:09.704  6363  6363 I app_process: The ClassLoaderContext is a special shared library.
+2152-09-30 18:23:09.710  6363  6363 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+2153:09-30 18:23:09.712  6363  6363 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+2154-09-30 18:23:09.714   497  1758 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+2155-09-30 18:23:09.715   497  1758 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+2156-09-30 18:23:09.715   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+2157-09-30 18:23:09.720   285   285 D Zygote  : Forked child process 6376
+2158-09-30 18:23:09.720   497   537 I ActivityManager: Start proc 6376:app.offgrow/u0a167 for added application app.offgrow
+2159-09-30 18:23:09.724  6376  6376 I app.offgrow: Late-enabling -Xcheck:jni
+2160-09-30 18:23:09.734  6376  6376 I app.offgrow: Unquickening 12 vdex files!
+2161-09-30 18:23:09.734  6376  6376 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+2162-09-30 18:23:09.737   400   409 I adbd    : jdwp connection from 6376
+2163-09-30 18:23:09.750  6376  6376 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+2164-09-30 18:23:09.751  6376  6376 I app.offgrow: The ClassLoaderContext is a special shared library.
+2165-09-30 18:23:09.751  6376  6376 I chatty  : uid=10167(app.offgrow) identical 1 line
+2166-09-30 18:23:09.752  6376  6376 I app.offgrow: The ClassLoaderContext is a special shared library.
+2167-09-30 18:23:09.752  6376  6376 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+2168-09-30 18:23:09.752  6376  6376 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+2169-09-30 18:23:09.752  6376  6376 W app.offgrow: NOTE: This wastes RAM and hurts startup performance.
+2170-09-30 18:23:09.752  6376  6376 W app.offgrow: Found duplicated class when checking oat files: 'Ljunit/framework/Assert;' in /system/framework/android.test.base.jar and /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+2171-09-30 18:23:09.773  6376  6376 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk*576142575:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes2.dex*2726892929:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes3.dex*1612290671:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes4.dex*1062045889])
+2172-09-30 18:23:09.780  6376  6376 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+2173-09-30 18:23:09.780  6376  6376 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+2174-09-30 18:23:09.780  6376  6376 I app.offgrow: The ClassLoaderContext is a special shared library.
+2175-09-30 18:23:09.781  6376  6376 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+2176-09-30 18:23:09.781  6376  6376 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+2177-09-30 18:23:09.781  6376  6376 I app.offgrow: The ClassLoaderContext is a special shared library.
+2178-09-30 18:23:09.782  6376  6376 I chatty  : uid=10167(app.offgrow) identical 2 lines
+--
+3464:09-30 18:25:06.311  6363  6363 I AndroidRuntime: VM exiting with result code 0.
+3465-09-30 18:25:06.812     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+3466-09-30 18:25:06.814     0     0 I binder  : undelivered transaction 479164, process died.
+3467-09-30 18:25:06.598   497   530 W ActivityManager: setHasOverlayUi called on unknown pid: 6376
+3468-09-30 18:25:06.634   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 6376 in 325ms
+3469-09-30 18:25:06.643   285   285 I Zygote  : Process 6376 exited due to signal 9 (Killed)
+3470:09-30 18:25:06.700  6797  6797 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+3471-09-30 18:25:06.715  6797  6797 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+3472-09-30 18:25:06.715  6797  6797 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+3473:09-30 18:25:06.715  6797  6797 I AndroidRuntime: Using default boot image
+3474-09-30 18:25:06.715  6797  6797 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+3475:09-30 18:25:06.715  6797  6797 I AndroidRuntime: Leaving lock profiling enabled
+3476-09-30 18:25:06.715  6797  6797 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+3477-09-30 18:25:06.719  6797  6797 I app_process: Core platform API reporting enabled, enforcing=false
+3478-09-30 18:25:06.700  6797  6797 W app_process: type=1400 audit(0.0:73): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+3479-09-30 18:25:06.700  6797  6797 I chatty  : uid=2000(shell) app_process identical 2 lines
+3480-09-30 18:25:06.700  6797  6797 W app_process: type=1400 audit(0.0:76): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+3481-09-30 18:25:06.776  6797  6797 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+3482-09-30 18:25:06.777  6797  6797 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+3483-09-30 18:25:06.780  6797  6797 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+3484-09-30 18:25:06.781  6797  6797 I app_process: The ClassLoaderContext is a special shared library.
+3485-09-30 18:25:06.791  6797  6797 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+3486:09-30 18:25:06.793  6797  6797 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+3487-09-30 18:25:06.795   497  1758 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+3488-09-30 18:25:06.796   497  1758 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+3489-09-30 18:25:06.796   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+3490-09-30 18:25:06.799   285   285 D Zygote  : Forked child process 6810
+3491-09-30 18:25:06.800   497   537 I ActivityManager: Start proc 6810:app.offgrow/u0a167 for added application app.offgrow
+3492-09-30 18:25:06.802  6810  6810 I app.offgrow: Late-enabling -Xcheck:jni
+3493-09-30 18:25:06.808  6810  6810 I app.offgrow: Unquickening 12 vdex files!
+3494-09-30 18:25:06.809  6810  6810 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+3495-09-30 18:25:06.810   400   409 I adbd    : jdwp connection from 6810
+3496-09-30 18:25:06.821  6810  6810 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+3497-09-30 18:25:06.822  6810  6810 I app.offgrow: The ClassLoaderContext is a special shared library.
+3498-09-30 18:25:06.822  6810  6810 I chatty  : uid=10167(app.offgrow) identical 1 line
+3499-09-30 18:25:06.823  6810  6810 I app.offgrow: The ClassLoaderContext is a special shared library.
+3500-09-30 18:25:06.823  6810  6810 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+3501-09-30 18:25:06.823  6810  6810 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+3502-09-30 18:25:06.823  6810  6810 W app.offgrow: NOTE: This wastes RAM and hurts startup performance.
+3503-09-30 18:25:06.823  6810  6810 W app.offgrow: Found duplicated class when checking oat files: 'Ljunit/framework/Assert;' in /system/framework/android.test.base.jar and /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+3504-09-30 18:25:06.844  6810  6810 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk*576142575:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes2.dex*2726892929:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes3.dex*1612290671:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes4.dex*1062045889])
+3505-09-30 18:25:06.850  6810  6810 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+3506-09-30 18:25:06.850  6810  6810 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+3507-09-30 18:25:06.851  6810  6810 I app.offgrow: The ClassLoaderContext is a special shared library.
+3508-09-30 18:25:06.851  6810  6810 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+3509-09-30 18:25:06.851  6810  6810 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+3510-09-30 18:25:06.851  6810  6810 I app.offgrow: The ClassLoaderContext is a special shared library.
+3511-09-30 18:25:06.852  6810  6810 I chatty  : uid=10167(app.offgrow) identical 2 lines
+--
+6437:09-30 18:27:55.262  6797  6797 I AndroidRuntime: VM exiting with result code 0.
+6438-09-30 18:27:55.263   497  1145 I ActivityManager: Killing 6810:app.offgrow/u0a167 (adj 0): stop app.offgrow due to finished inst
+6439-09-30 18:27:55.622     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+6440-09-30 18:27:55.627     0     0 I binder  : undelivered transaction 549303, process died.
+6441-09-30 18:27:55.418   497   530 W ActivityManager: setHasOverlayUi called on unknown pid: 6810
+6442-09-30 18:27:55.420   285   285 I Zygote  : Process 6810 exited due to signal 9 (Killed)
+6443-09-30 18:27:55.464   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 6810 in 199ms
+6444:09-30 18:27:55.537  7851  7851 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+6445-09-30 18:27:55.559  7851  7851 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+6446-09-30 18:27:55.559  7851  7851 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+6447:09-30 18:27:55.559  7851  7851 I AndroidRuntime: Using default boot image
+6448-09-30 18:27:55.559  7851  7851 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+6449:09-30 18:27:55.559  7851  7851 I AndroidRuntime: Leaving lock profiling enabled
+6450-09-30 18:27:55.560  7851  7851 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+6451-09-30 18:27:55.561  7851  7851 I app_process: Core platform API reporting enabled, enforcing=false
+6452-09-30 18:27:55.536  7851  7851 W app_process: type=1400 audit(0.0:79): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+6453-09-30 18:27:55.556  7851  7851 I chatty  : uid=2000(shell) app_process identical 2 lines
+6454-09-30 18:27:55.556  7851  7851 W app_process: type=1400 audit(0.0:82): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+6455-09-30 18:27:55.632  7851  7851 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+6456-09-30 18:27:55.632  7851  7851 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+6457-09-30 18:27:55.636  7851  7851 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+6458-09-30 18:27:55.636  7851  7851 I app_process: The ClassLoaderContext is a special shared library.
+6459-09-30 18:27:55.651  7851  7851 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+6460:09-30 18:27:55.654  7851  7851 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+6461-09-30 18:27:55.659   497  1955 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+6462-09-30 18:27:55.659   497  1955 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+6463-09-30 18:27:55.660   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+6464-09-30 18:27:55.665   285   285 D Zygote  : Forked child process 7864
+6465-09-30 18:27:55.667   497   537 I ActivityManager: Start proc 7864:app.offgrow/u0a167 for added application app.offgrow
+6466-09-30 18:27:55.670  7864  7864 I app.offgrow: Late-enabling -Xcheck:jni
+6467-09-30 18:27:55.678  7864  7864 I app.offgrow: Unquickening 12 vdex files!
+6468-09-30 18:27:55.679  7864  7864 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+6469-09-30 18:27:55.682   400   409 I adbd    : jdwp connection from 7864
+6470-09-30 18:27:55.692  7864  7864 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+6471-09-30 18:27:55.693  7864  7864 I app.offgrow: The ClassLoaderContext is a special shared library.
+6472-09-30 18:27:55.694  7864  7864 I chatty  : uid=10167(app.offgrow) identical 1 line
+6473-09-30 18:27:55.694  7864  7864 I app.offgrow: The ClassLoaderContext is a special shared library.
+6474-09-30 18:27:55.694  7864  7864 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+6475-09-30 18:27:55.695  7864  7864 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+6476-09-30 18:27:55.695  7864  7864 W app.offgrow: NOTE: This wastes RAM and hurts startup performance.
+6477-09-30 18:27:55.695  7864  7864 W app.offgrow: Found duplicated class when checking oat files: 'Ljunit/framework/Assert;' in /system/framework/android.test.base.jar and /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+6478-09-30 18:27:55.716  7864  7864 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk*576142575:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes2.dex*2726892929:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes3.dex*1612290671:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes4.dex*1062045889])
+6479-09-30 18:27:55.722  7864  7864 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+6480-09-30 18:27:55.722  7864  7864 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+6481-09-30 18:27:55.723  7864  7864 I app.offgrow: The ClassLoaderContext is a special shared library.
+6482-09-30 18:27:55.723  7864  7864 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+6483-09-30 18:27:55.723  7864  7864 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+6484-09-30 18:27:55.723  7864  7864 I app.offgrow: The ClassLoaderContext is a special shared library.
+6485-09-30 18:27:55.724  7864  7864 I chatty  : uid=10167(app.offgrow) identical 2 lines
+--
+7116:09-30 18:29:36.859  7851  7851 I AndroidRuntime: VM exiting with result code 0.
+7117-09-30 18:29:36.859   348   348 E Layer   : [Surface(name=Task=1)/@0x8fe47ea - animation-leash#0] No local sync point found
+7118-09-30 18:29:36.859   348   348 E Layer   : [Surface(name=Task=39)/@0x1fa1224 - animation-leash#0] No local sync point found
+7119-09-30 18:29:36.893   285   285 I Zygote  : Process 7864 exited due to signal 9 (Killed)
+7120-09-30 18:29:36.906   497   530 W ActivityManager: setHasOverlayUi called on unknown pid: 7864
+7121-09-30 18:29:36.911   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 7864 in 45ms
+7122-09-30 18:29:37.010   348   348 E Layer   : [Surface(name=Task=1)/@0x8fe47ea - animation-leash#0] No local sync point found
+7123-09-30 18:29:37.010   348   348 E Layer   : [Surface(name=Task=39)/@0x1fa1224 - animation-leash#0] No local sync point found
+7124:09-30 18:29:37.239  8109  8109 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+7125-09-30 18:29:37.245  8109  8109 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+7126-09-30 18:29:37.245  8109  8109 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+7127:09-30 18:29:37.245  8109  8109 I AndroidRuntime: Using default boot image
+7128-09-30 18:29:37.245  8109  8109 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+7129:09-30 18:29:37.245  8109  8109 I AndroidRuntime: Leaving lock profiling enabled
+7130-09-30 18:29:37.245  8109  8109 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+7131-09-30 18:29:37.249  8109  8109 I app_process: Core platform API reporting enabled, enforcing=false
+7132-09-30 18:29:37.236  8109  8109 W app_process: type=1400 audit(0.0:83): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+7133-09-30 18:29:37.236  8109  8109 I chatty  : uid=2000(shell) app_process identical 2 lines
+7134-09-30 18:29:37.236  8109  8109 W app_process: type=1400 audit(0.0:86): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+7135-09-30 18:29:37.385  8109  8109 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+7136-09-30 18:29:37.385  8109  8109 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+7137-09-30 18:29:37.389  8109  8109 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+7138-09-30 18:29:37.389  8109  8109 I app_process: The ClassLoaderContext is a special shared library.
+7139-09-30 18:29:37.398  8109  8109 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+7140:09-30 18:29:37.401  8109  8109 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+7141-09-30 18:29:37.411   497  1708 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+7142-09-30 18:29:37.412   497  1708 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+7143-09-30 18:29:37.412   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+7144-09-30 18:29:37.419   285   285 D Zygote  : Forked child process 8122
+7145-09-30 18:29:37.419   497   537 I ActivityManager: Start proc 8122:app.offgrow/u0a167 for added application app.offgrow
+7146-09-30 18:29:37.424  8122  8122 I app.offgrow: Late-enabling -Xcheck:jni
+7147-09-30 18:29:37.435  8122  8122 I app.offgrow: Unquickening 12 vdex files!
+7148-09-30 18:29:37.435  8122  8122 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+7149-09-30 18:29:37.437   400   409 I adbd    : jdwp connection from 8122
+7150-09-30 18:29:37.458  8122  8122 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+7151-09-30 18:29:37.460  8122  8122 I app.offgrow: The ClassLoaderContext is a special shared library.
+7152-09-30 18:29:37.460  8122  8122 I chatty  : uid=10167(app.offgrow) identical 1 line
+7153-09-30 18:29:37.461  8122  8122 I app.offgrow: The ClassLoaderContext is a special shared library.
+7154-09-30 18:29:37.461  8122  8122 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+7155-09-30 18:29:37.461  8122  8122 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+7156-09-30 18:29:37.461  8122  8122 W app.offgrow: NOTE: This wastes RAM and hurts startup performance.
+7157-09-30 18:29:37.461  8122  8122 W app.offgrow: Found duplicated class when checking oat files: 'Ljunit/framework/Assert;' in /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk and /system/framework/android.test.base.jar
+7158-09-30 18:29:37.483  8122  8122 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk*576142575:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes2.dex*2726892929:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes3.dex*1612290671:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes4.dex*1062045889])
+7159-09-30 18:29:37.490  8122  8122 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+7160-09-30 18:29:37.490  8122  8122 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+7161-09-30 18:29:37.491  8122  8122 I app.offgrow: The ClassLoaderContext is a special shared library.
+7162-09-30 18:29:37.491  8122  8122 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+7163-09-30 18:29:37.491  8122  8122 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+7164-09-30 18:29:37.492  8122  8122 I app.offgrow: The ClassLoaderContext is a special shared library.
+7165-09-30 18:29:37.493  8122  8122 I chatty  : uid=10167(app.offgrow) identical 2 lines
+--
+8178:09-30 18:31:44.502  8109  8109 I AndroidRuntime: VM exiting with result code 0.
+8179-09-30 18:31:44.542   686   686 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+8180-09-30 18:31:44.682  8511  8511 I TetheringManager: registerTetheringEventCallback:com.google.android.googlequicksearchbox
+8181-09-30 18:31:44.683  8511  8511 I Search.LoginHelperImpl: Getting accounts.
+8182-09-30 18:31:44.914     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+8183-09-30 18:31:44.916     0     0 I binder  : undelivered transaction 586265, process died.
+8184-09-30 18:31:44.703   285   285 I Zygote  : Process 8122 exited due to signal 9 (Killed)
+8185-09-30 18:31:44.703   497   530 W ActivityManager: setHasOverlayUi called on unknown pid: 8122
+8186-09-30 18:31:44.746   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 8122 in 292ms
+8187:09-30 18:31:44.780  8540  8540 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+8188-09-30 18:31:44.794  8540  8540 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+8189-09-30 18:31:44.794  8540  8540 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+8190:09-30 18:31:44.794  8540  8540 I AndroidRuntime: Using default boot image
+8191-09-30 18:31:44.794  8540  8540 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+8192:09-30 18:31:44.794  8540  8540 I AndroidRuntime: Leaving lock profiling enabled
+8193-09-30 18:31:44.794  8540  8540 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+8194-09-30 18:31:44.795  8540  8540 I app_process: Core platform API reporting enabled, enforcing=false
+8195-09-30 18:31:44.776  8540  8540 W app_process: type=1400 audit(0.0:89): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+8196-09-30 18:31:44.816  8511  8511 E OverlaySController: Calling with an invalid UID, the interface will not work
+8197-09-30 18:31:44.827  8511  8549 I SharedPreferencesProto: load shared preferences: file not found
+8198-09-30 18:31:44.792  8540  8540 W app_process: type=1400 audit(0.0:90): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+8199-09-30 18:31:44.792  8540  8540 W app_process: type=1400 audit(0.0:91): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+8200-09-30 18:31:44.859  8511  8545 I FedAssExpListener: Fed-ass not supported for signed out users.
+8201-09-30 18:31:44.859  8511  8545 I FedAssExpListener: Successfully processed experiments changed.
+8202-09-30 18:31:44.792  8540  8540 W app_process: type=1400 audit(0.0:92): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+8203-09-30 18:31:44.864  8540  8540 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+8204-09-30 18:31:44.864  8540  8540 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+8205-09-30 18:31:44.880  8540  8540 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+8206-09-30 18:31:44.881  8540  8540 I app_process: The ClassLoaderContext is a special shared library.
+8207-09-30 18:31:44.886  8540  8540 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+8208:09-30 18:31:44.888  8540  8540 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+8209-09-30 18:31:44.890   497  1896 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+8210-09-30 18:31:44.891   497  1896 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+8211-09-30 18:31:44.892   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+8212-09-30 18:31:44.895   285   285 D Zygote  : Forked child process 8562
+8213-09-30 18:31:44.896   497   537 I ActivityManager: Start proc 8562:app.offgrow/u0a167 for added application app.offgrow
+8214-09-30 18:31:44.900  8562  8562 I app.offgrow: Late-enabling -Xcheck:jni
+8215-09-30 18:31:44.900  8511  8537 I ModelDownloadListener: Schdedule model download
+8216-09-30 18:31:44.908  8562  8562 I app.offgrow: Unquickening 12 vdex files!
+8217-09-30 18:31:44.909  8562  8562 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+8218-09-30 18:31:44.912  8511  8537 I OpaEligibilityChecker: send OpaEligibilityChange broadcast to CommonBroadcastReceiver
+8219-09-30 18:31:44.915   400   409 I adbd    : jdwp connection from 8562
+8220-09-30 18:31:44.938  8511  8551 D libEGL  : loaded /vendor/lib/egl/libEGL_emulation.so
+8221-09-30 18:31:44.939  8511  8551 D libEGL  : loaded /vendor/lib/egl/libGLESv1_CM_emulation.so
+8222-09-30 18:31:44.940  8511  8551 D libEGL  : loaded /vendor/lib/egl/libGLESv2_emulation.so
+8223-09-30 18:31:44.976  8511  8551 D HostConnection: HostConnection::get() New Host Connection established 0xeb6a3940, tid 8551
+8224-09-30 18:31:44.979  8511  8551 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+8225-09-30 18:31:44.980   162   162 I hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device manifest.
+8226-09-30 18:31:44.981  8511  8551 D EGL_emulation: eglCreateContext: 0xeb6a39b0: maj 3 min 0 rcv 3
+8227-09-30 18:31:44.981  8511  8551 D EGL_emulation: eglMakeCurrent: 0xeb6a39b0: ver 3 0 (tinfo 0xebb37c30) (first time)
+8228-09-30 18:31:44.981  8562  8562 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+8229-09-30 18:31:44.983  8562  8562 I app.offgrow: The ClassLoaderContext is a special shared library.
+8230-09-30 18:31:44.983  8562  8562 I chatty  : uid=10167(app.offgrow) identical 1 line
+8231-09-30 18:31:44.984  8562  8562 I app.offgrow: The ClassLoaderContext is a special shared library.
+8232-09-30 18:31:44.984  8562  8562 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+8233-09-30 18:31:44.985  8562  8562 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+--
+8521:09-30 18:31:48.893  8687  8687 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+8522-09-30 18:31:48.895  8687  8687 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+8523-09-30 18:31:48.895  8687  8687 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+8524:09-30 18:31:48.895  8687  8687 I AndroidRuntime: Using default boot image
+8525-09-30 18:31:48.895  8687  8687 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+8526:09-30 18:31:48.895  8687  8687 I AndroidRuntime: Leaving lock profiling enabled
+8527-09-30 18:31:48.895  8687  8687 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+8528-09-30 18:31:48.892  8687  8687 W app_process: type=1400 audit(0.0:93): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+8529-09-30 18:31:48.908  8687  8687 I app_process: Core platform API reporting enabled, enforcing=false
+8530-09-30 18:31:48.892  8687  8687 W app_process: type=1400 audit(0.0:94): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+8531-09-30 18:31:48.892  8687  8687 I chatty  : uid=2000(shell) app_process identical 1 line
+8532-09-30 18:31:48.892  8687  8687 W app_process: type=1400 audit(0.0:96): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+8533-09-30 18:31:48.960  8687  8687 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+8534-09-30 18:31:48.961  8687  8687 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+8535-09-30 18:31:48.963  8687  8687 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+8536-09-30 18:31:48.965  8687  8687 I app_process: The ClassLoaderContext is a special shared library.
+8537-09-30 18:31:48.970  8687  8687 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+8538:09-30 18:31:48.972  8687  8687 D AndroidRuntime: Calling main entry com.android.commands.appwidget.AppWidget
+8539:09-30 18:31:48.974  8687  8687 D AndroidRuntime: Shutting down VM
+8540-09-30 18:31:49.069  1445  1518 I PeriodicStatsRunner: PeriodicStatsRunner.call():180 call()
+8541-09-30 18:31:49.070  1445  1518 I PeriodicStatsRunner: PeriodicStatsRunner.call():184 No submit PeriodicStats since input started.
+8542-09-30 18:31:49.382  8562  8617 I OffgrowQA:   grantbind: 
+8543-09-30 18:31:49.385  8562  8617 I OffgrowQA: - PASS Widget square 2×2 can be placed
+8544-09-30 18:31:49.390  8562  8617 I OffgrowQA: - PASS Widget square 3×3 can be placed
+8545-09-30 18:31:49.396  8562  8617 I OffgrowQA: - PASS Widget square 4×4 can be placed
+8546-09-30 18:31:49.399  8562  8619 D WM-SystemJobScheduler: Scheduling work ID df0945e4-3475-4c74-9860-22d1121401a6Job ID 6
+8547-09-30 18:31:49.401  8562  8562 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=df0945e4-3475-4c74-9860-22d1121401a6, generation=0)
+8548-09-30 18:31:49.401  8562  8619 D WM-GreedyScheduler: Starting work for df0945e4-3475-4c74-9860-22d1121401a6
+8549-09-30 18:31:49.403  8562  8616 D WM-SystemJobScheduler: Scheduling work ID cb9262a4-ce63-491d-8727-736bd13b31c4Job ID 7
+8550-09-30 18:31:49.404  8562  8562 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=cb9262a4-ce63-491d-8727-736bd13b31c4, generation=0)
+8551-09-30 18:31:49.404  8562  8616 D WM-GreedyScheduler: Starting work for cb9262a4-ce63-491d-8727-736bd13b31c4
+8552-09-30 18:31:49.410  8562  8616 D WM-Processor: Processor cancelling cb9262a4-ce63-491d-8727-736bd13b31c4
+8553-09-30 18:31:49.410  8562  8616 D WM-Processor: WorkerWrapper could not be found for cb9262a4-ce63-491d-8727-736bd13b31c4
+8554-09-30 18:31:49.411  8562  8616 D WM-GreedyScheduler: Cancelling work ID cb9262a4-ce63-491d-8727-736bd13b31c4
+8555-09-30 18:31:49.411  8562  8562 D WM-SystemJobService: onStopJob for WorkGenerationalId(workSpecId=cb9262a4-ce63-491d-8727-736bd13b31c4, generation=0)
+8556-09-30 18:31:49.413  8562  8617 I OffgrowQA: - PASS Widget wide 4×2 can be placed
+8557-09-30 18:31:49.414  8562  8617 I OffgrowQA: - PASS Widget wide 5×2 can be placed
+8558-09-30 18:31:49.416  8562  8617 I OffgrowQA: - PASS Widget square resized wide can be placed
+8559-09-30 18:31:49.416  8562  8616 D WM-SystemJobScheduler: Scheduling work ID 06229d20-858f-4ef9-b420-df5dd9aee000Job ID 8
+8560-09-30 18:31:49.417  8562  8616 D WM-GreedyScheduler: Starting work for 06229d20-858f-4ef9-b420-df5dd9aee000
+8561-09-30 18:31:49.418  8562  8616 D WM-Processor: Processor cancelling 06229d20-858f-4ef9-b420-df5dd9aee000
+8562-09-30 18:31:49.418  8562  8616 D WM-Processor: WorkerWrapper could not be found for 06229d20-858f-4ef9-b420-df5dd9aee000
+8563-09-30 18:31:49.418  8562  8616 D WM-GreedyScheduler: Cancelling work ID 06229d20-858f-4ef9-b420-df5dd9aee000
+8564-09-30 18:31:49.419  8562  8562 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=06229d20-858f-4ef9-b420-df5dd9aee000, generation=0)
+--
+9002:09-30 18:32:28.743  8540  8540 I AndroidRuntime: VM exiting with result code 0.
+9003-09-30 18:32:28.768   285   285 I Zygote  : Process 8562 exited due to signal 9 (Killed)
+9004-09-30 18:32:28.776   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 8562 in 90ms
+9005-09-30 18:32:28.779   348   348 E Layer   : [Surface(name=Task=41)/@0x3386e0e - animation-leash#0] No local sync point found
+9006-09-30 18:32:28.779   348   348 E Layer   : [Surface(name=Task=1)/@0x8fe47ea - animation-leash#0] No local sync point found
+9007-09-30 18:32:28.987     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+9008-09-30 18:32:28.995     0     0 I binder  : undelivered transaction 598233, process died.
+9009-09-30 18:32:29.006     0     0 I binder  : undelivered transaction 598258, process died.
+9010-09-30 18:32:29.008     0     0 I binder  : undelivered transaction 598267, process died.
+9011-09-30 18:32:28.792   497  1963 W WindowManager: Cannot find window which accessibility connection is added to
+9012-09-30 18:32:28.794   707   721 I ndroid.systemu: NativeAlloc concurrent copying GC freed 8488(542KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 7644KB/14MB, paused 20us total 415.658ms
+9013-09-30 18:32:28.796  8511  8588 I MicroDataManager: isInitializing-false locale not changed-true model not changed-true
+9014-09-30 18:32:28.816  8511  8511 I BgTaskExecutorImpl: Starting EXCLUSIVE background task TNG_MINUS_ONE_SYNC.
+9015-09-30 18:32:28.837   497   530 W ActivityManager: setHasOverlayUi called on unknown pid: 8562
+9016-09-30 18:32:28.908   348   348 E Layer   : [Surface(name=Task=41)/@0x3386e0e - animation-leash#0] No local sync point found
+9017-09-30 18:32:28.908   348   348 E Layer   : [Surface(name=Task=1)/@0x8fe47ea - animation-leash#0] No local sync point found
+9018-09-30 18:32:28.926   348   348 E Layer   : [Surface(name=Task=41)/@0x3386e0e - animation-leash#0] No local sync point found
+9019-09-30 18:32:28.926   348   348 E Layer   : [Surface(name=Task=1)/@0x8fe47ea - animation-leash#0] No local sync point found
+9020-09-30 18:32:28.978  8511  8546 W LocationOracle: No location history returned by ContextManager
+9021-09-30 18:32:28.997  8511  8588 I MicroDetectionState: Should stop hotword detection immediately - false
+9022-09-30 18:32:29.000  8511  8546 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/sharedminusonemodule/shared/SharedMinusOneData.pb.tmp
+9023-09-30 18:32:29.005  8511  8588 I MicroDetectionState: Should stop hotword detection immediately - false
+9024-09-30 18:32:29.041  8511  8588 I TngMinusOneSync: Syncing TNG:-1
+9025-09-30 18:32:29.059  1166  2816 W GCoreFlp: No location to return for getLastLocation()
+9026:09-30 18:32:29.350  8853  8853 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+9027-09-30 18:32:29.351  8853  8853 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+9028-09-30 18:32:29.351  8853  8853 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+9029:09-30 18:32:29.351  8853  8853 I AndroidRuntime: Using default boot image
+9030-09-30 18:32:29.351  8853  8853 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+9031:09-30 18:32:29.351  8853  8853 I AndroidRuntime: Leaving lock profiling enabled
+9032-09-30 18:32:29.351  8853  8853 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+9033-09-30 18:32:29.358  8853  8853 I app_process: Core platform API reporting enabled, enforcing=false
+9034-09-30 18:32:29.373  1166  1201 I .gms.persisten: Background concurrent copying GC freed 189768(8105KB) AllocSpace objects, 15(448KB) LOS objects, 49% free, 8812KB/17MB, paused 185us total 392.811ms
+9035-09-30 18:32:29.348  8853  8853 W app_process: type=1400 audit(0.0:97): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+9036-09-30 18:32:29.348  8853  8853 I chatty  : uid=2000(shell) app_process identical 2 lines
+9037-09-30 18:32:29.348  8853  8853 W app_process: type=1400 audit(0.0:100): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+9038-09-30 18:32:29.418  8853  8853 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+9039-09-30 18:32:29.418  8853  8853 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+9040-09-30 18:32:29.422  8853  8853 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+9041-09-30 18:32:29.422  8853  8853 I app_process: The ClassLoaderContext is a special shared library.
+9042-09-30 18:32:29.435  8853  8853 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+9043:09-30 18:32:29.437  8853  8853 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+9044-09-30 18:32:29.440   497   524 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+9045-09-30 18:32:29.442   497   524 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+9046-09-30 18:32:29.442   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+9047-09-30 18:32:29.446   285   285 D Zygote  : Forked child process 8869
+9048-09-30 18:32:29.447   497   537 I ActivityManager: Start proc 8869:app.offgrow/u0a167 for added application app.offgrow
+9049-09-30 18:32:29.449  8869  8869 I app.offgrow: Late-enabling -Xcheck:jni
+9050-09-30 18:32:29.456  8869  8869 I app.offgrow: Unquickening 12 vdex files!
+9051-09-30 18:32:29.457  8869  8869 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+9052-09-30 18:32:29.460   400   409 I adbd    : jdwp connection from 8869
+9053-09-30 18:32:29.472  8869  8869 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+9054-09-30 18:32:29.473  8869  8869 I app.offgrow: The ClassLoaderContext is a special shared library.
+9055-09-30 18:32:29.474  8869  8869 I chatty  : uid=10167(app.offgrow) identical 1 line
+9056-09-30 18:32:29.474  8869  8869 I app.offgrow: The ClassLoaderContext is a special shared library.
+9057-09-30 18:32:29.475  8869  8869 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+9058-09-30 18:32:29.475  8869  8869 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+9059-09-30 18:32:29.475  8869  8869 W app.offgrow: NOTE: This wastes RAM and hurts startup performance.
+9060-09-30 18:32:29.475  8869  8869 W app.offgrow: Found duplicated class when checking oat files: 'Ljunit/framework/Assert;' in /system/framework/android.test.base.jar and /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+9061-09-30 18:32:29.496  8869  8869 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk*576142575:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes2.dex*2726892929:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes3.dex*1612290671:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes4.dex*1062045889])
+9062-09-30 18:32:29.502  8869  8869 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9063-09-30 18:32:29.502  8869  8869 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9064-09-30 18:32:29.503  8869  8869 I app.offgrow: The ClassLoaderContext is a special shared library.
+9065-09-30 18:32:29.503  8869  8869 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9066-09-30 18:32:29.503  8869  8869 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9067-09-30 18:32:29.503  8869  8869 I app.offgrow: The ClassLoaderContext is a special shared library.
+9068-09-30 18:32:29.504  8869  8869 I chatty  : uid=10167(app.offgrow) identical 2 lines
+--
+9262:09-30 18:32:37.228  8853  8853 I AndroidRuntime: VM exiting with result code 0.
+9263-09-30 18:32:37.233   285   285 I Zygote  : Process 8869 exited due to signal 9 (Killed)
+9264-09-30 18:32:37.448     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+9265-09-30 18:32:37.450     0     0 I binder  : undelivered transaction 602739, process died.
+9266-09-30 18:32:37.237   933   933 I Zygote  : Process 9004 exited cleanly (0)
+9267-09-30 18:32:37.454     0     0 I binder  : undelivered transaction 602714, process died.
+9268-09-30 18:32:37.456     0     0 I binder  : undelivered transaction 602715, process died.
+9269-09-30 18:32:37.243   497   542 D KernelCpuUidUserSysTimeReader: Removing uids 99030-99030
+9270-09-30 18:32:37.458     0     0 I binder  : undelivered transaction 602713, process died.
+9271-09-30 18:32:37.253   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 8869 in 40ms
+9272:09-30 18:32:37.275  9033  9033 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+9273-09-30 18:32:37.276  9033  9033 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+9274-09-30 18:32:37.276  9033  9033 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+9275:09-30 18:32:37.276  9033  9033 I AndroidRuntime: Using default boot image
+9276-09-30 18:32:37.276  9033  9033 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+9277:09-30 18:32:37.276  9033  9033 I AndroidRuntime: Leaving lock profiling enabled
+9278-09-30 18:32:37.276  9033  9033 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+9279-09-30 18:32:37.277  9033  9033 I app_process: Core platform API reporting enabled, enforcing=false
+9280-09-30 18:32:37.272  9033  9033 W app_process: type=1400 audit(0.0:101): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+9281-09-30 18:32:37.272  9033  9033 I chatty  : uid=2000(shell) app_process identical 2 lines
+9282-09-30 18:32:37.272  9033  9033 W app_process: type=1400 audit(0.0:104): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+9283-09-30 18:32:37.307  9033  9033 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+9284-09-30 18:32:37.307  9033  9033 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+9285-09-30 18:32:37.310  9033  9033 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+9286-09-30 18:32:37.310  9033  9033 I app_process: The ClassLoaderContext is a special shared library.
+9287-09-30 18:32:37.315  9033  9033 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+9288:09-30 18:32:37.317  9033  9033 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+9289-09-30 18:32:37.319   497  1896 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+9290-09-30 18:32:37.319   497  1896 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+9291-09-30 18:32:37.319   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+9292-09-30 18:32:37.323   285   285 D Zygote  : Forked child process 9047
+9293-09-30 18:32:37.323   497   537 I ActivityManager: Start proc 9047:app.offgrow/u0a167 for added application app.offgrow
+9294-09-30 18:32:37.325  9047  9047 I app.offgrow: Late-enabling -Xcheck:jni
+9295-09-30 18:32:37.332  9047  9047 I app.offgrow: Unquickening 12 vdex files!
+9296-09-30 18:32:37.332  9047  9047 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+9297-09-30 18:32:37.334   400   409 I adbd    : jdwp connection from 9047
+9298-09-30 18:32:37.344  9047  9047 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+9299-09-30 18:32:37.344  9047  9047 I app.offgrow: The ClassLoaderContext is a special shared library.
+9300-09-30 18:32:37.345  9047  9047 I chatty  : uid=10167(app.offgrow) identical 1 line
+9301-09-30 18:32:37.345  9047  9047 I app.offgrow: The ClassLoaderContext is a special shared library.
+9302-09-30 18:32:37.346  9047  9047 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+9303-09-30 18:32:37.346  9047  9047 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+9304-09-30 18:32:37.346  9047  9047 W app.offgrow: NOTE: This wastes RAM and hurts startup performance.
+9305-09-30 18:32:37.346  9047  9047 W app.offgrow: Found duplicated class when checking oat files: 'Ljunit/framework/Assert;' in /system/framework/android.test.base.jar and /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+9306-09-30 18:32:37.367  9047  9047 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk*576142575:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes2.dex*2726892929:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes3.dex*1612290671:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes4.dex*1062045889])
+9307-09-30 18:32:37.373  9047  9047 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9308-09-30 18:32:37.373  9047  9047 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9309-09-30 18:32:37.373  9047  9047 I app.offgrow: The ClassLoaderContext is a special shared library.
+9310-09-30 18:32:37.374  9047  9047 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9311-09-30 18:32:37.374  9047  9047 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9312-09-30 18:32:37.374  9047  9047 I app.offgrow: The ClassLoaderContext is a special shared library.
+9313-09-30 18:32:37.375  9047  9047 I chatty  : uid=10167(app.offgrow) identical 2 lines
+--
+9845:09-30 18:35:15.713  9033  9033 I AndroidRuntime: VM exiting with result code 0.
+9846-09-30 18:35:15.959     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+9847-09-30 18:35:15.961     0     0 I binder  : undelivered transaction 616356, process died.
+9848-09-30 18:35:15.754   285   285 I Zygote  : Process 9047 exited due to signal 9 (Killed)
+9849-09-30 18:35:15.754   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 9047 in 42ms
+9850:09-30 18:35:15.803  9232  9232 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+9851-09-30 18:35:15.804  9232  9232 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+9852-09-30 18:35:15.804  9232  9232 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+9853:09-30 18:35:15.804  9232  9232 I AndroidRuntime: Using default boot image
+9854-09-30 18:35:15.804  9232  9232 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+9855:09-30 18:35:15.804  9232  9232 I AndroidRuntime: Leaving lock profiling enabled
+9856-09-30 18:35:15.804  9232  9232 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+9857-09-30 18:35:15.806  9232  9232 I app_process: Core platform API reporting enabled, enforcing=false
+9858-09-30 18:35:15.800  9232  9232 W app_process: type=1400 audit(0.0:105): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+9859-09-30 18:35:15.800  9232  9232 I chatty  : uid=2000(shell) app_process identical 1 line
+9860-09-30 18:35:15.800  9232  9232 W app_process: type=1400 audit(0.0:107): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+9861-09-30 18:35:15.853  9232  9232 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+9862-09-30 18:35:15.853  9232  9232 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+9863-09-30 18:35:15.857  9232  9232 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+9864-09-30 18:35:15.857  9232  9232 I app_process: The ClassLoaderContext is a special shared library.
+9865-09-30 18:35:15.800  9232  9232 W app_process: type=1400 audit(0.0:108): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+9866-09-30 18:35:15.866  9232  9232 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+9867:09-30 18:35:15.868  9232  9232 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+9868-09-30 18:35:15.870   497  1958 I ActivityManager: Force stopping app.offgrow appid=10167 user=0: start instr
+9869-09-30 18:35:15.870   497  1958 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10167; state: DISABLED
+9870-09-30 18:35:15.871   497   537 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10167; state: ENABLED
+9871-09-30 18:35:15.874   285   285 D Zygote  : Forked child process 9245
+9872-09-30 18:35:15.874   497   537 I ActivityManager: Start proc 9245:app.offgrow/u0a167 for added application app.offgrow
+9873-09-30 18:35:15.876  9245  9245 I app.offgrow: Late-enabling -Xcheck:jni
+9874-09-30 18:35:15.883  9245  9245 I app.offgrow: Unquickening 12 vdex files!
+9875-09-30 18:35:15.884  9245  9245 W app.offgrow: Unexpected CPU variant for X86 using defaults: x86_64
+9876-09-30 18:35:15.886   400   409 I adbd    : jdwp connection from 9245
+9877-09-30 18:35:15.897  9245  9245 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+9878-09-30 18:35:15.898  9245  9245 I app.offgrow: The ClassLoaderContext is a special shared library.
+9879-09-30 18:35:15.898  9245  9245 I chatty  : uid=10167(app.offgrow) identical 1 line
+9880-09-30 18:35:15.898  9245  9245 I app.offgrow: The ClassLoaderContext is a special shared library.
+9881-09-30 18:35:15.899  9245  9245 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=3 (PCL[]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}#PCL[/system/framework/android.test.runner.jar*2931394026]{PCL[/system/framework/android.test.base.jar*315452938]#PCL[/system/framework/android.test.mock.jar*1904069966]{PCL[/system/framework/android.test.base.jar*315452938]}}} | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938])
+9882-09-30 18:35:15.899  9245  9245 W app.offgrow: Found duplicate classes, falling back to extracting from APK : /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+9883-09-30 18:35:15.899  9245  9245 W app.offgrow: NOTE: This wastes RAM and hurts startup performance.
+9884-09-30 18:35:15.899  9245  9245 W app.offgrow: Found duplicated class when checking oat files: 'Ljunit/framework/Assert;' in /system/framework/android.test.base.jar and /data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk
+9885-09-30 18:35:15.920  9245  9245 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2931394026:/system/framework/android.test.mock.jar*1904069966:/system/framework/android.test.base.jar*315452938:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk*576142575:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes2.dex*2726892929:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes3.dex*1612290671:/data/app/~~YmMjw7vrhRn9t7JxY_Iaqg==/app.offgrow.test-LSp3QsdOt69hQr4q-vd9ng==/base.apk!classes4.dex*1062045889])
+9886-09-30 18:35:15.926  9245  9245 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9887-09-30 18:35:15.926  9245  9245 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9888-09-30 18:35:15.926  9245  9245 I app.offgrow: The ClassLoaderContext is a special shared library.
+9889-09-30 18:35:15.927  9245  9245 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9890-09-30 18:35:15.927  9245  9245 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+9891-09-30 18:35:15.927  9245  9245 I app.offgrow: The ClassLoaderContext is a special shared library.
+9892-09-30 18:35:15.928  9245  9245 I chatty  : uid=10167(app.offgrow) identical 2 lines
+--
+11648:09-30 18:36:44.990  9232  9232 I AndroidRuntime: VM exiting with result code 0.
+11649-09-30 18:36:45.250     0     0 I binder  : release 9245:9266 transaction 656939 out, still active
+11650-09-30 18:36:45.252     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+11651-09-30 18:36:45.259     0     0 I binder  : 497:1750 transaction failed 29189/0, size 4-0 line 2985
+11652-09-30 18:36:45.274     0     0 I binder  : send failed reply for transaction 656939, target dead
+11653-09-30 18:36:45.090   285   285 I Zygote  : Process 9245 exited due to signal 9 (Killed)
+11654-09-30 18:36:45.091   497   538 I libprocessgroup: Successfully killed process cgroup uid 10167 pid 9245 in 102ms
+11655-09-30 18:36:45.110   497   528 W Looper  : Slow dispatch took 122ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=53
+11656-09-30 18:36:45.112   707   707 D Tonal   : Tonal Palette - index: 10. Main color: ffe590b7
+11657-09-30 18:36:45.112   707   707 D Tonal   : Colors: ff060104, ff1b0613, ff2f0b23, ff481135, ff671850, ff861f5d, ffa42773, ffbe4d91, ffd85a9e, ffde73aa, ffe590b7, ffefb9d1, fff5d6e5
+11658-09-30 18:36:45.112   707   707 D Tonal   : Gradients: 
+11659-09-30 18:36:45.112   707   707 D Tonal   : 	Normal GradientColors(ffe590b7, ffe590b7)
+11660-09-30 18:36:45.112   707   707 D Tonal   : 	Dark GradientColors(ff481135, ff481135)
+11661-09-30 18:36:45.112   707   707 D Tonal   : 	Extra dark: GradientColors(ff2f0b23, ff2f0b23)
+11662-09-30 18:36:45.112   707   707 D Tonal   : Tonal Palette - index: 10. Main color: ffe590b7
+11663-09-30 18:36:45.112   707   707 D Tonal   : Colors: ff060104, ff1b0613, ff2f0b23, ff481135, ff671850, ff861f5d, ffa42773, ffbe4d91, ffd85a9e, ffde73aa, ffe590b7, ffefb9d1, fff5d6e5
+11664-09-30 18:36:45.112   707   707 D Tonal   : Gradients: 
+11665-09-30 18:36:45.112   707   707 D Tonal   : 	Normal GradientColors(ffe590b7, ffe590b7)
+11666-09-30 18:36:45.112   707   707 D Tonal   : 	Dark GradientColors(ff481135, ff481135)
+11667-09-30 18:36:45.112   707   707 D Tonal   : 	Extra dark: GradientColors(ff2f0b23, ff2f0b23)
+11668-09-30 18:36:45.118   497  1958 W system_server: Long monitor contention with owner Binder:497_12 (1750) at boolean com.android.server.am.ActivityManagerService.refContentProvider(android.os.IBinder, int, int)(ActivityManagerService.java:7799) waiters=1 in boolean com.android.server.am.ActivityManagerService.stopServiceToken(android.content.ComponentName, android.os.IBinder, int) for 149ms
+11669-09-30 18:36:45.122   497  1958 V WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{29a72a2 u0 com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}, surfaceController Surface(name=com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity)/@0x3395b8d
+11670-09-30 18:36:45.146   896   896 D TaplTarget: sendStateEventToTest: 0
+11671-09-30 18:36:45.146   896   896 D RecentsOrientedState: current RecentsOrientedState: [this=RecentsOrientedState@5ec4b6d mOrientationHandler=PortraitPagedViewHandler@f29d0d4 mDisplayRotation=0 mTouchRotation=0 mRecentsActivityRotation=0 isRecentsActivityRotationAllowed=false mSystemRotation=true mFlags=299]
+11672-09-30 18:36:45.203   497  1958 V WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{29a72a2 u0 com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}, surfaceController Surface(name=com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity)/@0x3395b8d
+11673-09-30 18:36:45.208   497   497 W ActivityManager: Unable to start service Intent { act=android.service.appprediction.AppPredictionService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService } U=0: not found
+--
+11740:09-30 18:36:46.792  9679  9679 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11741-09-30 18:36:46.811  9679  9679 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.profilebootclasspath"
+11742-09-30 18:36:46.811  9679  9679 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+11743:09-30 18:36:46.811  9679  9679 I AndroidRuntime: Using default boot image
+11744-09-30 18:36:46.811  9679  9679 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+11745:09-30 18:36:46.811  9679  9679 I AndroidRuntime: Leaving lock profiling enabled
+11746-09-30 18:36:46.811  9679  9679 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+11747-09-30 18:36:46.792  9679  9679 W app_process: type=1400 audit(0.0:109): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+11748-09-30 18:36:46.816  9679  9679 I app_process: Core platform API reporting enabled, enforcing=false
+11749-09-30 18:36:46.808  9679  9679 W app_process: type=1400 audit(0.0:110): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+11750-09-30 18:36:46.808  9679  9679 I chatty  : uid=2000(shell) app_process identical 1 line
+11751-09-30 18:36:46.808  9679  9679 W app_process: type=1400 audit(0.0:112): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=8513 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+11752-09-30 18:36:46.890  9679  9679 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+11753-09-30 18:36:46.890  9679  9679 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+11754-09-30 18:36:46.893  9679  9679 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11755-09-30 18:36:46.895  9679  9679 I app_process: The ClassLoaderContext is a special shared library.
+11756-09-30 18:36:46.906  9679  9679 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+11757:09-30 18:36:46.908  9679  9679 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+11758-09-30 18:36:46.908  9679  9679 W Monkey  : args: [-p, app.offgrow, --throttle, 80, --pct-syskeys, 0, --pct-appswitch, 5, --ignore-crashes, --ignore-timeouts, --ignore-security-exceptions, -s, 20261007, -v, 3000]
+11759-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "-p"
+11760-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "app.offgrow"
+11761-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "--throttle"
+11762-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "80"
+11763-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "--pct-syskeys"
+11764-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "0"
+11765-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "--pct-appswitch"
+11766-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "5"
+11767-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "--ignore-crashes"
+11768-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "--ignore-timeouts"
+11769-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "--ignore-security-exceptions"
+11770-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "-s"
+11771-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "20261007"
+11772-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "-v"
+11773-09-30 18:36:46.909  9679  9679 W Monkey  :  arg: "3000"
+11774-09-30 18:36:46.909  9679  9679 W Monkey  : data="app.offgrow"
+11775-09-30 18:36:46.909  9679  9679 W Monkey  : arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="80"
+11776-09-30 18:36:46.909  9679  9679 W Monkey  : data="80"
+11777-09-30 18:36:46.909  9679  9679 W Monkey  : arg="--pct-syskeys" mCurArgData="null" mNextArg=5 argwas="--pct-syskeys" nextarg="0"
+11778-09-30 18:36:46.909  9679  9679 W Monkey  : data="0"
+11779-09-30 18:36:46.910  9679  9679 W Monkey  : arg="--pct-appswitch" mCurArgData="null" mNextArg=7 argwas="--pct-appswitch" nextarg="5"
+11780-09-30 18:36:46.910  9679  9679 W Monkey  : data="5"
+11781-09-30 18:36:46.910  9679  9679 W Monkey  : arg="--ignore-crashes" mCurArgData="null" mNextArg=9 argwas="--ignore-crashes" nextarg="--ignore-timeouts"
+11782-09-30 18:36:46.910  9679  9679 W Monkey  : arg="--ignore-timeouts" mCurArgData="null" mNextArg=10 argwas="--ignore-timeouts" nextarg="--ignore-security-exceptions"
+--
+14637:09-30 18:38:04.758  9679  9679 I AndroidRuntime: VM exiting with result code 0.
+14638-09-30 18:38:04.819   497   801 D CompatibilityChangeReporter: Compat change id reported: 149924527; UID 2000; state: ENABLED
+14639-09-30 18:38:04.820   497   801 D CompatibilityChangeReporter: Compat change id reported: 132649864; UID 2000; state: DISABLED
+14640-09-30 18:38:04.833   162   162 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device manifest.
+14641-09-30 18:38:04.833 10119 10119 I Gralloc4: mapper 4.x is not supported
+14642-09-30 18:38:04.837 10119 10119 D HostConnection: createUnique: call
+14643-09-30 18:38:04.837 10119 10119 D HostConnection: HostConnection::get() New Host Connection established 0x7fdc5a47d9d0, tid 10119
+14644-09-30 18:38:04.854 10119 10119 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+14645-09-30 18:38:05.038  1832  3011 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/after_monkey.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+14646-09-30 18:38:05.038  1832  3011 W ModernMediaScanner: Failed to visit /sdcard/after_monkey.png: java.nio.file.AccessDeniedException: /sdcard/after_monkey.png
+14647-09-30 18:38:05.039  1832  3011 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 1ms, 0 inserts 0 updates 0 deletes
+14648-09-30 18:38:05.039  1832  3011 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/after_monkey.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+14649-09-30 18:38:05.036  1832  1832 W com.google.android.providers.media.module: type=1400 audit(0.0:130): avc: denied { read } for comm=4173796E635461736B202331 name="primary" dev="tmpfs" ino=27379 scontext=u:r:mediaprovider_app:s0:c163,c256,c512,c768 tcontext=u:object_r:mnt_pass_through_file:s0 tclass=lnk_file permissive=0 app=com.google.android.providers.media.module
+14650-09-30 18:38:05.284     0     0 D logd    : logdr: UID=2000 GID=2000 PID=10127 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns

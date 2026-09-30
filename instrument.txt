@@ -1,0 +1,102 @@
+=== app.offgrow.qa.A1_OnboardingTest
+
+app.offgrow.qa.A1_OnboardingTest:s_glBindAttribLocation: bind attrib 0 name position
+s_glBindAttribLocation: bind attrib 1 name color
+s_glBindAttribLocation: bind attrib 2 name localCoord
+.
+
+Time: 48.445
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A2_HomeStatesTest
+
+app.offgrow.qa.A2_HomeStatesTest:s_glBindAttribLocation: bind attrib 0 name position
+s_glBindAttribLocation: bind attrib 1 name color
+s_glBindAttribLocation: bind attrib 2 name localCoord
+.
+
+Time: 79.431
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A3_WeeksSimulationTest
+
+app.offgrow.qa.A3_WeeksSimulationTest:s_glBindAttribLocation: bind attrib 0 name position
+s_glBindAttribLocation: bind attrib 1 name color
+s_glBindAttribLocation: bind attrib 2 name localCoord
+.....
+
+Time: 162.579
+
+OK (5 tests)
+
+
+=== app.offgrow.qa.A4_FocusTest
+
+app.offgrow.qa.A4_FocusTest:s_glBindAttribLocation: bind attrib 0 name position
+s_glBindAttribLocation: bind attrib 1 name color
+s_glBindAttribLocation: bind attrib 2 name localCoord
+.
+
+Time: 79.058
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A5_ScreensTest
+
+app.offgrow.qa.A5_ScreensTest:s_glBindAttribLocation: bind attrib 0 name position
+s_glBindAttribLocation: bind attrib 1 name color
+s_glBindAttribLocation: bind attrib 2 name localCoord
+.
+
+Time: 73.244
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A6_WidgetTest
+
+app.offgrow.qa.A6_WidgetTest:.
+
+Time: 19.032
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A7_BackgroundTest
+
+app.offgrow.qa.A7_BackgroundTest:.
+
+Time: 6.422
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A8_RealUsageTest
+
+app.offgrow.qa.A8_RealUsageTest:s_glBindAttribLocation: bind attrib 0 name position
+s_glBindAttribLocation: bind attrib 1 name color
+s_glBindAttribLocation: bind attrib 2 name localCoord
+.
+
+Time: 158.746
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A9_DeviceConditionsTest
+
+app.offgrow.qa.A9_DeviceConditionsTest:s_glBindAttribLocation: bind attrib 0 name position
+s_glBindAttribLocation: bind attrib 1 name color
+s_glBindAttribLocation: bind attrib 2 name localCoord
+.
+
+Time: 72.953
+
+OK (1 test)
+
+

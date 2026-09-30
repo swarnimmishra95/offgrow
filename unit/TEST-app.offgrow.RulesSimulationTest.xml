@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.offgrow.RulesSimulationTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-09-30T18:19:33" hostname="runnervm8df0l" time="0.354">
+  <properties/>
+  <testcase name="focusCountsOnlyThreeSessionsADay" classname="app.offgrow.RulesSimulationTest" time="0.146"/>
+  <testcase name="nightOwlAndMorningScroller" classname="app.offgrow.RulesSimulationTest" time="0.017"/>
+  <testcase name="longAbsenceOnlyCatchesUpSevenDays" classname="app.offgrow.RulesSimulationTest" time="0.005"/>
+  <testcase name="graceDayForgivesInstallDay" classname="app.offgrow.RulesSimulationTest" time="0.02"/>
+  <testcase name="losingWithNoFlowersIsSafe" classname="app.offgrow.RulesSimulationTest" time="0.004"/>
+  <testcase name="bandsAndFormatting" classname="app.offgrow.RulesSimulationTest" time="0.001"/>
+  <testcase name="idealMonth" classname="app.offgrow.RulesSimulationTest" time="0.026"/>
+  <testcase name="liveViewMatchesClosedDayExceptWateringAndComeback" classname="app.offgrow.RulesSimulationTest" time="0.0"/>
+  <testcase name="growthCurve" classname="app.offgrow.RulesSimulationTest" time="0.015"/>
+  <testcase name="defaultFlowerNameUsesDayAndMonth" classname="app.offgrow.RulesSimulationTest" time="0.051"/>
+  <testcase name="recoveryArcKeepsLostFlowersLost" classname="app.offgrow.RulesSimulationTest" time="0.013"/>
+  <testcase name="borderlineLimits" classname="app.offgrow.RulesSimulationTest" time="0.001"/>
+  <testcase name="seedsCapAtThreeWithoutPlanting" classname="app.offgrow.RulesSimulationTest" time="0.0"/>
+  <testcase name="doomscrollerThreeWeeks" classname="app.offgrow.RulesSimulationTest" time="0.018"/>
+  <testcase name="roughRunCountsEveryRoughDayEvenAfterALoss" classname="app.offgrow.RulesSimulationTest" time="0.004"/>
+  <testcase name="limitChangeAppliesFromTheNextClose" classname="app.offgrow.RulesSimulationTest" time="0.001"/>
+  <testcase name="revokedAccessDaysAreSkippedNotPunished" classname="app.offgrow.RulesSimulationTest" time="0.001"/>
+  <testcase name="weekdaysGoodWeekendsBinge" classname="app.offgrow.RulesSimulationTest" time="0.015"/>
+  <system-out><![CDATA[IDEAL MONTH
+MON 2026-10-05 social=20 delta=20 v=90 streak=1 seeds=1 flowers=1/1
+TUE 2026-10-06 social=21 delta=20 v=100 streak=2 seeds=1 flowers=2/2
+WED 2026-10-07 social=22 delta=20 v=100 streak=3 seeds=1 flowers=3/3
+THU 2026-10-08 social=23 delta=20 v=100 streak=4 seeds=1 flowers=4/4
+FRI 2026-10-09 social=24 delta=20 v=100 streak=5 seeds=1 flowers=5/5
+SAT 2026-10-10 social=25 delta=20 v=100 streak=6 seeds=1 flowers=6/6
+SUN 2026-10-11 social=26 delta=20 v=100 streak=7 seeds=1 flowers=7/7
+MON 2026-10-12 social=27 delta=20 v=100 streak=8 seeds=1 flowers=8/8
+TUE 2026-10-13 social=28 delta=20 v=100 streak=9 seeds=1 flowers=9/9
+WED 2026-10-14 social=29 delta=20 v=100 streak=10 seeds=1 flowers=10/10
+THU 2026-10-15 social=30 delta=20 v=100 streak=11 seeds=1 flowers=11/11
+FRI 2026-10-16 social=31 delta=20 v=100 streak=12 seeds=1 flowers=12/12
+SAT 2026-10-17 social=32 delta=20 v=100 streak=13 seeds=1 flowers=13/13
+SUN 2026-10-18 social=33 delta=20 v=100 streak=14 seeds=1 flowers=14/14
+MON 2026-10-19 social=34 delta=20 v=100 streak=15 seeds=1 flowers=15/15
+TUE 2026-10-20 social=35 delta=20 v=100 streak=16 seeds=1 flowers=16/16
+WED 2026-10-21 social=36 delta=20 v=100 streak=17 seeds=1 flowers=17/17
+THU 2026-10-22 social=37 delta=20 v=100 streak=18 seeds=1 flowers=18/18
+FRI 2026-10-23 social=38 delta=20 v=100 streak=19 seeds=1 flowers=19/19
+SAT 2026-10-24 social=39 delta=20 v=100 streak=20 seeds=1 flowers=20/20
+SUN 2026-10-25 social=20 delta=20 v=100 streak=21 seeds=1 flowers=21/21
+MON 2026-10-26 social=21 delta=20 v=100 streak=22 seeds=1 flowers=22/22
+TUE 2026-10-27 social=22 delta=20 v=100 streak=23 seeds=1 flowers=23/23
+WED 2026-10-28 social=23 delta=20 v=100 streak=24 seeds=1 flowers=24/24
+THU 2026-10-29 social=24 delta=20 v=100 streak=25 seeds=1 flowers=25/25
+FRI 2026-10-30 social=25 delta=20 v=100 streak=26 seeds=1 flowers=26/26
+SAT 2026-10-31 social=26 delta=20 v=100 streak=27 seeds=1 flowers=27/27
+SUN 2026-11-01 social=27 delta=20 v=100 streak=28 seeds=1 flowers=28/28
+
+RECOVERY
+MON 2026-10-05 social=30 delta=20 v=90 streak=1 seeds=1 flowers=1/1
+TUE 2026-10-06 social=30 delta=20 v=100 streak=2 seeds=1 flowers=2/2
+WED 2026-10-07 social=30 delta=20 v=100 streak=3 seeds=1 flowers=3/3
+THU 2026-10-08 social=240 delta=-23 v=77 streak=0 seeds=0 flowers=4/4
+FRI 2026-10-09 social=240 delta=-23 v=54 streak=0 seeds=0 flowers=4/4
+SAT 2026-10-10 social=240 delta=-23 v=31 streak=0 seeds=0 flowers=4/4
+SUN 2026-10-11 social=240 delta=-23 v=8 streak=0 seeds=0 flowers=4/4
+MON 2026-10-12 social=240 delta=-23 v=0 streak=0 seeds=0 flowers=3/4
+TUE 2026-10-13 social=240 delta=-23 v=0 streak=0 seeds=0 flowers=3/4
+WED 2026-10-14 social=240 delta=-23 v=0 streak=0 seeds=0 flowers=3/4
+THU 2026-10-15 social=30 delta=30 v=30 streak=1 seeds=1 flowers=3/4
+FRI 2026-10-16 social=30 delta=20 v=50 streak=2 seeds=1 flowers=4/5
+SAT 2026-10-17 social=30 delta=20 v=70 streak=3 seeds=1 flowers=5/6
+SUN 2026-10-18 social=30 delta=20 v=90 streak=4 seeds=1 flowers=6/7
+MON 2026-10-19 social=30 delta=20 v=100 streak=5 seeds=1 flowers=7/8
+TUE 2026-10-20 social=30 delta=20 v=100 streak=6 seeds=1 flowers=8/9
+WED 2026-10-21 social=30 delta=20 v=100 streak=7 seeds=1 flowers=9/10
+
+DOOMSCROLLER
+MON 2026-10-05 social=30 delta=20 v=90 streak=1 seeds=1 flowers=1/1
+TUE 2026-10-06 social=30 delta=20 v=100 streak=2 seeds=1 flowers=2/2
+WED 2026-10-07 social=30 delta=20 v=100 streak=3 seeds=1 flowers=3/3
+THU 2026-10-08 social=165 delta=-23 v=77 streak=0 seeds=0 flowers=4/4
+FRI 2026-10-09 social=170 delta=-23 v=54 streak=0 seeds=0 flowers=4/4
+SAT 2026-10-10 social=175 delta=-23 v=31 streak=0 seeds=0 flowers=4/4
+SUN 2026-10-11 social=180 delta=-23 v=8 streak=0 seeds=0 flowers=4/4
+MON 2026-10-12 social=185 delta=-23 v=0 streak=0 seeds=0 flowers=3/4
+TUE 2026-10-13 social=190 delta=-23 v=0 streak=0 seeds=0 flowers=3/4
+WED 2026-10-14 social=195 delta=-23 v=0 streak=0 seeds=0 flowers=3/4
+THU 2026-10-15 social=200 delta=-23 v=0 streak=0 seeds=0 flowers=2/4
+FRI 2026-10-16 social=205 delta=-23 v=0 streak=0 seeds=0 flowers=2/4
+SAT 2026-10-17 social=210 delta=-23 v=0 streak=0 seeds=0 flowers=2/4
+SUN 2026-10-18 social=215 delta=-23 v=0 streak=0 seeds=0 flowers=1/4
+MON 2026-10-19 social=220 delta=-23 v=0 streak=0 seeds=0 flowers=1/4
+TUE 2026-10-20 social=225 delta=-23 v=0 streak=0 seeds=0 flowers=1/4
+WED 2026-10-21 social=230 delta=-23 v=0 streak=0 seeds=0 flowers=0/4
+THU 2026-10-22 social=235 delta=-23 v=0 streak=0 seeds=0 flowers=0/4
+FRI 2026-10-23 social=240 delta=-23 v=0 streak=0 seeds=0 flowers=0/4
+SAT 2026-10-24 social=245 delta=-23 v=0 streak=0 seeds=0 flowers=0/4
+SUN 2026-10-25 social=250 delta=-23 v=0 streak=0 seeds=0 flowers=0/4
+
+WEEKEND BINGE
+MON 2026-10-05 social=35 delta=20 v=90 streak=1 seeds=1 flowers=1/1
+TUE 2026-10-06 social=35 delta=20 v=100 streak=2 seeds=1 flowers=2/2
+WED 2026-10-07 social=35 delta=20 v=100 streak=3 seeds=1 flowers=3/3
+THU 2026-10-08 social=35 delta=20 v=100 streak=4 seeds=1 flowers=4/4
+FRI 2026-10-09 social=35 delta=20 v=100 streak=5 seeds=1 flowers=5/5
+SAT 2026-10-10 social=200 delta=-23 v=77 streak=0 seeds=0 flowers=6/6
+SUN 2026-10-11 social=200 delta=-23 v=54 streak=0 seeds=0 flowers=6/6
+MON 2026-10-12 social=35 delta=30 v=84 streak=1 seeds=1 flowers=6/6
+TUE 2026-10-13 social=35 delta=20 v=100 streak=2 seeds=1 flowers=7/7
+WED 2026-10-14 social=35 delta=20 v=100 streak=3 seeds=1 flowers=8/8
+THU 2026-10-15 social=35 delta=20 v=100 streak=4 seeds=1 flowers=9/9
+FRI 2026-10-16 social=35 delta=20 v=100 streak=5 seeds=1 flowers=10/10
+SAT 2026-10-17 social=200 delta=-23 v=77 streak=0 seeds=0 flowers=11/11
+SUN 2026-10-18 social=200 delta=-23 v=54 streak=0 seeds=0 flowers=11/11
+MON 2026-10-19 social=35 delta=30 v=84 streak=1 seeds=1 flowers=11/11
+TUE 2026-10-20 social=35 delta=20 v=100 streak=2 seeds=1 flowers=12/12
+WED 2026-10-21 social=35 delta=20 v=100 streak=3 seeds=1 flowers=13/13
+THU 2026-10-22 social=35 delta=20 v=100 streak=4 seeds=1 flowers=14/14
+FRI 2026-10-23 social=35 delta=20 v=100 streak=5 seeds=1 flowers=15/15
+SAT 2026-10-24 social=200 delta=-23 v=77 streak=0 seeds=0 flowers=16/16
+SUN 2026-10-25 social=200 delta=-23 v=54 streak=0 seeds=0 flowers=16/16
+MON 2026-10-26 social=35 delta=30 v=84 streak=1 seeds=1 flowers=16/16
+TUE 2026-10-27 social=35 delta=20 v=100 streak=2 seeds=1 flowers=17/17
+WED 2026-10-28 social=35 delta=20 v=100 streak=3 seeds=1 flowers=18/18
+THU 2026-10-29 social=35 delta=20 v=100 streak=4 seeds=1 flowers=19/19
+FRI 2026-10-30 social=35 delta=20 v=100 streak=5 seeds=1 flowers=20/20
+SAT 2026-10-31 social=200 delta=-23 v=77 streak=0 seeds=0 flowers=21/21
+SUN 2026-11-01 social=200 delta=-23 v=54 streak=0 seeds=0 flowers=21/21
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

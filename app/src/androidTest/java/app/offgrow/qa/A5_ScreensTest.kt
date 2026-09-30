@@ -7,6 +7,7 @@ import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeDown
 import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onFirst
@@ -141,6 +142,8 @@ class A5_ScreensTest {
         Qa.shot("journal", "Journal")
         compose.onAllNodes(hasScrollAction()).onFirst().performTouchInput { swipeUp(durationMillis = 300) }
         Qa.shot("journal_days", "Journal, day by day")
+        compose.onAllNodes(hasScrollAction()).onFirst().performTouchInput { swipeDown(durationMillis = 300) }
+        compose.onAllNodes(hasScrollAction()).onFirst().performTouchInput { swipeDown(durationMillis = 300) }
         compose.onNodeWithText("Poppy, ${today.minusDays(10).dayOfMonth} Oct").performScrollTo().performClick()
         Qa.check("Opens an older flower", Qa.waitText(compose, "“Walked to the lake instead”"))
         Qa.shot("flower_old", "The first flower, opened from the journal")

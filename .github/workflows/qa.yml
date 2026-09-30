@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        api: [34]
+        api: [30, 34, 35]
     steps:
       - uses: actions/checkout@v4
 
@@ -65,9 +65,9 @@ jobs:
           mkdir -p /tmp/qa && cp -r qa-out/. /tmp/qa/ 2>/dev/null || true
           echo "${{ github.sha }} ${{ job.status }} run ${{ github.run_number }} api ${{ matrix.api }}" > /tmp/qa/status.txt
           cd /tmp/qa
-          git init -q -b qa-results
+          git init -q -b "qa-results-${{ matrix.api }}"
           git config user.name "offgrow-ci"
           git config user.email "ci@offgrow.invalid"
           git add -A
           git commit -qm "QA results for ${{ github.sha }} (api ${{ matrix.api }})"
-          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" qa-results
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "qa-results-${{ matrix.api }}"

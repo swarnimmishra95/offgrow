@@ -59,15 +59,6 @@ fun JournalScreen(ui: UiState, onOpenFlower: (String) -> Unit) {
         }
     }
     val todayDelta = Rules.liveDelta(ui.todayItems)
-    // Net change this week: where vitality is now versus where it stood before the week began.
-    val baseline = state.days.lastOrNull { d ->
-        try {
-            LocalDate.parse(d.day).isBefore(weekStart)
-        } catch (_: Exception) {
-            false
-        }
-    }?.vitalityEnd ?: Rules.START_VITALITY
-    val weekDelta = ui.live - baseline
     val newPlants = state.flowers.count { f ->
         try {
             !LocalDate.parse(f.plantedDay).isBefore(weekStart)
@@ -76,6 +67,12 @@ fun JournalScreen(ui: UiState, onOpenFlower: (String) -> Unit) {
         }
     }
     val rough = recent.count { !it.good }
+    // Average social time on the finished days of this week (today so far if none are finished yet).
+    val avgSocial: Int? = when {
+        recent.isNotEmpty() -> Math.round(recent.map { it.socialMin }.average()).toInt()
+        ui.today != null -> ui.today.socialMin
+        else -> null
+    }
 
     val byDay = state.days.associateBy { it.day }
     val chart = (6 downTo 0).map { back ->
@@ -112,7 +109,12 @@ fun JournalScreen(ui: UiState, onOpenFlower: (String) -> Unit) {
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
             Row {
-                WeekStat(signed(weekDelta), "vitality", if (weekDelta >= 0) Palette.Moss else Palette.Red, Modifier.weight(1f))
+                WeekStat(
+                    avgSocial?.let { Rules.fmtMin(it) } ?: "—",
+                    "social a day",
+                    if (avgSocial != null && avgSocial > state.limitMin) Palette.Red else Palette.Moss,
+                    Modifier.weight(1f),
+                )
                 WeekStat(newPlants.toString(), if (newPlants == 1) "new plant" else "new plants", Palette.Ink, Modifier.weight(1f))
                 WeekStat(rough.toString(), if (rough == 1) "rough day" else "rough days", if (rough > 0) Palette.Red else Palette.Ink, Modifier.weight(1f))
             }

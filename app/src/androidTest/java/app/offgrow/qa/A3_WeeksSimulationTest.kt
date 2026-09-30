@@ -80,7 +80,7 @@ class A3_WeeksSimulationTest {
                     val kind = Rules.PLANTABLES[o.planted % 7].kind
                     runBlocking {
                         GardenEngine.update(Qa.ctx) { s ->
-                            Rules.plant(s, Flower("f${o.planted}", kind, "${Rules.plantable(kind).label}, $d", "", d.toString()))
+                            Rules.plant(s, Flower("f${o.planted}", kind, Rules.defaultFlowerName(kind, d), "", d.toString()))
                         }
                     }
                     o.planted++

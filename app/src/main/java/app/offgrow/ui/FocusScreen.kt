@@ -38,6 +38,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -118,8 +119,10 @@ fun FocusScreen(
 
         // The middle scrolls if it must, so the button below is always on screen.
         BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
-            val ring = min(280.dp, maxHeight * 0.5f)
             val compact = maxHeight < 440.dp
+            // The ring takes what's left after the timer, the line under it and the note.
+            val reserve = (if (compact) 240.dp else 300.dp) * LocalDensity.current.fontScale.coerceAtLeast(1f)
+            val ring = min(280.dp, maxHeight - reserve).coerceAtLeast(110.dp)
             Column(
                 Modifier
                     .fillMaxSize()
@@ -174,7 +177,8 @@ fun FocusScreen(
                 ) {
                     Icon(painterResource(R.drawable.ic_info), contentDescription = null, tint = Palette.Sun, modifier = Modifier.size(20.dp))
                     Text(
-                        "Leave Offgrow and the session ends. Locking your phone is fine, and so is putting it face down.",
+                        if (compact) "Leave Offgrow and the session ends. Locking your phone is fine."
+                        else "Leave Offgrow and the session ends. Locking your phone is fine, and so is putting it face down.",
                         style = body(14, color = Palette.NightText, lineHeight = 1.45),
                     )
                 }

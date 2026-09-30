@@ -162,9 +162,13 @@ class A6_WidgetTest {
             WidgetInfo(22, "Wilting", "1h 42m over today", "Flowers can be saved", "WILTING", true),
         )
         for (st in states) {
-            val big = WidgetArt.draw(Qa.ctx, (330 * d).toInt(), (330 * d).toInt(), d, st, garden, false)
-            val wide = WidgetArt.draw(Qa.ctx, (330 * d).toInt(), (150 * d).toInt(), d, st, garden, true)
-            val small = WidgetArt.draw(Qa.ctx, (150 * d).toInt(), (150 * d).toInt(), d, st, garden, false)
+            // Draw the garden at this state's vitality, the way the background refresh would.
+            val cfg = GardenEngine.config(Qa.state(), st.vitality, java.time.LocalTime.of(13, 0))
+            val moodGarden = runBlocking { GardenEngine.renderPreview(Qa.ctx, cfg, 720) } ?: garden
+            Qa.check("Garden drawn for the ${st.title} widget", moodGarden != null)
+            val big = WidgetArt.draw(Qa.ctx, (330 * d).toInt(), (330 * d).toInt(), d, st, moodGarden, false)
+            val wide = WidgetArt.draw(Qa.ctx, (330 * d).toInt(), (150 * d).toInt(), d, st, moodGarden, true)
+            val small = WidgetArt.draw(Qa.ctx, (150 * d).toInt(), (150 * d).toInt(), d, st, moodGarden, false)
             sheet("widget_state_${st.band.lowercase()}", "Widget states: ${st.title} (${st.vitality})", listOf(big, wide, small))
         }
         val notYet = WidgetInfo(70, "Healthy", "Tap to plant your garden", "", "HEALTHY", false)

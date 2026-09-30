@@ -52,16 +52,23 @@ class A9_DeviceConditionsTest {
         compose.onNodeWithText("Cosmos").performClick()
         Qa.device.setOrientationLeft()
         SystemClock.sleep(2500)
-        Qa.check("Still on the planting screen after rotating", Qa.waitText(compose, "You earned a seed"))
-        Qa.check("Choice kept after rotating", Qa.exists(compose, "Plant cosmos"))
-        Qa.shot("landscape_plant", "Planting screen, rotated")
-        Qa.device.pressBack()
-        Qa.waitText(compose, "Today's care")
-        Qa.settle(compose)
-        Qa.shot("landscape_home", "Home, rotated")
+        Qa.check(
+            "Stays upright when the phone is turned",
+            Qa.device.displayWidth < Qa.device.displayHeight,
+            "${Qa.device.displayWidth}x${Qa.device.displayHeight}",
+        )
+        Qa.check("Still on the planting screen after turning", Qa.waitText(compose, "You earned a seed"))
+        Qa.shot("turned_plant", "Planting screen with the phone turned sideways")
         Qa.device.setOrientationNatural()
         Qa.device.unfreezeRotation()
-        SystemClock.sleep(1500)
+        SystemClock.sleep(1000)
+        // A settings change while the app is open rebuilds the screen; choices must survive it.
+        Qa.shell("cmd uimode night yes")
+        SystemClock.sleep(2500)
+        Qa.check("Still on the planting screen after a system change", Qa.waitText(compose, "You earned a seed"))
+        Qa.check("Choice kept after a system change", Qa.waitText(compose, "Plant cosmos"))
+        Qa.shell("cmd uimode night no")
+        SystemClock.sleep(2000)
         Qa.closeApp()
 
         // Large text: the welcome button must stay reachable.

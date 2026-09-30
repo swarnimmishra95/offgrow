@@ -38,6 +38,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -81,7 +82,9 @@ fun WelcomeScreen(onStart: () -> Unit) {
     ) {
         BoxWithConstraints(Modifier.weight(1f)) {
         // On small phones the picture gives way so the headline stays in view.
-        val heroHeight = min(maxWidth / 0.9f, maxHeight * 0.52f)
+        // Leave room for the wordmark, headline and body text (more room when text is enlarged).
+        val reserve = 262.dp * LocalDensity.current.fontScale.coerceAtLeast(1f)
+        val heroHeight = min(maxWidth / 0.9f, maxHeight - reserve).coerceAtLeast(140.dp)
         Column(
             Modifier
                 .fillMaxSize()

@@ -48,7 +48,7 @@ class A5_ScreensTest {
         val start = today.minusDays(10)
         Qa.reset(start, 9)
         Qa.seed(Qa.onboardedState(start, vitality = 70, flowers = 1, lastClosed = start.minusDays(1)).copy(flowers = listOf(
-            Flower("first", "poppy", "Poppy, ${start.dayOfMonth} Oct", "Walked to the lake instead", start.toString()),
+            Flower("first", "poppy", Rules.defaultFlowerName("poppy", start), "Walked to the lake instead", start.toString()),
         )))
         val usage = listOf(25, 40, 95, 20, 30, 150, 45, 35, 20, 28)
         for (i in 0 until 10) {
@@ -61,7 +61,7 @@ class A5_ScreensTest {
                 while (Qa.state().pendingSeeds > 0) {
                     val n = Qa.state().flowers.size
                     val kind = listOf("sunflower", "cornflower", "daisy", "cosmos", "lavender", "marigold")[n % 6]
-                    runBlocking { GardenEngine.update(Qa.ctx) { s -> Rules.plant(s, Flower("p$n", kind, "${Rules.plantable(kind).label}, ${d.plusDays(1).dayOfMonth} Oct", "", d.plusDays(1).toString())) } }
+                    runBlocking { GardenEngine.update(Qa.ctx) { s -> Rules.plant(s, Flower("p$n", kind, Rules.defaultFlowerName(kind, d.plusDays(1)), "", d.plusDays(1).toString())) } }
                 }
             }
         }
@@ -90,15 +90,17 @@ class A5_ScreensTest {
         val tulipLocked = best < 3
         compose.onNodeWithText("Tulip").performScrollTo().performClick()
         Qa.check(
-            "Tulip locked below a 3-day streak",
+            if (tulipLocked) "Tulip stays locked below a 3-day streak" else "Tulip can be planted after a 3-day streak",
             if (tulipLocked) !Qa.exists(compose, "Plant tulip") else Qa.exists(compose, "Plant tulip"),
             "best streak $best",
         )
-        compose.onNodeWithText("Hydrangea").performScrollTo()
+        compose.onNodeWithText("Hydrangea").performScrollTo().performClick()
         Qa.check("Hydrangea shows its unlock", Qa.exists(compose, "14-day streak"))
+        Qa.check("Tapping a locked flower doesn't select it", !Qa.exists(compose, "Plant hydrangea"))
         Qa.shot("plant_locked", "Locked flowers show the streak needed")
         compose.onNodeWithText("Lavender").performScrollTo().performClick()
-        compose.onNode(hasSetTextAction()).performScrollTo().performTextInput("Board games with the cousins")
+        compose.onNode(hasSetTextAction()).performClick()
+        compose.onNode(hasSetTextAction()).performTextInput("Board games with the cousins")
         compose.onNodeWithText("Plant lavender").performClick()
         Qa.check("Opens the new flower", Qa.waitText(compose, "Back to garden", 15_000))
         Qa.waitEngineIdle()
@@ -127,24 +129,25 @@ class A5_ScreensTest {
         // Journal.
         compose.onAllNodesWithText("Journal").onFirst().performClick()
         Qa.check("Journal", Qa.waitText(compose, "Garden journal"))
-        Qa.check("Week summary", Qa.exists(compose, "vitality"))
+        Qa.check("Week summary", Qa.exists(compose, "social a day"))
         Qa.check("Flowers row", Qa.exists(compose, "Your flowers".uppercase()))
         Qa.check("Yesterday listed", Qa.exists(compose, "Yesterday"))
         run {
             val st = Qa.state()
             val weekStart = today.minusDays(6)
-            val baseline = st.days.lastOrNull { LocalDate.parse(it.day).isBefore(weekStart) }?.vitalityEnd ?: Rules.START_VITALITY
-            val live = Store(Qa.ctx).widgetInfo()?.vitality ?: 0
-            val net = live - baseline
-            val shown = if (net > 0) "+$net" else if (net < 0) "−${-net}" else "0"
-            Qa.check("Week change is the real net change ($shown)", Qa.exists(compose, shown), "live $live, before the week $baseline")
+            val week = st.days.filter { !LocalDate.parse(it.day).isBefore(weekStart) }
+            val avg = Math.round(week.map { it.socialMin }.average()).toInt()
+            val shown = Rules.fmtMin(avg)
+            Qa.check("Average social a day this week ($shown)", Qa.exists(compose, shown), "${week.size} finished days")
+            val rough = week.count { !it.good }
+            Qa.check("Rough days this week ($rough)", Qa.exists(compose, if (rough == 1) "rough day" else "rough days"))
         }
         Qa.shot("journal", "Journal")
         compose.onAllNodes(hasScrollAction()).onFirst().performTouchInput { swipeUp(durationMillis = 300) }
         Qa.shot("journal_days", "Journal, day by day")
         compose.onAllNodes(hasScrollAction()).onFirst().performTouchInput { swipeDown(durationMillis = 300) }
         compose.onAllNodes(hasScrollAction()).onFirst().performTouchInput { swipeDown(durationMillis = 300) }
-        compose.onNodeWithText("Poppy, ${today.minusDays(10).dayOfMonth} Oct").performScrollTo().performClick()
+        compose.onNodeWithText(Rules.defaultFlowerName("poppy", today.minusDays(10))).performScrollTo().performClick()
         Qa.check("Opens an older flower", Qa.waitText(compose, "“Walked to the lake instead”"))
         Qa.shot("flower_old", "The first flower, opened from the journal")
         Qa.device.pressBack()

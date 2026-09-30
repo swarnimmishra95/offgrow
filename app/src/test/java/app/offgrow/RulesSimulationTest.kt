@@ -308,4 +308,28 @@ class RulesSimulationTest {
         assertEquals("1h 1m", Rules.fmtMin(61))
         assertEquals("0m", Rules.fmtMin(-5))
     }
+
+    @Test
+    fun roughRunCountsEveryRoughDayEvenAfterALoss() {
+        val start = LocalDate.of(2026, 10, 1)
+        var s = GardenState(installId = "r", seed = 1, createdDay = "2026-09-01", onboarded = true, vitality = 40,
+            lastClosedDay = start.minusDays(1).toString(),
+            flowers = (1..3).map { Flower("f$it", "poppy", "Poppy", "", "2026-09-0$it") })
+        s = Rules.closeDay(s, start, good())
+        assertEquals(0, Rules.roughRun(s))
+        for (i in 1..8) s = Rules.closeDay(s, start.plusDays(i.toLong()), bad())
+        // The low-days counter resets each time a flower is lost; the rough run keeps counting.
+        assertTrue("a flower was lost", s.flowers.any { !it.alive })
+        assertTrue("low-day counter reset", s.lowDays < 3)
+        assertEquals(8, Rules.roughRun(s))
+        s = Rules.closeDay(s, start.plusDays(9), good())
+        assertEquals(0, Rules.roughRun(s))
+    }
+
+    @Test
+    fun defaultFlowerNameUsesDayAndMonth() {
+        val name = Rules.defaultFlowerName("rosebush", LocalDate.of(2026, 10, 7))
+        assertTrue(name, name.startsWith("Rose bush, 7 "))
+        assertTrue(name, !name.contains("2026"))
+    }
 }

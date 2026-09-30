@@ -8,6 +8,8 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import app.offgrow.data.Store
+import app.offgrow.garden.CareItem
+import app.offgrow.garden.DayRecord
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -24,6 +26,16 @@ class A2_HomeStatesTest {
     }
 
     private val today = LocalDate.of(2026, 10, 14)
+
+    /** [n] closed days over the limit, ending yesterday, finishing at [endVitality]. */
+    private fun rough(n: Int, endVitality: Int): List<DayRecord> = (n downTo 1).map { back ->
+        DayRecord(
+            day = today.minusDays(back.toLong()).toString(),
+            socialMin = 150, limitMin = 60, screenMin = 260, phoneFreeMin = 120, pickups = 70,
+            good = false, delta = -23, vitalityEnd = endVitality,
+            items = listOf(CareItem("wilt", "Flowers wilting", "1h 30m over your 1h limit", -20), CareItem("weeds", "Weeds crept in", "Phone used in your night window", -3)),
+        )
+    }
 
     private fun open(caption: String, name: String) {
         Qa.launchApp()
@@ -79,7 +91,7 @@ class A2_HomeStatesTest {
 
         // Wilting: rough days in a row, far over the limit.
         Qa.reset(today, 21)
-        Qa.seed(Qa.onboardedState(today.minusDays(30), vitality = 40, flowers = 8, lowDays = 2, best = 15))
+        Qa.seed(Qa.onboardedState(today.minusDays(30), vitality = 40, flowers = 8, lowDays = 2, best = 15).copy(days = rough(2, 40)))
         Qa.fake.days[today] = Qa.stats(102, sunlight = false, nightMin = 25)
         open("Wilting, 2 rough days, 42m over, night", "home_wilting")
         Qa.check("Wilting headline", Qa.exists(compose, "Your garden is wilting"))
@@ -95,6 +107,19 @@ class A2_HomeStatesTest {
         Qa.check("Notice opens focus", Qa.waitText(compose, "Start focus"))
         Qa.closeApp()
 
+        // Every flower lost after a long slump: the notice changes, the kicker counts all rough days.
+        Qa.reset(today, 13)
+        run {
+            val base = Qa.onboardedState(today.minusDays(30), vitality = 6, flowers = 4, lowDays = 1, best = 6)
+            Qa.seed(base.copy(days = rough(9, 6), flowers = base.flowers.map { it.copy(lostDay = today.minusDays(2).toString()) }))
+        }
+        Qa.fake.days[today] = Qa.stats(150, sunlight = false, nightMin = 30, free = 90)
+        open("Every flower lost, nine rough days in a row", "home_bare")
+        Qa.check("Kicker counts every rough day", Qa.exists(compose, "9 rough days in a row"))
+        Qa.check("No-flowers notice", Qa.exists(compose, "Your garden needs one good day"))
+        Qa.check("Doesn't promise to save flowers that are gone", !Qa.exists(compose, "Your flowers can still be saved"))
+        Qa.closeApp()
+
         // Usage access switched off after setup.
         Qa.reset(today, 11)
         Qa.seed(Qa.onboardedState(today.minusDays(5), vitality = 75, flowers = 3))
@@ -108,7 +133,7 @@ class A2_HomeStatesTest {
         // Early morning: nothing decided yet.
         Qa.reset(today, 5)
         Qa.seed(Qa.onboardedState(today.minusDays(5), vitality = 70, flowers = 3))
-        Qa.fake.days[today] = Qa.stats(0, nightDone = false, wakeHourDone = false, wake = null)
+        Qa.fake.days[today] = Qa.stats(0, nightDone = false, wakeHourDone = false, wake = null, free = 0, pickups = 0, screen = 0)
         open("5am, before anything is decided (dawn)", "home_dawn")
         Qa.check("Vitality unchanged at 70", Qa.exists(compose, "70"))
         compose.onNodeWithText("Today's care").performScrollTo()

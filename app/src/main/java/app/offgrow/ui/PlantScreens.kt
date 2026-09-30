@@ -147,7 +147,7 @@ fun PlantScreen(state: GardenState, onClose: () -> Unit, onPlant: (kind: String,
                         .padding(12.dp),
                 ) {
                     SeedStat(Rules.fmtMin(seedRecord.phoneFreeMin), "phone-free", Modifier.weight(1f))
-                    SeedStat(Rules.fmtMin(seedRecord.socialMin), "social (of ${seedRecord.limitMin})", Modifier.weight(1f))
+                    SeedStat(Rules.fmtMin(seedRecord.socialMin), "social (of ${Rules.fmtMin(seedRecord.limitMin)})", Modifier.weight(1f))
                     SeedStat(if (seedRecord.pickups >= 0) seedRecord.pickups.toString() else "—", "pickups", Modifier.weight(1f))
                 }
             }
@@ -176,10 +176,12 @@ fun PlantScreen(state: GardenState, onClose: () -> Unit, onPlant: (kind: String,
                 }
             }
 
-            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text("What did you do instead of scrolling?", style = body(14, FontWeight.Bold))
-                TextInput(note, { note = it.take(160) }, "A walk, a book, a long lunch…")
-            }
+            Spacer(Modifier.height(4.dp))
+        }
+        // Kept outside the scrolling list so the note stays in view above the keyboard.
+        Column(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.padding(top = 12.dp)) {
+            Text("What did you do instead of scrolling?", style = body(14, FontWeight.Bold))
+            TextInput(note, { note = it.take(160) }, "A walk, a book, a long lunch…")
         }
         PrimaryButton(
             if (planting) "Planting…" else "Plant ${Rules.plantable(selected).label.lowercase()}",

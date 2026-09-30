@@ -33,8 +33,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
 import java.time.LocalTime
-import java.time.format.DateTimeFormatter
-import java.util.Locale
 import java.util.UUID
 
 data class UiState(
@@ -232,11 +230,10 @@ class AppViewModel(private val app: Application, private val saved: SavedStateHa
     fun plant(kind: String, note: String, onPlanted: (String?) -> Unit) {
         val id = UUID.randomUUID().toString()
         val today = AppClock.today()
-        val label = Rules.plantable(kind).label
         val flower = Flower(
             id = id,
             kind = kind,
-            name = "$label, ${today.format(DateTimeFormatter.ofPattern("d MMM", Locale.getDefault()))}",
+            name = Rules.defaultFlowerName(kind, today),
             note = note.trim().take(160),
             plantedDay = today.toString(),
         )

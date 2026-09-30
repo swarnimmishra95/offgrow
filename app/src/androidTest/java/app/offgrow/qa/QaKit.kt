@@ -203,7 +203,7 @@ object Qa {
             onboarded = true,
             fence = "white",
             flowers = (0 until flowers).map { i ->
-                Flower("f$i", kinds[i % kinds.size], Rules.plantable(kinds[i % kinds.size]).label + " #${i + 1}", if (i == 0) "Lodhi garden walk with Riya" else "", created.plusDays(i.toLong()).toString())
+                Flower("f$i", kinds[i % kinds.size], Rules.defaultFlowerName(kinds[i % kinds.size], created.plusDays(i.toLong())), if (i == 0) "Lodhi garden walk with Riya" else "", created.plusDays(i.toLong()).toString())
             },
         )
     }

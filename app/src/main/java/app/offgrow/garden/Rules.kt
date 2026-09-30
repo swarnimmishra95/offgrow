@@ -195,6 +195,13 @@ object Rules {
         return out
     }
 
+    /** How many closed days in a row, up to yesterday, went over the limit. */
+    fun roughRun(state: GardenState): Int = state.days.asReversed().takeWhile { !it.good }.count()
+
+    /** The name a new flower gets until the user renames it, e.g. "Poppy, 14 Oct". */
+    fun defaultFlowerName(kind: String, day: LocalDate): String =
+        "${plantable(kind).label}, ${day.format(java.time.format.DateTimeFormatter.ofPattern("d MMM", java.util.Locale.getDefault()))}"
+
     fun liveDelta(items: List<CareItem>): Int = items.filter { !it.pending }.sumOf { it.delta }
 
     /** Vitality right now: the settled value plus today's partial changes. */

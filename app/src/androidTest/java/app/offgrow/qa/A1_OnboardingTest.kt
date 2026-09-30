@@ -4,6 +4,7 @@ import android.os.SystemClock
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
+import androidx.compose.ui.test.isDisplayed
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
@@ -84,8 +85,12 @@ class A1_OnboardingTest {
         Qa.check("First-flower screen shows", Qa.waitText(compose, "Plant your first flower"))
         Qa.shot("plant_first", "First seed")
         compose.onNodeWithText("Poppy").performScrollTo().performClick()
-        compose.onNode(hasSetTextAction()).performScrollTo().performTextInput("Walked to the lake instead")
+        compose.onNode(hasSetTextAction()).performClick()
+        compose.onNode(hasSetTextAction()).performTextInput("Walked to the lake instead")
         compose.waitForIdle()
+        SystemClock.sleep(900) // let the keyboard finish opening
+        compose.waitForIdle()
+        Qa.check("Note field stays in view while typing", compose.onNode(hasSetTextAction()).isDisplayed())
         Qa.check("Button follows the chosen flower", Qa.exists(compose, "Plant poppy"))
         Qa.shot("plant_first_filled", "Poppy chosen with a note")
         compose.onNodeWithText("Plant poppy").performClick()

@@ -1,0 +1,81 @@
+=== app.offgrow.qa.A1_OnboardingTest
+
+app.offgrow.qa.A1_OnboardingTest:.
+
+Time: 41.186
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A2_HomeStatesTest
+
+app.offgrow.qa.A2_HomeStatesTest:.
+
+Time: 78.833
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A3_WeeksSimulationTest
+
+app.offgrow.qa.A3_WeeksSimulationTest:.....
+
+Time: 152.437
+
+OK (5 tests)
+
+
+=== app.offgrow.qa.A4_FocusTest
+
+app.offgrow.qa.A4_FocusTest:.
+
+Time: 79.072
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A5_ScreensTest
+
+app.offgrow.qa.A5_ScreensTest:.
+
+Time: 68.269
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A6_WidgetTest
+
+app.offgrow.qa.A6_WidgetTest:.
+
+Time: 22.852
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A7_BackgroundTest
+
+app.offgrow.qa.A7_BackgroundTest:.
+
+Time: 5.535
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A8_RealUsageTest
+
+app.offgrow.qa.A8_RealUsageTest:.
+
+Time: 158.221
+
+OK (1 test)
+
+
+=== app.offgrow.qa.A9_DeviceConditionsTest
+
+app.offgrow.qa.A9_DeviceConditionsTest:.
+
+Time: 72.18
+
+OK (1 test)
+
+

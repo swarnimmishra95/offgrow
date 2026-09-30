@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.offgrow.UsageMathTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2026-09-30T18:19:32" hostname="runnervm8df0l" time="0.041">
+  <properties/>
+  <testcase name="alarmOverTheLockScreenIsNotNightUse" classname="app.offgrow.UsageMathTest" time="0.01"/>
+  <testcase name="liveFiguresCountUpToNow" classname="app.offgrow.UsageMathTest" time="0.002"/>
+  <testcase name="simpleSocialSpan" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="phoneFreeTimeIsTimeSinceWakingMinusScreenTime" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <testcase name="movingBetweenScreensInsideOneAppKeepsCounting" classname="app.offgrow.UsageMathTest" time="0.003"/>
+  <testcase name="eventsAfterNowAreIgnored" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <testcase name="pickupsUnknownOnOldAndroidWithoutKeyguardEvents" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <testcase name="switchingAppsSplitsTime" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <testcase name="resumeOfAnotherAppClosesAMissingPause" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <testcase name="earlyCheckBeforeFourAmIsNotWaking" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <testcase name="socialInFirstHourAfterWakingBlocksSunlight" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <testcase name="manyPickups" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="daylightSavingDayStillSumsCorrectly" classname="app.offgrow.UsageMathTest" time="0.004"/>
+  <testcase name="screenOffEndsTheSpan" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="socialAfterTheFirstHourKeepsSunlight" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="sunlightIsPendingUntilTheHourPasses" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="heavyUserDay" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="nightUseAfterUnlockCounts" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="nightIsPendingUntilSixAm" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="emptyDay" classname="app.offgrow.UsageMathTest" time="0.006"/>
+  <testcase name="briefNightCheckUnderFiveMinutesIsForgiven" classname="app.offgrow.UsageMathTest" time="0.001"/>
+  <testcase name="lateCloseOfPreviousScreenDoesNotEndTheSpan" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <testcase name="spanAcrossMidnightIsSplit" classname="app.offgrow.UsageMathTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

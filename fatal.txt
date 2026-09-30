@@ -1,0 +1,789 @@
+80:09-30 18:22:14.641  4120  4120 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+81-09-30 18:22:14.644  1538  3514 W ChimeraUtils: Module com.google.android.gms.backup_g1 missing resource null(0)
+82-09-30 18:22:14.646  1247  4028 I PTCommittedOperation: Receive new configuration for com.google.android.gms.auth_account
+83:09-30 18:22:14.647  4120  4120 I AndroidRuntime: Using default boot image
+84-09-30 18:22:14.647  1538  4013 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+85:09-30 18:22:14.647  4120  4120 I AndroidRuntime: Leaving lock profiling enabled
+86-09-30 18:22:14.649  4120  4120 I app_process: Core platform API reporting enabled, enforcing=false
+87-09-30 18:22:14.650  4120  4120 I app_process: Using CollectorTypeCMC GC.
+88-09-30 18:22:14.655  1538  2322 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+89-09-30 18:22:14.656  1538  2322 I SyncIntentOperation: Handling the intent: Intent { act=com.google.android.gms.phenotype.COMMITTED pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }. [CONTEXT service_id=80 ]
+90-09-30 18:22:14.656  1538  3514 W ChimeraUtils: Module com.google.android.gms.backup_g1 missing resource null(0)
+91-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: Update for unknown DeviceConfig package com.google.android.gms.auth_account [CONTEXT service_id=204 ]
+92-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: daaf: No package exists for config package: com.google.android.gms.auth_account
+93-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):233)
+94-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):29)
+95-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):207)
+96-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):2)
+97-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at ajom.onHandleIntent(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+98-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at pkf.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):70)
+99-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at pke.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):152)
+100-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at emsz.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):21)
+101-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+102-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+103-09-30 18:22:14.657  1247  3886 W PlatformConfigurator: 	at java.lang.Thread.run(Thread.java:1012)
+104-09-30 18:22:14.658  1538  2750 I MdiSyncModule: flag handling is skipping irrelevant intent.
+105-09-30 18:22:14.659  1538  2750 I MlBenchmarkInstaller: Intent: com.google.android.gms.phenotype.COMMITTED [CONTEXT service_id=340 ]
+106-09-30 18:22:14.659  1538  2750 I MlBenchmarkInstaller: COMMITTED Extra package name: com.google.android.gms.auth_account [CONTEXT service_id=340 ]
+107-09-30 18:22:14.659  1538  2750 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+108-09-30 18:22:14.661  1538  3933 I GmsSyncPolicyEngine: Periodic sync 1 disabled by policy, cancelled.
+109-09-30 18:22:14.661  1538  2753 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+110-09-30 18:22:14.664  1538  3933 I GmsSyncPolicyEngine: Periodic sync 2 disabled by policy, cancelled.
+--
+152:09-30 18:22:14.751  4120  4120 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+153-09-30 18:22:14.754  4120  4120 D UiAutomationConnection: Created on user UserHandle{0}
+154-09-30 18:22:14.754  1247  4042 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore default scan mode.
+155---------- beginning of system
+156-09-30 18:22:14.754   577  1825 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+157-09-30 18:22:14.756   577  1825 D CompatChangeReporter: Compat change id reported: 151861875; UID 10209; state: ENABLED
+158-09-30 18:22:14.756   577  1825 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+159-09-30 18:22:14.757   577  1825 I AppsFilter: interaction: PackageSetting{df09d77 com.android.microdroid.empty_payload/10192} -> PackageSetting{c494759 app.offgrow/10209} BLOCKED
+160-09-30 18:22:14.762  1247  1251 I .gms.persistent: Background concurrent mark compact GC freed 22MB AllocSpace bytes, 25(852KB) LOS objects, 50% free, 20MB/41MB, paused 1.285ms,1.596ms total 157.820ms
+161-09-30 18:22:14.773   375   375 D Zygote  : Forked child process 4132
+162-09-30 18:22:14.775  1247  4042 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore device name
+163-09-30 18:22:14.779   577   612 I ActivityManager: Start proc 4132:app.offgrow/u0a209 for added application app.offgrow
+164-09-30 18:22:14.783   577   884 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_UNSTOPPED on user 0
+165-09-30 18:22:14.784   577   884 I AppWidgetServiceImpl: Updating package stopped masked state for uid 10209 package app.offgrow isStopped false
+166-09-30 18:22:14.785  1538  3933 I NearbySharing: onBindSlice failed since shareTargets is empty [CONTEXT service_id=194 ]
+167-09-30 18:22:14.786  1538  3933 I NearbySharing: Granted slice and uri permissions to com.samsung.android.app.nearbyshare.theme [CONTEXT service_id=194 ]
+168-09-30 18:22:14.787  1538  3933 I NearbySharing: Granted slice and uri permissions to android [CONTEXT service_id=194 ]
+169-09-30 18:22:14.789  4132  4132 I app.offgrow: Late-enabling -Xcheck:jni
+170-09-30 18:22:14.791  1538  3933 I NearbySharing: Granted slice and uri permissions to com.google.android.apps.nbu.files [CONTEXT service_id=194 ]
+171-09-30 18:22:14.792  1538  3933 I NearbySharing: Granted slice and uri permissions to com.samsung.android.app.sharelive [CONTEXT service_id=194 ]
+172-09-30 18:22:14.795  1247  1247 I NearbySharing: ReceiveSurfaceService started [CONTEXT service_id=194 ]
+173-09-30 18:22:14.796  1247  1247 I NearbySharing: SendSurfaceService started [CONTEXT service_id=194 ]
+174-09-30 18:22:14.796  1538  3933 I NearbySharing: Runtime state initialization complete. Sharing is enabled. [CONTEXT service_id=194 ]
+175-09-30 18:22:14.801  4132  4132 I app.offgrow: Using CollectorTypeCMC GC.
+176-09-30 18:22:14.802  4132  4132 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+177-09-30 18:22:14.802  4132  4132 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+--
+6534:09-30 18:22:56.737  4120  4120 I AndroidRuntime: VM exiting with result code 0.
+6535-09-30 18:22:56.926     0     0 I binder  : 577:1013 ioctl 400c620e 7866ae55a354 returned -11
+6536-09-30 18:22:56.738  1589  1787 I A       : NGA enabled in interactor.
+6537-09-30 18:22:56.738  3232  3512 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/AboutEntity_android.far_1565913559556
+6538-09-30 18:22:56.738  3232  3512 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/AboutEntity_android.far_1565913559556)
+6539-09-30 18:22:56.739  1589  1787 I A       : (REDACTED) Nga state changed to %s
+6540-09-30 18:22:56.739   577  1013 E ActivityManager: Unable to freeze binder for 4132: -11
+6541-09-30 18:22:56.740   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+6542-09-30 18:22:56.741   577  1013 I ActivityManager: Killing 4132:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+6543-09-30 18:22:56.742  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/PrebuiltBugle/PrebuiltBugle.apk' with 1 weak references
+6544-09-30 18:22:56.742  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.apk' with 1 weak references
+6545-09-30 18:22:56.744  3232  3870 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510408
+6546-09-30 18:22:56.745  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk' with 1 weak references
+6547-09-30 18:22:56.745  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '/vendor/overlay/SystemUIGoogle__sdk_gphone64_x86_64__auto_generated_rro_vendor.apk' with 1 weak references
+6548-09-30 18:22:56.745  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '/product/overlay/SystemUIGoogle__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+6549-09-30 18:22:56.745  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '/product/overlay/SystemUIEmulationPixel6/SystemUIEmulationPixel6Overlay.apk' with 1 weak references
+6550-09-30 18:22:56.745  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Maps/Maps.apk' with 1 weak references
+6551-09-30 18:22:56.745  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk' with 1 weak references
+6552-09-30 18:22:56.745  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/Velvet/Velvet.apk' with 1 weak references
+6553-09-30 18:22:56.746  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/SettingsIntelligenceGooglePrebuilt/SettingsIntelligenceGooglePrebuilt.apk' with 1 weak references
+6554-09-30 18:22:56.746  1188  1197 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/YouTube/YouTube.apk' with 1 weak references
+6555-09-30 18:22:56.747  3232  3875 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/Weather_android.far_1565913559556
+6556-09-30 18:22:56.747  3232  3875 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/Weather_android.far_1565913559556)
+6557-09-30 18:22:56.750  1455  2661 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+6558-09-30 18:22:56.750  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+6559-09-30 18:22:56.750  1455  1752 I AiAiEcho: EchoTargets: 
+--
+6687:09-30 18:22:57.620  4447  4447 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+6688:09-30 18:22:57.634  4447  4447 I AndroidRuntime: Using default boot image
+6689:09-30 18:22:57.643  4447  4447 I AndroidRuntime: Leaving lock profiling enabled
+6690-09-30 18:22:57.656  4447  4447 I app_process: Core platform API reporting enabled, enforcing=false
+6691-09-30 18:22:57.659  4447  4447 I app_process: Using CollectorTypeCMC GC.
+6692-09-30 18:22:57.778  3232  3512 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510415
+6693-09-30 18:22:57.780  3232  3875 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510414
+6694-09-30 18:22:57.783  3232  3870 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/SharePhoneNumber_android.far_1565913559556
+6695-09-30 18:22:57.783  3232  3870 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/SharePhoneNumber_android.far_1565913559556)
+6696-09-30 18:22:57.788  3232  3512 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/SendPaymentRequest_android.far_1565913559556
+6697-09-30 18:22:57.788  3232  3512 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/SendPaymentRequest_android.far_1565913559556)
+6698-09-30 18:22:57.804  3232  3870 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510416
+6699-09-30 18:22:57.812  3232  3512 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510417
+6700-09-30 18:22:57.813  3232  3875 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/DuoCall_android.far_1565913559556
+6701-09-30 18:22:57.813  3232  3875 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/DuoCall_android.far_1565913559556)
+6702-09-30 18:22:57.824  3232  3870 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/ReminderClassification_android.far_1565913559556
+6703-09-30 18:22:57.824  3232  3870 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/ReminderClassification_android.far_1565913559556)
+6704-09-30 18:22:57.835  3232  3875 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510418
+6705-09-30 18:22:57.842  3232  3870 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510419
+6706-09-30 18:22:57.845  3232  3512 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/model_based_provider_configs_pumpkin.pb_1565913559556
+6707-09-30 18:22:57.845  3232  3512 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/model_based_provider_configs_pumpkin.pb_1565913559556)
+6708-09-30 18:22:57.860  3232  3875 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/FindMovies_android.far_1565913559556
+6709-09-30 18:22:57.860  3232  3875 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/FindMovies_android.far_1565913559556)
+6710-09-30 18:22:57.866  3232  3512 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510420
+6711-09-30 18:22:57.871  3232  3870 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/ScriptedReply_android.far_1565913559556
+6712-09-30 18:22:57.871  3232  3870 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/ScriptedReply_android.far_1565913559556)
+6713-09-30 18:22:57.872  3232  3875 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510421
+6714-09-30 18:22:57.874  3232  3512 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/assistant_templates.pb_1565913559556
+--
+6725:09-30 18:22:57.910  4447  4447 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+6726-09-30 18:22:57.912  4447  4447 D UiAutomationConnection: Created on user UserHandle{0}
+6727-09-30 18:22:57.913   577  1840 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+6728-09-30 18:22:57.913   577  1840 D OomAdjuster: Not killing cached processes
+6729-09-30 18:22:57.914   577  1840 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+6730-09-30 18:22:57.920   375   375 D Zygote  : Forked child process 4460
+6731-09-30 18:22:57.921   577   612 I ActivityManager: Start proc 4460:app.offgrow/u0a209 for added application app.offgrow
+6732-09-30 18:22:57.927   374   374 I netd    : tetherGetStats() -> {[]} <0.27ms>
+6733-09-30 18:22:57.929  4460  4460 I app.offgrow: Late-enabling -Xcheck:jni
+6734-09-30 18:22:57.940  4460  4460 I app.offgrow: Using CollectorTypeCMC GC.
+6735-09-30 18:22:57.940  4460  4460 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+6736-09-30 18:22:57.940  4460  4460 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+6737-09-30 18:22:57.942   453   462 I adbd    : jdwp connection from 4460
+6738-09-30 18:22:57.947  4460  4460 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+6739-09-30 18:22:57.967  4460  4460 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+6740-09-30 18:22:57.969  4460  4460 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+6741-09-30 18:22:57.969  4460  4460 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+6742-09-30 18:22:57.970  4460  4460 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+6743-09-30 18:22:57.971  4460  4460 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+6744-09-30 18:22:57.971  4460  4460 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+6745-09-30 18:22:57.992  4460  4460 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+6746-09-30 18:22:57.992  4460  4460 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+6747-09-30 18:22:58.091  3232  3512 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510423
+6748-09-30 18:22:58.092  3232  3870 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.apps.messaging/files/datadownload/shared/public/datadownloadfile_1790792510422
+6749-09-30 18:22:58.095  3232  3875 D dasx    : Starting download: https://www.gstatic.com/messages/smarts/smart_actions_grammars/AboutRestaurant_android.far_1565913559556
+6750-09-30 18:22:58.095  3232  3875 V dasx    : Is http uri, downloading (uri: https://www.gstatic.com/messages/smarts/smart_actions_grammars/AboutRestaurant_android.far_1565913559556)
+--
+12271:09-30 18:24:17.447  4447  4447 I AndroidRuntime: VM exiting with result code 0.
+12272-09-30 18:24:17.447   577  1835 I ActivityManager: Killing 4460:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+12273-09-30 18:24:17.449   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+12274-09-30 18:24:17.471  1455  3495 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+12275-09-30 18:24:17.471  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+12276-09-30 18:24:17.471  1455  1752 I AiAiEcho: EchoTargets: 
+12277-09-30 18:24:17.471  1455  1752 I AiAiEcho: Filtered by AiAi flag check: 
+12278-09-30 18:24:17.471  1455  1752 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+12279-09-30 18:24:17.471  1455  1752 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+12280-09-30 18:24:17.472  1455  1752 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+12281-09-30 18:24:17.472  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+12282-09-30 18:24:17.472  1455  1752 I AiAiEcho: EchoTargets: 
+12283-09-30 18:24:17.472  1455  1752 I AiAiEcho: Filtered by AiAi flag check: 
+12284-09-30 18:24:17.472  1455  1752 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+12285-09-30 18:24:17.472  1455  1752 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+12286-09-30 18:24:17.472  1455  1752 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+12287-09-30 18:24:17.472  1455  1752 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+12288-09-30 18:24:17.472   935   935 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+12289-09-30 18:24:17.473  1455  1752 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+12290-09-30 18:24:17.485  1589  1778 I A       : NGA enabled in interactor.
+12291-09-30 18:24:17.490  1589  1778 I A       : (REDACTED) Nga state changed to %s
+12292-09-30 18:24:17.490  1589  1778 I A       : (REDACTED) isTngActive=%s
+12293-09-30 18:24:17.512  1496  1951 I A       : (REDACTED) on opa visibility changed %s
+12294-09-30 18:24:17.514  1496  1951 I A       : (REDACTED) on opa visibility changed %s
+12295-09-30 18:24:17.522  1496  3537 I A       : Initializing all components
+12296-09-30 18:24:17.522  1496  1836 I A       : (REDACTED) Nga on-device enabled based on TNG:MA active state: %b
+--
+12379:09-30 18:24:17.961  4818  4818 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+12380:09-30 18:24:17.967  4818  4818 I AndroidRuntime: Using default boot image
+12381:09-30 18:24:17.968  4818  4818 I AndroidRuntime: Leaving lock profiling enabled
+12382-09-30 18:24:17.971  4818  4818 I app_process: Core platform API reporting enabled, enforcing=false
+12383-09-30 18:24:17.973  4818  4818 I app_process: Using CollectorTypeCMC GC.
+12384-09-30 18:24:18.038  4818  4818 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+12385-09-30 18:24:18.046  4818  4818 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+12386-09-30 18:24:18.046  4818  4818 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+12387-09-30 18:24:18.046  4818  4818 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+12388-09-30 18:24:18.047  4818  4818 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+12389-09-30 18:24:18.048  4818  4818 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+12390-09-30 18:24:18.049  4818  4818 W app_process: Unexpected CPU variant for x86: x86_64.
+12391-09-30 18:24:18.049  4818  4818 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+12392-09-30 18:24:18.064  4818  4818 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+12393:09-30 18:24:18.064  4818  4818 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+12394-09-30 18:24:18.066  4818  4818 D UiAutomationConnection: Created on user UserHandle{0}
+12395-09-30 18:24:18.067   577  1835 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+12396-09-30 18:24:18.068   577  1835 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+12397-09-30 18:24:18.075   375   375 D Zygote  : Forked child process 4834
+12398-09-30 18:24:18.076   577   612 I ActivityManager: Start proc 4834:app.offgrow/u0a209 for added application app.offgrow
+12399-09-30 18:24:18.093  4834  4834 I app.offgrow: Late-enabling -Xcheck:jni
+12400-09-30 18:24:18.104  4834  4834 I app.offgrow: Using CollectorTypeCMC GC.
+12401-09-30 18:24:18.104  4834  4834 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+12402-09-30 18:24:18.104  4834  4834 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+12403-09-30 18:24:18.106   453   462 I adbd    : jdwp connection from 4834
+12404-09-30 18:24:18.111  4834  4834 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+12405-09-30 18:24:18.129  4834  4834 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+12406-09-30 18:24:18.132  4834  4834 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+12407-09-30 18:24:18.133  4834  4834 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+12408-09-30 18:24:18.135  4834  4834 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+12409-09-30 18:24:18.135  4834  4834 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+12410-09-30 18:24:18.135  4834  4834 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+12411-09-30 18:24:18.157  4834  4834 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+12412-09-30 18:24:18.157  4834  4834 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+12413-09-30 18:24:18.215  1657  1657 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+12414-09-30 18:24:18.337   577  1835 I AppsFilter: interaction: PackageSetting{5a84abd app.offgrow/10209} -> PackageSetting{852936a com.android.cts.priv.ctsshim/10193} BLOCKED
+12415-09-30 18:24:18.338   577  1835 I AppsFilter: interaction: PackageSetting{5a84abd app.offgrow/10209} -> PackageSetting{20f405b com.android.internal.display.cutout.emulation.corner/10002} BLOCKED
+12416-09-30 18:24:18.338   577  1835 I AppsFilter: interaction: PackageSetting{5a84abd app.offgrow/10209} -> PackageSetting{77c50f8 com.android.internal.display.cutout.emulation.double/10082} BLOCKED
+12417-09-30 18:24:18.338   577  1835 I AppsFilter: interaction: PackageSetting{5a84abd app.offgrow/10209} -> PackageSetting{86a39d1 com.google.android.onetimeinitializer/10128} BLOCKED
+12418-09-30 18:24:18.338   577  1835 I AppsFilter: interaction: PackageSetting{5a84abd app.offgrow/10209} -> PackageSetting{b7e7c36 com.google.android.ext.shared/10117} BLOCKED
+--
+20537:09-30 18:26:51.150  4818  4818 I AndroidRuntime: VM exiting with result code 0.
+20538-09-30 18:26:51.338     0     0 I binder  : 577:1825 ioctl 400c620e 7866a8d7a354 returned -11
+20539-09-30 18:26:51.342     0     0 I binder  : 577:1825 ioctl 400c620e 7866a8d7a354 returned -11
+20540-09-30 18:26:51.159  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+20541-09-30 18:26:51.159   577  1825 E ActivityManager: Unable to freeze binder for 4834: -11
+20542-09-30 18:26:51.160  1455  1752 I AiAiEcho: EchoTargets: 
+20543-09-30 18:26:51.160  1455  1752 I AiAiEcho: Filtered by AiAi flag check: 
+20544-09-30 18:26:51.160  1455  1752 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+20545-09-30 18:26:51.160  1455  1752 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+20546-09-30 18:26:51.161   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+20547-09-30 18:26:51.165  1455  1752 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+20548-09-30 18:26:51.165  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+20549-09-30 18:26:51.165  1455  1752 I AiAiEcho: EchoTargets: 
+20550-09-30 18:26:51.165  1455  1752 I AiAiEcho: Filtered by AiAi flag check: 
+20551-09-30 18:26:51.165  1455  1752 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+20552-09-30 18:26:51.165  1455  1752 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+20553-09-30 18:26:51.165  1455  1752 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+20554-09-30 18:26:51.165  1455  1752 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+20555-09-30 18:26:51.165  1455  1752 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+20556-09-30 18:26:51.169  1589  1777 I A       : NGA enabled in interactor.
+20557-09-30 18:26:51.169  1589  1777 I A       : (REDACTED) Nga state changed to %s
+20558-09-30 18:26:51.169  1589  1777 I A       : (REDACTED) isTngActive=%s
+20559-09-30 18:26:51.171  1496  4039 I A       : Initializing all components
+20560-09-30 18:26:51.180   577  1825 I ActivityManager: Killing 4834:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+20561-09-30 18:26:51.181   935   935 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+20562-09-30 18:26:51.190  1496  1836 I A       : (REDACTED) onIsEnabledChanged, isEnabled: %s
+--
+20653:09-30 18:26:51.516  5557  5557 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+20654:09-30 18:26:51.521  5557  5557 I AndroidRuntime: Using default boot image
+20655:09-30 18:26:51.521  5557  5557 I AndroidRuntime: Leaving lock profiling enabled
+20656-09-30 18:26:51.523  5557  5557 I app_process: Core platform API reporting enabled, enforcing=false
+20657-09-30 18:26:51.523  5557  5557 I app_process: Using CollectorTypeCMC GC.
+20658-09-30 18:26:51.616  5557  5557 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+20659-09-30 18:26:51.629  5557  5557 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+20660-09-30 18:26:51.629  5557  5557 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+20661-09-30 18:26:51.630  5557  5557 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+20662-09-30 18:26:51.634  5557  5557 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+20663-09-30 18:26:51.639  5557  5557 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+20664-09-30 18:26:51.648  5557  5557 W app_process: Unexpected CPU variant for x86: x86_64.
+20665-09-30 18:26:51.648  5557  5557 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+20666-09-30 18:26:51.711  5557  5557 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+20667:09-30 18:26:51.714  5557  5557 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+20668-09-30 18:26:51.743  5557  5557 D UiAutomationConnection: Created on user UserHandle{0}
+20669-09-30 18:26:51.746   577  1841 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+20670-09-30 18:26:51.747   577  1841 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+20671-09-30 18:26:51.764   375   375 D Zygote  : Forked child process 5571
+20672-09-30 18:26:51.765   577   612 I ActivityManager: Start proc 5571:app.offgrow/u0a209 for added application app.offgrow
+20673-09-30 18:26:51.800  5571  5571 I app.offgrow: Late-enabling -Xcheck:jni
+20674-09-30 18:26:51.868  5571  5571 I app.offgrow: Using CollectorTypeCMC GC.
+20675-09-30 18:26:51.908  5571  5571 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+20676-09-30 18:26:51.908  5571  5571 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+20677-09-30 18:26:51.909  1247  1247 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.time.trustedtime.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+20678-09-30 18:26:51.973   453   462 I adbd    : jdwp connection from 5571
+20679-09-30 18:26:51.984  5571  5571 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+20680-09-30 18:26:51.989  1247  1247 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.time.trustedtime.singleuserapi.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentSingleUserInternalApiService }
+20681-09-30 18:26:52.087  5571  5571 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+20682-09-30 18:26:52.121  5571  5571 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+20683-09-30 18:26:52.127  5571  5571 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+20684-09-30 18:26:52.128  5571  5571 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+20685-09-30 18:26:52.128  5571  5571 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+20686-09-30 18:26:52.128  5571  5571 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+20687-09-30 18:26:52.312  5571  5571 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+20688-09-30 18:26:52.316  5571  5571 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+20689-09-30 18:26:52.364  1188  1628 D EGL_emulation: app_time_stats: avg=65.92ms min=25.06ms max=219.54ms count=15
+20690-09-30 18:26:52.629   577  1835 I AppsFilter: interaction: PackageSetting{a2821f7 app.offgrow/10209} -> PackageSetting{852936a com.android.cts.priv.ctsshim/10193} BLOCKED
+20691-09-30 18:26:52.629   577  1835 I AppsFilter: interaction: PackageSetting{a2821f7 app.offgrow/10209} -> PackageSetting{20f405b com.android.internal.display.cutout.emulation.corner/10002} BLOCKED
+20692-09-30 18:26:52.630   577  1835 I AppsFilter: interaction: PackageSetting{a2821f7 app.offgrow/10209} -> PackageSetting{77c50f8 com.android.internal.display.cutout.emulation.double/10082} BLOCKED
+--
+23035:09-30 18:28:12.040  5557  5557 I AndroidRuntime: VM exiting with result code 0.
+23036-09-30 18:28:12.233     0     0 I binder  : 577:1827 ioctl 400c620e 7866a8948354 returned -11
+23037-09-30 18:28:12.235     0     0 I binder  : 577:1827 ioctl 400c620e 7866a8948354 returned -11
+23038-09-30 18:28:12.046   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23039-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23040-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23041-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23042-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23043-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23044-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23045-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23046-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23047-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23048-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23049-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23050-09-30 18:28:12.047   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23051-09-30 18:28:12.051   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+23052-09-30 18:28:12.051   577   577 D BatterySaverPolicy: accessibility changed to false, updating policy.
+23053-09-30 18:28:12.055   577  1827 E ActivityManager: Unable to freeze binder for 5571: -11
+23054-09-30 18:28:12.078   577  5781 W ActivityManager: pid 577 system sent binder code 2 with flags 0 to frozen apps and got error -32
+23055-09-30 18:28:12.078   577  5781 I ActivityManager: Failure reporting to instrumentation watcher: comp=ComponentInfo{app.offgrow.test/androidx.test.runner.AndroidJUnitRunner} results=Bundle[mParcelledData.dataSize=92]
+23056-09-30 18:28:12.079   577  1827 I ActivityManager: Killing 5571:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+23057-09-30 18:28:12.265     0     0 I binder  : release 5557:5570 transaction 499595 in, still active
+23058-09-30 18:28:12.268     0     0 I binder  : send failed reply for transaction 499595 to 577:5781
+23059-09-30 18:28:12.082   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+23060-09-30 18:28:12.272     0     0 I binder  : undelivered transaction 499642, process died.
+--
+23155:09-30 18:28:12.644  5783  5783 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+23156:09-30 18:28:12.654  5783  5783 I AndroidRuntime: Using default boot image
+23157:09-30 18:28:12.654  5783  5783 I AndroidRuntime: Leaving lock profiling enabled
+23158-09-30 18:28:12.668  1589  2182 W A       : (REDACTED) %s task was not run. Callback from Service received after client was disposed.
+23159-09-30 18:28:12.670  1589  2182 W A       : (REDACTED) %s task was not run. Callback from Service received after client was disposed.
+23160-09-30 18:28:12.678  5783  5783 I app_process: Core platform API reporting enabled, enforcing=false
+23161-09-30 18:28:12.686  1538  2941 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.googlequicksearchbox componentName=null serviceId=36
+23162-09-30 18:28:12.688  1496  4039 V ClearcutMetricXmitter: Transmission is done.
+23163-09-30 18:28:12.693  1589  2182 W SearchServiceCore: Abort, client detached.
+23164-09-30 18:28:12.699  1589  2182 I MicroDetectionState: (REDACTED) #takeChangeMicroDetectorMode [mIsBargeInEnabled: %b, mCurrentDetectionMode: %s]
+23165-09-30 18:28:12.700  1589  2182 I MicroDetectionState: (REDACTED) Should stop hotword detection immediately - %b
+23166-09-30 18:28:12.701  5783  5783 I app_process: Using CollectorTypeCMC GC.
+23167-09-30 18:28:12.905     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+23168-09-30 18:28:12.907     0     0 I binder  : undelivered transaction 499683, process died.
+23169-09-30 18:28:12.720   577  1825 V ActivityManager: Got obituary of 5571:app.offgrow
+23170-09-30 18:28:12.912     0     0 I binder  : undelivered transaction 499695, process died.
+23171-09-30 18:28:12.735   577   602 W ActivityManager: setHasOverlayUi called on unknown pid: 5571
+23172-09-30 18:28:12.792   453   453 I adbd    : Remote process closed the socket (on MSG_PEEK)
+23173-09-30 18:28:12.932   375   375 I Zygote  : Process 5571 exited due to signal 9 (Killed)
+23174-09-30 18:28:12.932   577   613 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10209/pid_5571
+23175-09-30 18:28:13.164  1538  2995 I Icing   : Usage reports ok 1, Failed Usage reports 0, indexed 0, rejected 0
+23176-09-30 18:28:13.172  5783  5783 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+23177-09-30 18:28:13.245  5783  5783 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+23178-09-30 18:28:13.255  5783  5783 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+23179-09-30 18:28:13.255  5783  5783 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+23180-09-30 18:28:13.258  5783  5783 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+23181-09-30 18:28:13.276  5783  5783 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+23182-09-30 18:28:13.280   577   591 I system_server: NativeAlloc concurrent mark compact GC freed 13MB AllocSpace bytes, 53(1076KB) LOS objects, 47% free, 26MB/50MB, paused 1.092ms,12.705ms total 1.395s
+--
+23198:09-30 18:28:13.392  5783  5783 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+23199-09-30 18:28:13.395  5783  5783 D UiAutomationConnection: Created on user UserHandle{0}
+23200-09-30 18:28:13.396   577   845 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+23201-09-30 18:28:13.398   577   845 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+23202-09-30 18:28:13.408   375   375 D Zygote  : Forked child process 5799
+23203-09-30 18:28:13.409   577   612 I ActivityManager: Start proc 5799:app.offgrow/u0a209 for added application app.offgrow
+23204-09-30 18:28:13.416   374   374 I netd    : tetherGetStats() -> {[]} <0.53ms>
+23205-09-30 18:28:13.426  5799  5799 I app.offgrow: Late-enabling -Xcheck:jni
+23206-09-30 18:28:13.441  5799  5799 I app.offgrow: Using CollectorTypeCMC GC.
+23207-09-30 18:28:13.442  5799  5799 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+23208-09-30 18:28:13.442  5799  5799 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+23209-09-30 18:28:13.444   453   462 I adbd    : jdwp connection from 5799
+23210-09-30 18:28:13.450  5799  5799 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+23211-09-30 18:28:13.489  5799  5799 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+23212-09-30 18:28:13.492  5799  5799 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+23213-09-30 18:28:13.494  5799  5799 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+23214-09-30 18:28:13.496  5799  5799 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+23215-09-30 18:28:13.497  5799  5799 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+23216-09-30 18:28:13.497  5799  5799 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+23217-09-30 18:28:13.526  5799  5799 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+23218-09-30 18:28:13.526  5799  5799 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+23219-09-30 18:28:13.704   577   845 I AppsFilter: interaction: PackageSetting{814e2d8 app.offgrow/10209} -> PackageSetting{852936a com.android.cts.priv.ctsshim/10193} BLOCKED
+23220-09-30 18:28:13.704   577   845 I AppsFilter: interaction: PackageSetting{814e2d8 app.offgrow/10209} -> PackageSetting{20f405b com.android.internal.display.cutout.emulation.corner/10002} BLOCKED
+23221-09-30 18:28:13.704   577   845 I AppsFilter: interaction: PackageSetting{814e2d8 app.offgrow/10209} -> PackageSetting{77c50f8 com.android.internal.display.cutout.emulation.double/10082} BLOCKED
+23222-09-30 18:28:13.704   577   845 I AppsFilter: interaction: PackageSetting{814e2d8 app.offgrow/10209} -> PackageSetting{86a39d1 com.google.android.onetimeinitializer/10128} BLOCKED
+23223-09-30 18:28:13.704   577   845 I AppsFilter: interaction: PackageSetting{814e2d8 app.offgrow/10209} -> PackageSetting{b7e7c36 com.google.android.ext.shared/10117} BLOCKED
+--
+25963:09-30 18:29:22.379  5783  5783 I AndroidRuntime: VM exiting with result code 0.
+25964-09-30 18:29:22.385   577  1013 E ActivityManager: Unable to freeze binder for 5799: -11
+25965-09-30 18:29:22.390   577  1013 I ActivityManager: Killing 5799:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+25966-09-30 18:29:22.400   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+25967-09-30 18:29:22.426  1455  3495 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+25968-09-30 18:29:22.451  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+25969-09-30 18:29:22.451  1455  1752 I AiAiEcho: EchoTargets: 
+25970-09-30 18:29:22.451  1455  1752 I AiAiEcho: Filtered by AiAi flag check: 
+25971-09-30 18:29:22.451  1455  1752 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+25972-09-30 18:29:22.451  1455  1752 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+25973-09-30 18:29:22.451  1455  1752 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+25974-09-30 18:29:22.451  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+25975-09-30 18:29:22.451  1455  1752 I AiAiEcho: EchoTargets: 
+25976-09-30 18:29:22.451  1455  1752 I AiAiEcho: Filtered by AiAi flag check: 
+25977-09-30 18:29:22.451  1455  1752 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+25978-09-30 18:29:22.452  1455  1752 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+25979-09-30 18:29:22.452  1455  1752 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+25980-09-30 18:29:22.452  1455  1752 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+25981-09-30 18:29:22.452  1455  1752 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+25982-09-30 18:29:22.452   935   935 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+25983-09-30 18:29:22.459  1188  1188 D SsBaseTemplateCard: No text view can be set up
+25984-09-30 18:29:22.459  1188  1188 D SsBaseTemplateCard: Passed-in item info is null
+25985-09-30 18:29:22.459  1188  1188 D SsBaseTemplateCard: Passed-in item info is null
+25986-09-30 18:29:22.459  1188  1188 D SsBaseTemplateCard: Passed-in item info is null
+25987-09-30 18:29:22.459  1188  1188 I SsBaseTemplateCard: Secondary card pane is null
+25988-09-30 18:29:22.459  1188  1188 W FrameTracker: Missed App frame:UNKNOWN: 76, 150171, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+--
+26133:09-30 18:29:22.819  6142  6142 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+26134:09-30 18:29:22.822  6142  6142 I AndroidRuntime: Using default boot image
+26135:09-30 18:29:22.822  6142  6142 I AndroidRuntime: Leaving lock profiling enabled
+26136-09-30 18:29:22.824  6142  6142 I app_process: Core platform API reporting enabled, enforcing=false
+26137-09-30 18:29:22.824  6142  6142 I app_process: Using CollectorTypeCMC GC.
+26138-09-30 18:29:22.877  6142  6142 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+26139-09-30 18:29:22.885  6142  6142 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+26140-09-30 18:29:22.885  6142  6142 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+26141-09-30 18:29:22.885  6142  6142 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+26142-09-30 18:29:22.886  6142  6142 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+26143-09-30 18:29:22.887  6142  6142 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+26144-09-30 18:29:22.888  6142  6142 W app_process: Unexpected CPU variant for x86: x86_64.
+26145-09-30 18:29:22.888  6142  6142 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+26146-09-30 18:29:22.889  1188  1628 D EGL_emulation: app_time_stats: avg=175.85ms min=91.56ms max=292.35ms count=8
+26147-09-30 18:29:22.911  6142  6142 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+26148:09-30 18:29:22.912  6142  6142 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+26149-09-30 18:29:22.916  6142  6142 D UiAutomationConnection: Created on user UserHandle{0}
+26150-09-30 18:29:22.916   577  2033 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+26151-09-30 18:29:22.918   577  2033 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+26152-09-30 18:29:22.931   375   375 D Zygote  : Forked child process 6157
+26153-09-30 18:29:22.932   577   612 I ActivityManager: Start proc 6157:app.offgrow/u0a209 for added application app.offgrow
+26154-09-30 18:29:22.943   374   374 I netd    : tetherGetStats() -> {[]} <3.55ms>
+26155-09-30 18:29:22.961  6157  6157 I app.offgrow: Late-enabling -Xcheck:jni
+26156-09-30 18:29:23.004  6157  6157 I app.offgrow: Using CollectorTypeCMC GC.
+26157-09-30 18:29:23.005  6157  6157 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+26158-09-30 18:29:23.005  6157  6157 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+26159-09-30 18:29:23.013   453   462 I adbd    : jdwp connection from 6157
+26160-09-30 18:29:23.026  6157  6157 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+26161-09-30 18:29:23.120  6157  6157 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+26162-09-30 18:29:23.129  6157  6157 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+26163-09-30 18:29:23.132  6157  6157 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+26164-09-30 18:29:23.133  6157  6157 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+26165-09-30 18:29:23.133  6157  6157 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+26166-09-30 18:29:23.137  6157  6157 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+26167-09-30 18:29:23.330  6157  6157 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+26168-09-30 18:29:23.331  6157  6157 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+26169-09-30 18:29:23.896  6157  6157 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar:/system/framework/android.test.mock.jar:/system/framework/android.test.base.jar:/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.apk:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/lib/x86_64:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/lib/x86_64:/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.apk!/lib/x86_64:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/app.offgrow
+26170-09-30 18:29:23.896   577  1826 I AppsFilter: interaction: PackageSetting{f34192b app.offgrow/10209} -> PackageSetting{852936a com.android.cts.priv.ctsshim/10193} BLOCKED
+26171-09-30 18:29:23.896   577  1826 I AppsFilter: interaction: PackageSetting{f34192b app.offgrow/10209} -> PackageSetting{20f405b com.android.internal.display.cutout.emulation.corner/10002} BLOCKED
+26172-09-30 18:29:23.896   577  1826 I AppsFilter: interaction: PackageSetting{f34192b app.offgrow/10209} -> PackageSetting{77c50f8 com.android.internal.display.cutout.emulation.double/10082} BLOCKED
+26173-09-30 18:29:23.896   577  1826 I AppsFilter: interaction: PackageSetting{f34192b app.offgrow/10209} -> PackageSetting{86a39d1 com.google.android.onetimeinitializer/10128} BLOCKED
+--
+27249:09-30 18:29:28.324  6248  6248 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+27250:09-30 18:29:28.329  6248  6248 I AndroidRuntime: Using default boot image
+27251:09-30 18:29:28.329  6248  6248 I AndroidRuntime: Leaving lock profiling enabled
+27252-09-30 18:29:28.332  6248  6248 I app_process: Core platform API reporting enabled, enforcing=false
+27253-09-30 18:29:28.332  6248  6248 I app_process: Using CollectorTypeCMC GC.
+27254-09-30 18:29:28.403  6248  6248 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+27255-09-30 18:29:28.410  6248  6248 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+27256-09-30 18:29:28.410  6248  6248 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+27257-09-30 18:29:28.410  6248  6248 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+27258-09-30 18:29:28.411  6248  6248 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+27259-09-30 18:29:28.412  6248  6248 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+27260-09-30 18:29:28.413  6248  6248 W app_process: Unexpected CPU variant for x86: x86_64.
+27261-09-30 18:29:28.413  6248  6248 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+27262-09-30 18:29:28.430  6248  6248 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+27263:09-30 18:29:28.431  6248  6248 D AndroidRuntime: Calling main entry com.android.commands.appwidget.AppWidget
+27264-09-30 18:29:28.432   577  2033 I AppWidgetServiceImpl: setBindAppWidgetPermission() 0
+27265:09-30 18:29:28.433  6248  6248 D AndroidRuntime: Shutting down VM
+27266-09-30 18:29:28.669  1018  6241 D NetworkMonitor/100: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=353ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Wed, 30 Sep 2026 18:29:28 GMT], X-Android-Received-Millis=[1790792968668], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1790792968464]}
+27267-09-30 18:29:28.674  1018  6240 D NetworkMonitor/100: PROBE_HTTPS https://www.google.com/generate_204 time=355ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Wed, 30 Sep 2026 18:29:28 GMT], X-Android-Received-Millis=[1790792968674], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1790792968670]}
+27268-09-30 18:29:28.675  1018  6239 D NetworkMonitor/100: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=669ms
+27269-09-30 18:29:28.675   577   859 D ConnectivityService: [100 WIFI] validation passed
+27270-09-30 18:29:29.247  6157  6171 I OffgrowQA:   grantbind: 
+27271-09-30 18:29:29.248   577  1013 I AppWidgetServiceImpl: getInstalledProvidersForProfiles() 0
+27272-09-30 18:29:29.249   577  2033 I AppWidgetServiceImpl: startListening() 0
+27273-09-30 18:29:29.249   577  2033 I AppWidgetServiceImpl: allocateAppWidgetId() 0
+27274-09-30 18:29:29.249   577  2033 I AppWidgetServiceImpl: addWidgetLocked() AppWidgetId{2:Host{HostId{user:0, app:10209, hostId:7301, pkg:app.offgrow}}:null}
+27275-09-30 18:29:29.249   577  2033 I AppWidgetServiceImpl: Allocated widget id 2 for host HostId{user:0, app:10209, hostId:7301, pkg:app.offgrow}
+27276-09-30 18:29:29.249   577  2033 I AppWidgetServiceImpl: notifyProviderInheritance() 0
+27277-09-30 18:29:29.250   577  1013 I AppWidgetServiceImpl: bindAppWidgetId() 0
+27278-09-30 18:29:29.251   577  1013 I AppWidgetServiceImpl: Bound widget 2 to provider ProviderId{user:0, app:10209, cmp:ComponentInfo{app.offgrow/app.offgrow.widget.GardenWidgetProvider}}
+27279-09-30 18:29:29.251  6157  6171 I OffgrowQA: - PASS Widget square 2×2 can be placed
+27280-09-30 18:29:29.251   577  1826 I AppWidgetServiceImpl: updateAppWidgetOptions() 0
+27281-09-30 18:29:29.252   577  1826 I AppWidgetServiceImpl: allocateAppWidgetId() 0
+27282-09-30 18:29:29.252   577  1826 I AppWidgetServiceImpl: addWidgetLocked() AppWidgetId{3:Host{HostId{user:0, app:10209, hostId:7301, pkg:app.offgrow}}:null}
+27283-09-30 18:29:29.252   577  1826 I AppWidgetServiceImpl: Allocated widget id 3 for host HostId{user:0, app:10209, hostId:7301, pkg:app.offgrow}
+27284-09-30 18:29:29.252   577  1826 I AppWidgetServiceImpl: bindAppWidgetId() 0
+27285-09-30 18:29:29.252   577  1826 I AppWidgetServiceImpl: Bound widget 3 to provider ProviderId{user:0, app:10209, cmp:ComponentInfo{app.offgrow/app.offgrow.widget.GardenWidgetProvider}}
+27286-09-30 18:29:29.253  6157  6171 I OffgrowQA: - PASS Widget square 3×3 can be placed
+27287-09-30 18:29:29.253   577  2033 I AppWidgetServiceImpl: updateAppWidgetOptions() 0
+27288-09-30 18:29:29.253   577  1013 I AppWidgetServiceImpl: allocateAppWidgetId() 0
+27289-09-30 18:29:29.253   577  1013 I AppWidgetServiceImpl: addWidgetLocked() AppWidgetId{4:Host{HostId{user:0, app:10209, hostId:7301, pkg:app.offgrow}}:null}
+27290-09-30 18:29:29.253   577  1013 I AppWidgetServiceImpl: Allocated widget id 4 for host HostId{user:0, app:10209, hostId:7301, pkg:app.offgrow}
+--
+28697:09-30 18:29:47.117  6142  6142 I AndroidRuntime: VM exiting with result code 0.
+28698-09-30 18:29:47.306     0     0 I binder  : 577:1829 ioctl 400c620e 7866a7b44354 returned -11
+28699-09-30 18:29:47.308     0     0 I binder  : 577:1829 ioctl 400c620e 7866a7b44354 returned -11
+28700-09-30 18:29:47.120   577  1829 E ActivityManager: Unable to freeze binder for 6157: -11
+28701-09-30 18:29:47.120   577  1829 I ActivityManager: Killing 6157:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+28702-09-30 18:29:47.121   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+28703-09-30 18:29:47.121   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+28704-09-30 18:29:47.122   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+28705-09-30 18:29:47.127   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+28706-09-30 18:29:47.127   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+28707-09-30 18:29:47.127   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+28708-09-30 18:29:47.127   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+28709-09-30 18:29:47.128   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+28710-09-30 18:29:47.128   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+28711-09-30 18:29:47.129   577   577 D BatterySaverPolicy: accessibility changed to false, updating policy.
+28712-09-30 18:29:47.130   577   669 W ActivityManager: finishReceiver: no app for android.os.BinderProxy@bc2c491
+28713-09-30 18:29:47.149  1589  1777 I A       : NGA enabled in interactor.
+28714-09-30 18:29:47.149  1589  1777 I A       : (REDACTED) Nga state changed to %s
+28715-09-30 18:29:47.150  1589  1777 I A       : (REDACTED) isTngActive=%s
+28716-09-30 18:29:47.156  1188  1628 D EGL_emulation: app_time_stats: avg=73.43ms min=30.18ms max=237.37ms count=15
+28717-09-30 18:29:47.158  1496  3537 I A       : Initializing all components
+28718-09-30 18:29:47.158  1496  1951 I A       : (REDACTED) onIsEnabledChanged, isEnabled: %s
+28719-09-30 18:29:47.158  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+28720-09-30 18:29:47.158  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+28721-09-30 18:29:47.158  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+28722-09-30 18:29:47.158  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+--
+28777:09-30 18:29:47.319  6378  6378 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+28778:09-30 18:29:47.324  6378  6378 I AndroidRuntime: Using default boot image
+28779:09-30 18:29:47.324  6378  6378 I AndroidRuntime: Leaving lock profiling enabled
+28780-09-30 18:29:47.327  6378  6378 I app_process: Core platform API reporting enabled, enforcing=false
+28781-09-30 18:29:47.328  6378  6378 I app_process: Using CollectorTypeCMC GC.
+28782-09-30 18:29:47.383  6378  6378 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+28783-09-30 18:29:47.390  6378  6378 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+28784-09-30 18:29:47.391  6378  6378 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+28785-09-30 18:29:47.391  6378  6378 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+28786-09-30 18:29:47.392  6378  6378 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+28787-09-30 18:29:47.393  6378  6378 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+28788-09-30 18:29:47.394  6378  6378 W app_process: Unexpected CPU variant for x86: x86_64.
+28789-09-30 18:29:47.394  6378  6378 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+28790-09-30 18:29:47.410  6378  6378 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+28791:09-30 18:29:47.410  6378  6378 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+28792-09-30 18:29:47.412  6378  6378 D UiAutomationConnection: Created on user UserHandle{0}
+28793-09-30 18:29:47.413   577  2033 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+28794-09-30 18:29:47.414   577  2033 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+28795-09-30 18:29:47.421   375   375 D Zygote  : Forked child process 6389
+28796-09-30 18:29:47.422   577   612 I ActivityManager: Start proc 6389:app.offgrow/u0a209 for added application app.offgrow
+28797-09-30 18:29:47.445  6389  6389 I app.offgrow: Late-enabling -Xcheck:jni
+28798-09-30 18:29:47.456  6389  6389 I app.offgrow: Using CollectorTypeCMC GC.
+28799-09-30 18:29:47.457  6389  6389 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+28800-09-30 18:29:47.457  6389  6389 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+28801-09-30 18:29:47.459   453   462 I adbd    : jdwp connection from 6389
+28802-09-30 18:29:47.465  6389  6389 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+28803-09-30 18:29:47.481  6389  6389 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+28804-09-30 18:29:47.483  6389  6389 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+28805-09-30 18:29:47.484  6389  6389 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+28806-09-30 18:29:47.486  6389  6389 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+28807-09-30 18:29:47.486  6389  6389 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+28808-09-30 18:29:47.486  6389  6389 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+28809-09-30 18:29:47.507  6389  6389 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+28810-09-30 18:29:47.508  6389  6389 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+28811-09-30 18:29:47.684  6389  6389 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar:/system/framework/android.test.mock.jar:/system/framework/android.test.base.jar:/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.apk:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/lib/x86_64:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/lib/x86_64:/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.apk!/lib/x86_64:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/app.offgrow
+28812-09-30 18:29:47.684   577  2033 I AppsFilter: interaction: PackageSetting{167d24f app.offgrow/10209} -> PackageSetting{852936a com.android.cts.priv.ctsshim/10193} BLOCKED
+28813-09-30 18:29:47.684   577  2033 I AppsFilter: interaction: PackageSetting{167d24f app.offgrow/10209} -> PackageSetting{20f405b com.android.internal.display.cutout.emulation.corner/10002} BLOCKED
+28814-09-30 18:29:47.684   577  2033 I AppsFilter: interaction: PackageSetting{167d24f app.offgrow/10209} -> PackageSetting{77c50f8 com.android.internal.display.cutout.emulation.double/10082} BLOCKED
+28815-09-30 18:29:47.684   577  2033 I AppsFilter: interaction: PackageSetting{167d24f app.offgrow/10209} -> PackageSetting{86a39d1 com.google.android.onetimeinitializer/10128} BLOCKED
+28816-09-30 18:29:47.684   577  2033 I AppsFilter: interaction: PackageSetting{167d24f app.offgrow/10209} -> PackageSetting{b7e7c36 com.google.android.ext.shared/10117} BLOCKED
+--
+29818:09-30 18:29:53.564  6378  6378 I AndroidRuntime: VM exiting with result code 0.
+29819-09-30 18:29:53.754     0     0 I binder  : 577:669 ioctl 400c620e 7866b736b354 returned -11
+29820-09-30 18:29:53.755     0     0 I binder  : 577:669 ioctl 400c620e 7866b736b354 returned -11
+29821-09-30 18:29:53.567   577   669 E ActivityManager: Unable to freeze binder for 6389: -11
+29822-09-30 18:29:53.568   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+29823-09-30 18:29:53.569   577   669 I ActivityManager: Killing 6389:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+29824-09-30 18:29:53.575   994   994 I Zygote  : Process 6485 exited cleanly (0)
+29825-09-30 18:29:53.575   577   613 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_99054/pid_6485
+29826-09-30 18:29:53.577   577   600 D DisplayManagerService: Drop pending events for gone uid 99054
+29827-09-30 18:29:53.766     0     0 I binder  : undelivered transaction 532903, process died.
+29828-09-30 18:29:53.768     0     0 I binder  : undelivered transaction 532904, process died.
+29829-09-30 18:29:53.769     0     0 I binder  : undelivered transaction 532902, process died.
+29830-09-30 18:29:53.594   453   453 I adbd    : Remote process closed the socket (on MSG_PEEK)
+29831-09-30 18:29:53.784     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+29832-09-30 18:29:53.785     0     0 I binder  : undelivered transaction 532937, process died.
+29833-09-30 18:29:53.595   375   375 I Zygote  : Process 6389 exited due to signal 9 (Killed)
+29834-09-30 18:29:53.595   577   613 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10209/pid_6389
+29835-09-30 18:29:53.595   577  2033 V ActivityManager: Got obituary of 6389:app.offgrow
+29836:09-30 18:29:53.647  6507  6507 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+29837:09-30 18:29:53.651  6507  6507 I AndroidRuntime: Using default boot image
+29838:09-30 18:29:53.651  6507  6507 I AndroidRuntime: Leaving lock profiling enabled
+29839-09-30 18:29:53.653  6507  6507 I app_process: Core platform API reporting enabled, enforcing=false
+29840-09-30 18:29:53.653  6507  6507 I app_process: Using CollectorTypeCMC GC.
+29841-09-30 18:29:53.703  6507  6507 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+29842-09-30 18:29:53.710  6507  6507 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+29843-09-30 18:29:53.710  6507  6507 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+29844-09-30 18:29:53.710  6507  6507 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+29845-09-30 18:29:53.710  6507  6507 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+29846-09-30 18:29:53.711  6507  6507 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+29847-09-30 18:29:53.712  6507  6507 W app_process: Unexpected CPU variant for x86: x86_64.
+29848-09-30 18:29:53.712  6507  6507 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+29849-09-30 18:29:53.726  6507  6507 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+29850:09-30 18:29:53.726  6507  6507 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+29851-09-30 18:29:53.728  6507  6507 D UiAutomationConnection: Created on user UserHandle{0}
+29852-09-30 18:29:53.728   577  1441 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+29853-09-30 18:29:53.729   577  1441 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+29854-09-30 18:29:53.736   375   375 D Zygote  : Forked child process 6518
+29855-09-30 18:29:53.737   577   612 I ActivityManager: Start proc 6518:app.offgrow/u0a209 for added application app.offgrow
+29856-09-30 18:29:53.744   374   374 I netd    : tetherGetStats() -> {[]} <0.41ms>
+29857-09-30 18:29:53.753  6518  6518 I app.offgrow: Late-enabling -Xcheck:jni
+29858-09-30 18:29:53.765  6518  6518 I app.offgrow: Using CollectorTypeCMC GC.
+29859-09-30 18:29:53.765  6518  6518 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+29860-09-30 18:29:53.765  6518  6518 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+29861-09-30 18:29:53.767   453   462 I adbd    : jdwp connection from 6518
+29862-09-30 18:29:53.771  6518  6518 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+29863-09-30 18:29:53.786  6518  6518 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+29864-09-30 18:29:53.789  6518  6518 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+29865-09-30 18:29:53.790  6518  6518 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+29866-09-30 18:29:53.791  6518  6518 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+29867-09-30 18:29:53.791  6518  6518 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+29868-09-30 18:29:53.791  6518  6518 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+29869-09-30 18:29:53.811  6518  6518 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+29870-09-30 18:29:53.811  6518  6518 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+29871-09-30 18:29:53.984   577  1050 I AppsFilter: interaction: PackageSetting{3944e9 app.offgrow/10209} -> PackageSetting{852936a com.android.cts.priv.ctsshim/10193} BLOCKED
+29872-09-30 18:29:53.984   577  1050 I AppsFilter: interaction: PackageSetting{3944e9 app.offgrow/10209} -> PackageSetting{20f405b com.android.internal.display.cutout.emulation.corner/10002} BLOCKED
+29873-09-30 18:29:53.984   577  1050 I AppsFilter: interaction: PackageSetting{3944e9 app.offgrow/10209} -> PackageSetting{77c50f8 com.android.internal.display.cutout.emulation.double/10082} BLOCKED
+29874-09-30 18:29:53.984   577  1050 I AppsFilter: interaction: PackageSetting{3944e9 app.offgrow/10209} -> PackageSetting{86a39d1 com.google.android.onetimeinitializer/10128} BLOCKED
+29875-09-30 18:29:53.984   577  1050 I AppsFilter: interaction: PackageSetting{3944e9 app.offgrow/10209} -> PackageSetting{b7e7c36 com.google.android.ext.shared/10117} BLOCKED
+--
+31226:09-30 18:29:57.079  6555  6555 I AndroidRuntime: VM exiting with result code 0, cleanup skipped.
+31227-09-30 18:29:57.089   577  1441 I AppWidgetServiceImpl: getAppWidgetIds() 0
+31228-09-30 18:29:57.090   577  1050 I AppWidgetServiceImpl: getInstalledProvidersForProfiles() 0
+31229-09-30 18:29:57.090   577  1050 I AppWidgetServiceImpl: getAppWidgetIds() 0
+31230-09-30 18:29:57.092  6518  6532 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=5dc9834c-6b69-4e6d-8ca1-ccad80965c21, tags={ app.offgrow.work.RefreshWorker } ]
+31231-09-30 18:29:57.092   577  1050 I AppWidgetServiceImpl: notifyProviderInheritance() 0
+31232-09-30 18:29:57.096  6518  6518 D WM-Processor: Processor 5dc9834c-6b69-4e6d-8ca1-ccad80965c21 executed; reschedule = false
+31233-09-30 18:29:57.096   374   374 I netd    : tetherGetStats() -> {[]} <0.36ms>
+31234-09-30 18:29:57.097  6518  6518 D WM-SystemJobService: 5dc9834c-6b69-4e6d-8ca1-ccad80965c21 executed on JobScheduler
+31235-09-30 18:29:57.098  6518  6532 D WM-GreedyScheduler: Cancelling work ID 5dc9834c-6b69-4e6d-8ca1-ccad80965c21
+31236-09-30 18:29:57.099  6518  6518 D WM-SystemJobService: onStopJob for WorkGenerationalId(workSpecId=5dc9834c-6b69-4e6d-8ca1-ccad80965c21, generation=0)
+31237-09-30 18:29:57.100   577  1050 W JobScheduler: Job didn't exist in JobStore: 97592e2 {androidx.work.systemjobscheduler} #u0a209/16 @androidx.work.systemjobscheduler@app.offgrow/androidx.work.impl.background.systemjob.SystemJobService
+31238-09-30 18:29:57.104   994   994 I Zygote  : Process 6555 exited cleanly (0)
+31239-09-30 18:29:57.104   577   613 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_99055/pid_6555
+31240-09-30 18:29:57.105   577   600 D DisplayManagerService: Drop pending events for gone uid 99055
+31241-09-30 18:29:57.109  6518  6532 D WM-SystemJobScheduler: Scheduling work ID 5dc9834c-6b69-4e6d-8ca1-ccad80965c21Job ID 17
+31242-09-30 18:29:57.111   577   610 W IPCThreadState: Sending oneway calls to frozen process.
+31243-09-30 18:29:57.113  6518  6534 D WM-StopWorkRunnable: StopWorkRunnable for 5dc9834c-6b69-4e6d-8ca1-ccad80965c21; Processor.stopWork = false
+31244-09-30 18:29:57.803  1117  1160 D EGL_emulation: app_time_stats: avg=318.89ms min=22.25ms max=948.33ms count=5
+31245-09-30 18:29:57.976   577  2748 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+31246-09-30 18:29:59.121   577   610 W IPCThreadState: Sending oneway calls to frozen process.
+31247-09-30 18:29:59.752   577   859 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+31248-09-30 18:29:59.752   577   859 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+31249-09-30 18:29:59.752   577   859 D InetDiagMessage: Destroyed live tcp sockets for uids={10152} in 1ms
+31250-09-30 18:29:59.753   577   859 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+31251-09-30 18:29:59.753   577   859 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+--
+32166:09-30 18:32:32.539  6507  6507 I AndroidRuntime: VM exiting with result code 0.
+32167-09-30 18:32:32.539   577   596 E ActivityManager: Unable to freeze binder for 6518: -11
+32168-09-30 18:32:32.540   577   596 I ActivityManager: Killing 6518:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+32169-09-30 18:32:32.540   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+32170-09-30 18:32:32.541   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+32171-09-30 18:32:32.542   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+32172-09-30 18:32:32.544   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+32173-09-30 18:32:32.544   577   577 W IPCThreadState: Sending oneway calls to frozen process.
+32174-09-30 18:32:32.544   577   577 D BatterySaverPolicy: accessibility changed to false, updating policy.
+32175-09-30 18:32:32.554  1589  1778 I A       : NGA enabled in interactor.
+32176-09-30 18:32:32.554  1589  1778 I A       : (REDACTED) Nga state changed to %s
+32177-09-30 18:32:32.554  1589  1778 I A       : (REDACTED) isTngActive=%s
+32178-09-30 18:32:32.556  1496  1520 I A       : Initializing all components
+32179-09-30 18:32:32.556  1496  1951 I A       : (REDACTED) onIsEnabledChanged, isEnabled: %s
+32180-09-30 18:32:32.557  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+32181-09-30 18:32:32.557  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+32182-09-30 18:32:32.557  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+32183-09-30 18:32:32.557  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+32184-09-30 18:32:32.557  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+32185-09-30 18:32:32.557  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+32186-09-30 18:32:32.557  1496  1836 I A       : (REDACTED) Nga on-device enabled based on TNG:MA active state: %b
+32187-09-30 18:32:32.558  1496  1836 I A       : (REDACTED) State changed: %s => %s by %s and %s with %s
+32188-09-30 18:32:32.558  1496  1836 I A       : (REDACTED) Recognizer choice: (recognizer_type: %s, recognizer_mode: %s, choice_reason: %s)
+32189-09-30 18:32:32.558  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+32190-09-30 18:32:32.558  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+32191-09-30 18:32:32.558  1496  1951 W A       : Disposing empty manager. Did you forgot to subscribe observables?
+--
+32256:09-30 18:32:32.703  6712  6712 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+32257:09-30 18:32:32.707  6712  6712 I AndroidRuntime: Using default boot image
+32258:09-30 18:32:32.708  6712  6712 I AndroidRuntime: Leaving lock profiling enabled
+32259-09-30 18:32:32.710  6712  6712 I app_process: Core platform API reporting enabled, enforcing=false
+32260-09-30 18:32:32.710  6712  6712 I app_process: Using CollectorTypeCMC GC.
+32261-09-30 18:32:32.763  6712  6712 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+32262-09-30 18:32:32.770  6712  6712 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+32263-09-30 18:32:32.770  6712  6712 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+32264-09-30 18:32:32.770  6712  6712 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+32265-09-30 18:32:32.771  6712  6712 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+32266-09-30 18:32:32.772  6712  6712 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+32267-09-30 18:32:32.773  6712  6712 W app_process: Unexpected CPU variant for x86: x86_64.
+32268-09-30 18:32:32.773  6712  6712 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+32269-09-30 18:32:32.789  6712  6712 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+32270:09-30 18:32:32.790  6712  6712 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+32271-09-30 18:32:32.792  6712  6712 D UiAutomationConnection: Created on user UserHandle{0}
+32272-09-30 18:32:32.792   577  1013 I ActivityManager: Force stopping app.offgrow appid=10209 user=0: start instr
+32273-09-30 18:32:32.793   577  1013 D CompatChangeReporter: Compat change id reported: 151861875; UID 10209; state: ENABLED
+32274-09-30 18:32:32.793   577  1013 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@5ed77c1, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+32275-09-30 18:32:32.799   375   375 D Zygote  : Forked child process 6725
+32276-09-30 18:32:32.799   577   612 I ActivityManager: Start proc 6725:app.offgrow/u0a209 for added application app.offgrow
+32277-09-30 18:32:32.825  6725  6725 I app.offgrow: Late-enabling -Xcheck:jni
+32278-09-30 18:32:32.835  6725  6725 I app.offgrow: Using CollectorTypeCMC GC.
+32279-09-30 18:32:32.836  6725  6725 W app.offgrow: Unexpected CPU variant for x86: x86_64.
+32280-09-30 18:32:32.836  6725  6725 W app.offgrow: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+32281-09-30 18:32:32.837   453   462 I adbd    : jdwp connection from 6725
+32282-09-30 18:32:32.841  6725  6725 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+32283-09-30 18:32:32.857  6725  6725 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[app.offgrow]: x86_64, null instrumentation[app.offgrow.test]: null, null
+32284-09-30 18:32:32.860  6725  6725 W app.offgrow: ClassLoaderContext shared library size mismatch. Expected=2, found=0 (PCL[]{PCL[/system/framework/android.test.base.jar*724373495]#PCL[/system/framework/android.test.mock.jar*1452759902]} | PCL[])
+32285-09-30 18:32:32.861  6725  6725 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986])
+32286-09-30 18:32:32.863  6725  6725 W app.offgrow: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2496447986:/system/framework/android.test.mock.jar*1452759902])
+32287-09-30 18:32:32.863  6725  6725 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+32288-09-30 18:32:32.863  6725  6725 W ziparchive: Unable to open '/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.dm': No such file or directory
+32289-09-30 18:32:32.884  6725  6725 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+32290-09-30 18:32:32.884  6725  6725 W ziparchive: Unable to open '/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.dm': No such file or directory
+32291-09-30 18:32:33.061  6725  6725 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar:/system/framework/android.test.mock.jar:/system/framework/android.test.base.jar:/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.apk:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/lib/x86_64:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/lib/x86_64:/data/app/~~oQDZzoTdUAesITq8Wd93uQ==/app.offgrow.test-44s62aXrtBwGSZwhGNH4eA==/base.apk!/lib/x86_64:/data/app/~~k55JRroqLP9yLf-FJoBz5g==/app.offgrow-k8Gj-ZPjoKBzbgz0sIt0gw==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/app.offgrow
+32292-09-30 18:32:33.061   577  1013 I AppsFilter: interaction: PackageSetting{b6d0e48 app.offgrow/10209} -> PackageSetting{852936a com.android.cts.priv.ctsshim/10193} BLOCKED
+32293-09-30 18:32:33.061   577  1013 I AppsFilter: interaction: PackageSetting{b6d0e48 app.offgrow/10209} -> PackageSetting{20f405b com.android.internal.display.cutout.emulation.corner/10002} BLOCKED
+32294-09-30 18:32:33.061   577  1013 I AppsFilter: interaction: PackageSetting{b6d0e48 app.offgrow/10209} -> PackageSetting{77c50f8 com.android.internal.display.cutout.emulation.double/10082} BLOCKED
+32295-09-30 18:32:33.061   577  1013 I AppsFilter: interaction: PackageSetting{b6d0e48 app.offgrow/10209} -> PackageSetting{86a39d1 com.google.android.onetimeinitializer/10128} BLOCKED
+--
+39656:09-30 18:33:45.616  6712  6712 I AndroidRuntime: VM exiting with result code 0.
+39657-09-30 18:33:45.618   577   845 E ActivityManager: Unable to freeze binder for 6725: -11
+39658-09-30 18:33:45.806     0     0 I binder  : 577:845 ioctl 400c620e 7866b2057354 returned -11
+39659-09-30 18:33:45.808     0     0 I binder  : 577:845 ioctl 400c620e 7866b2057354 returned -11
+39660-09-30 18:33:45.622   577   591 I system_server: NativeAlloc concurrent mark compact GC freed 22MB AllocSpace bytes, 30(576KB) LOS objects, 45% free, 28MB/52MB, paused 2.132ms,9.630ms total 610.467ms
+39661-09-30 18:33:45.622   577   845 I ActivityManager: Killing 6725:app.offgrow/u0a209 (adj 0): stop app.offgrow due to finished inst
+39662-09-30 18:33:45.625   577   600 D DisplayManagerService: Drop pending events for gone uid 10209
+39663-09-30 18:33:45.628  1496  1836 I A       : (REDACTED) onActiveStateChangeEvent: %s => %s
+39664-09-30 18:33:45.641  1496  1836 I A       : (REDACTED) #onActiveStateChangeEvent, newState: %s, previousState: %s.
+39665-09-30 18:33:45.645  1496  1836 I NgaEntryPointEventSendr: setupConnection
+39666-09-30 18:33:45.649   577   602 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+39667-09-30 18:33:45.650   577   592 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+39668-09-30 18:33:45.650   577   592 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+39669-09-30 18:33:45.651  1188  1188 D AutofillManager: Fill dialog is enabled:false, hints=[]
+39670-09-30 18:33:45.655  1188  1188 D DeviceSearchAlg: search timeout = %d200
+39671-09-30 18:33:45.656  1496  1951 I A       : Initialize
+39672-09-30 18:33:45.663  1188  1188 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+39673-09-30 18:33:45.663  1188  1188 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+39674-09-30 18:33:45.857     0     0 I binder  : undelivered transaction 592458, process died.
+39675-09-30 18:33:45.668  1496  1951 I A       : (REDACTED) stopListening(%s, %s)
+39676-09-30 18:33:45.668  1188  1188 I OverviewComponentObserver: updateOverviewTargets: mIsHomeDisabled=false, isDefaultHomeNull=false, mIsDefaultHome=true
+39677-09-30 18:33:45.669  1188  1188 D OverviewActionsView: updateActionButtonsVisibility() called: showSingleTaskActions = [true], showGroupActions = [false]
+39678-09-30 18:33:45.672   577   592 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+39679-09-30 18:33:45.673  1496  1836 I NgaEntryPointEventSendr: (REDACTED) State changed: %s => %s
+39680-09-30 18:33:45.673   577  1828 I AppWidgetServiceImpl: startListening() 0
+39681-09-30 18:33:45.674  1188  1188 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+--
+39903:09-30 18:33:46.809  7161  7161 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+39904:09-30 18:33:46.813  7161  7161 I AndroidRuntime: Using default boot image
+39905:09-30 18:33:46.813  7161  7161 I AndroidRuntime: Leaving lock profiling enabled
+39906-09-30 18:33:46.815  7161  7161 I app_process: Core platform API reporting enabled, enforcing=false
+39907-09-30 18:33:46.816  7161  7161 I app_process: Using CollectorTypeCMC GC.
+39908-09-30 18:33:46.868  7161  7161 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+39909-09-30 18:33:46.875  7161  7161 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+39910-09-30 18:33:46.876  7161  7161 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+39911-09-30 18:33:46.876  7161  7161 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+39912-09-30 18:33:46.876  7161  7161 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+39913-09-30 18:33:46.877  7161  7161 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+39914-09-30 18:33:46.878  7161  7161 W app_process: Unexpected CPU variant for x86: x86_64.
+39915-09-30 18:33:46.878  7161  7161 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+39916-09-30 18:33:46.896  7161  7161 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+39917:09-30 18:33:46.896  7161  7161 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+39918-09-30 18:33:46.896  7161  7161 W Monkey  : args: [-p, app.offgrow, --throttle, 80, --pct-syskeys, 0, --pct-appswitch, 5, --ignore-crashes, --ignore-timeouts, --ignore-security-exceptions, -s, 20261007, -v, 3000]
+39919-09-30 18:33:46.897  7161  7161 W Monkey  :  arg: "-p"
+39920-09-30 18:33:46.897  7161  7161 W Monkey  :  arg: "app.offgrow"
+39921-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "--throttle"
+39922-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "80"
+39923-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "--pct-syskeys"
+39924-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "0"
+39925-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "--pct-appswitch"
+39926-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "5"
+39927-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "--ignore-crashes"
+39928-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "--ignore-timeouts"
+39929-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "--ignore-security-exceptions"
+39930-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "-s"
+39931-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "20261007"
+39932-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "-v"
+39933-09-30 18:33:46.898  7161  7161 W Monkey  :  arg: "3000"
+39934-09-30 18:33:46.898  7161  7161 W Monkey  : data="app.offgrow"
+39935-09-30 18:33:46.898  7161  7161 W Monkey  : arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="80"
+39936-09-30 18:33:46.899  7161  7161 W Monkey  : data="80"
+39937-09-30 18:33:46.899  7161  7161 W Monkey  : arg="--pct-syskeys" mCurArgData="null" mNextArg=5 argwas="--pct-syskeys" nextarg="0"
+39938-09-30 18:33:46.899  7161  7161 W Monkey  : data="0"
+39939-09-30 18:33:46.899  7161  7161 W Monkey  : arg="--pct-appswitch" mCurArgData="null" mNextArg=7 argwas="--pct-appswitch" nextarg="5"
+39940-09-30 18:33:46.899  7161  7161 W Monkey  : data="5"
+39941-09-30 18:33:46.899  7161  7161 W Monkey  : arg="--ignore-crashes" mCurArgData="null" mNextArg=9 argwas="--ignore-crashes" nextarg="--ignore-timeouts"
+39942-09-30 18:33:46.899  7161  7161 W Monkey  : arg="--ignore-timeouts" mCurArgData="null" mNextArg=10 argwas="--ignore-timeouts" nextarg="--ignore-security-exceptions"
+--
+50970:09-30 18:35:32.782  7161  7161 I AndroidRuntime: VM exiting with result code 0.
+50971-09-30 18:35:32.783   577   683 W IPCThreadState: Sending oneway calls to frozen process.
+50972-09-30 18:35:32.784  1455  2661 I AiAiEcho: Settings changed for uri: content://settings/secure/device_state_rotation_lock
+50973-09-30 18:35:32.787  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+50974-09-30 18:35:32.787  1455  1752 I AiAiEcho: EchoTargets: 
+50975-09-30 18:35:32.787  1455  1752 I AiAiEcho: Filtered by AiAi flag check: 
+50976-09-30 18:35:32.787  1455  1752 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+50977-09-30 18:35:32.787  1455  1752 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+50978-09-30 18:35:32.787  1455  1752 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+50979-09-30 18:35:32.787  1455  1752 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+50980-09-30 18:35:32.787  1455  1752 I AiAiEcho: EchoTargets: 
+50981-09-30 18:35:32.787  1455  1752 I AiAiEcho: Filtered by AiAi flag check: 
+50982-09-30 18:35:32.787  1455  1752 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+50983-09-30 18:35:32.787  1455  1752 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+50984-09-30 18:35:32.787  1455  1752 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+50985-09-30 18:35:32.795  1455  1752 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+50986-09-30 18:35:32.795  1455  1752 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+50987-09-30 18:35:32.795   935   935 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+50988-09-30 18:35:32.796  1188  1188 D SsBaseTemplateCard: No text view can be set up
+50989-09-30 18:35:32.796  1188  1188 D SsBaseTemplateCard: Passed-in item info is null
+50990-09-30 18:35:32.796  1188  1188 D SsBaseTemplateCard: Passed-in item info is null
+50991-09-30 18:35:32.797  1188  1188 D SsBaseTemplateCard: Passed-in item info is null
+50992-09-30 18:35:32.797  1188  1188 I SsBaseTemplateCard: Secondary card pane is null
+50993-09-30 18:35:32.835   383  7641 W android.hardware.audio@7.1-impl.ranchu: pcmWrite:259 pcm_writei failed with 'cannot read/write stream data: I/O error' (-1)
+50994-09-30 18:35:32.835   383  7641 E android.hardware.audio@7.1-impl.ranchu: pcmWrite:260 failure: -1
+50995-09-30 18:35:32.882  7665  7665 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.

@@ -33,6 +33,7 @@ object GardenEngine {
     private const val TAG = "GardenEngine"
     const val IMAGE_SIZE = 1080
     private val mutex = Mutex()
+    private val renderMutex = Mutex()
 
     fun imageFile(context: Context) = File(context.filesDir, "garden.jpg")
 
@@ -40,12 +41,13 @@ object GardenEngine {
      * Close finished days, work out today's live vitality, redraw the garden if anything
      * visible changed, and refresh the widgets.
      */
-    suspend fun refresh(context: Context, render: Boolean = true): Snapshot = mutex.withLock {
+    suspend fun refresh(context: Context, render: Boolean = true): Snapshot {
         val app = context.applicationContext
         val store = Store(app)
         val reader = UsageReader(app)
 
-        val snap = withContext(Dispatchers.IO) {
+        // Scoring holds the lock; drawing happens after, so taps never wait on the renderer.
+        val snap = mutex.withLock { withContext(Dispatchers.IO) {
             val access = reader.hasAccess()
             val today = LocalDate.now()
             var state = store.load()
@@ -77,10 +79,10 @@ object GardenEngine {
             store.saveWidgetInfo(widgetInfo(state, stats, live, access))
             val file = imageFile(app)
             Snapshot(state, access, stats, items, live, Band.of(live), file.takeIf { it.exists() }, file.lastModified())
-        }
+        } }
 
         var result = snap
-        if (render) {
+        if (render) renderMutex.withLock {
             val cfg = config(snap.state, snap.live, LocalTime.now())
             val key = renderKey(cfg)
             val file = imageFile(app)
@@ -100,7 +102,7 @@ object GardenEngine {
             }
         }
         WidgetUpdater.updateAll(app)
-        result
+        return result
     }
 
     /** Change the saved garden safely (never at the same time as a refresh). */

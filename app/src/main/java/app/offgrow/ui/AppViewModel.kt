@@ -44,7 +44,7 @@ data class UiState(
 
 data class AppChoice(val pkg: String, val label: String, val counted: Boolean)
 
-class AppViewModel(app: Application) : AndroidViewModel(app) {
+class AppViewModel(private val app: Application) : AndroidViewModel(app) {
     private val _ui = MutableStateFlow(UiState())
     val ui: StateFlow<UiState> = _ui.asStateFlow()
 
@@ -76,7 +76,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         refreshJob = viewModelScope.launch {
             _ui.update { it.copy(refreshing = true) }
             try {
-                val snap = GardenEngine.refresh(getApplication(), render = true)
+                val snap = GardenEngine.refresh(app, render = true)
                 show(snap)
             } finally {
                 _ui.update { it.copy(refreshing = false) }
@@ -101,7 +101,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     private suspend fun loadImage(): ImageBitmap? = withContext(Dispatchers.IO) {
-        val f = GardenEngine.imageFile(getApplication())
+        val f = GardenEngine.imageFile(app)
         if (!f.exists()) return@withContext null
         try {
             imageVersion = f.lastModified()
@@ -113,7 +113,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
 
     private fun change(then: (() -> Unit)? = null, f: (GardenState) -> GardenState) {
         viewModelScope.launch {
-            val next = GardenEngine.update(getApplication(), f)
+            val next = GardenEngine.update(app, f)
             _ui.update { it.copy(state = next) }
             then?.invoke()
             refreshJob?.join()
@@ -164,14 +164,14 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
 
     fun onAccessMaybeChanged() {
         viewModelScope.launch {
-            val access = withContext(Dispatchers.IO) { UsageReader(getApplication()).hasAccess() }
+            val access = withContext(Dispatchers.IO) { UsageReader(app).hasAccess() }
             _ui.update { it.copy(hasAccess = access) }
             refresh()
         }
     }
 
     suspend fun appChoices(): List<AppChoice> = withContext(Dispatchers.IO) {
-        val reader = UsageReader(getApplication())
+        val reader = UsageReader(app)
         reader.launchableApps().map { (pkg, label) -> AppChoice(pkg, label, reader.isSocial(pkg)) }
             .sortedWith(compareByDescending<AppChoice> { it.counted }.thenBy { it.label.lowercase() })
     }
@@ -179,8 +179,8 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     fun setCounted(pkg: String, counted: Boolean) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                val store = Store(getApplication())
-                val reader = UsageReader(getApplication())
+                val store = Store(app)
+                val reader = UsageReader(app)
                 val byDefault = reader.isSocialByDefault(pkg)
                 var inc = store.includedApps
                 var exc = store.excludedApps
@@ -198,6 +198,6 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     suspend fun preview(vitality: Int, tod: String): ImageBitmap? {
         val s = _ui.value.state ?: return null
         val cfg = GardenEngine.config(s, vitality, LocalTime.now(), overrideTod = tod)
-        return GardenEngine.renderPreview(getApplication(), cfg, 900)?.asImageBitmap()
+        return GardenEngine.renderPreview(app, cfg, 900)?.asImageBitmap()
     }
 }

@@ -298,9 +298,9 @@ fun CareIcon(key: String, pending: Boolean = false, size: Dp = 34.dp) {
             }
             "weeds" -> {
                 val p = Path().apply {
-                    moveTo(11f * s, 25f * s); quadraticBezierTo(12f * s, 16f * s, 9f * s, 11f * s)
-                    moveTo(17f * s, 25f * s); quadraticBezierTo(17f * s, 15f * s, 19f * s, 9f * s)
-                    moveTo(23f * s, 25f * s); quadraticBezierTo(22f * s, 18f * s, 26f * s, 13f * s)
+                    moveTo(11f * s, 25f * s); quadraticTo(12f * s, 16f * s, 9f * s, 11f * s)
+                    moveTo(17f * s, 25f * s); quadraticTo(17f * s, 15f * s, 19f * s, 9f * s)
+                    moveTo(23f * s, 25f * s); quadraticTo(22f * s, 18f * s, 26f * s, 13f * s)
                 }
                 drawPath(p, Color(0xFF8A7A3A), style = Stroke(width = 2f * s, cap = StrokeCap.Round))
             }
@@ -317,7 +317,7 @@ fun CareIcon(key: String, pending: Boolean = false, size: Dp = 34.dp) {
             }
             "wilt", "lost" -> {
                 val stem = Path().apply {
-                    moveTo(15f * s, 27f * s); quadraticBezierTo(15f * s, 16f * s, 22f * s, 14f * s)
+                    moveTo(15f * s, 27f * s); quadraticTo(15f * s, 16f * s, 22f * s, 14f * s)
                 }
                 drawPath(stem, Palette.Moss, style = Stroke(width = 2f * s, cap = StrokeCap.Round))
                 drawCircle(Palette.Red, radius = 4.2f * s, center = Offset(22.5f * s, 17.5f * s))
@@ -337,7 +337,7 @@ fun CareIcon(key: String, pending: Boolean = false, size: Dp = 34.dp) {
             else -> { // seed
                 drawOval(Palette.Wilt, topLeft = Offset(12.4f * s, 14f * s), size = Size(9.2f * s, 12f * s))
                 val sprout = Path().apply {
-                    moveTo(17f * s, 14f * s); quadraticBezierTo(17f * s, 9f * s, 21f * s, 8f * s)
+                    moveTo(17f * s, 14f * s); quadraticTo(17f * s, 9f * s, 21f * s, 8f * s)
                 }
                 drawPath(sprout, Palette.Moss, style = Stroke(width = 2f * s, cap = StrokeCap.Round))
                 rotate(-20f, pivot = Offset(21f * s, 9f * s)) {

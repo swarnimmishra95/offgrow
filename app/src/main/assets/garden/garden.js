@@ -159,7 +159,7 @@
     this.tod = cfg.tod || 'day';
     this.age = cfg.age === undefined ? 1 : cfg.age;
     this.density = cfg.density || 1;
-    var F = { sunflowers: true, arch: true, birdbath: true, pot: true, fence: 'white', tulips: true, cornflowers: true };
+    var F = { sunflowers: true, arch: true, birdbath: true, pot: true, fence: 'white', tulips: true, cornflowers: true, hydrangea: true, roses: true };
     var f = cfg.features || {};
     for (var k in f) if (f.hasOwnProperty(k)) F[k] = f[k];
     if (!FENCE[F.fence]) F.fence = 'white';
@@ -247,9 +247,11 @@
     for (var i = 0; i < (this.F.sunflowers ? 6 : 0); i++)
       extra.push({ sp: 'sunflower', x: 18 + i * 22 + r2.uniform(-6, 6), y: r2.uniform(214, 232), depth: 0.55, scale: 0.95 * r2.uniform(0.9, 1.1), h: r2.random(), seed: r2.random(), lean: r2.uniform(-8, 8) });
     [[150, 'hydrangea'], [330, 'rosebush'], [378, 'hydrangea']].forEach(function (b) {
+      if (b[1] === 'hydrangea' && !self.F.hydrangea) return;
+      if (b[1] === 'rosebush' && !self.F.roses) return;
       extra.push({ sp: b[1], x: b[0] + r2.uniform(-6, 6), y: r2.uniform(236, 246), depth: 0.6, scale: 1, h: r2.random() * 0.8, seed: r2.random(), lean: 0 });
     });
-    extra.push({ sp: 'rosebush', x: 96, y: 300, depth: 0.8, scale: 1.25, h: r2.random() * 0.7, seed: r2.random(), lean: 0 });
+    if (this.F.roses) extra.push({ sp: 'rosebush', x: 96, y: 300, depth: 0.8, scale: 1.25, h: r2.random() * 0.7, seed: r2.random(), lean: 0 });
     [[126, 360, 'tulip', 9], [318, 372, 'tulip', 8], [262, 300, 'cornflower', 5], [170, 300, 'cornflower', 6], [360, 330, 'tulip', 6]].forEach(function (dr) {
       if (dr[2] === 'tulip' && !self.F.tulips) return;
       if (dr[2] === 'cornflower' && !self.F.cornflowers) return;

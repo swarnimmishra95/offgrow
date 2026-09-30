@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="paper">#FFF3EEE3</color>
+    <color name="ink">#FF1D2B22</color>
+    <color name="moss">#FF2F6B45</color>
+    <color name="leaf">#FF9CC47F</color>
+    <color name="amber">#FFF2B632</color>
+    <color name="widget_bg">#FF2A3D31</color>
+</resources>

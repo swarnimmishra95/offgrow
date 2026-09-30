@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Offgrow</string>
+    <string name="widget_square">Garden</string>
+    <string name="widget_wide">Garden and today</string>
+    <string name="widget_description">Your garden, live on your home screen.</string>
+    <string name="widget_wide_description">Your garden with today\'s social time and streak.</string>
+</resources>

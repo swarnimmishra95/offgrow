@@ -1,0 +1,68 @@
+name: Build Android app
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build APK
+        env:
+          BUILD_NUMBER: ${{ github.run_number }}
+        run: |
+          chmod +x gradlew
+          set -o pipefail
+          ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tee build.log
+
+      - name: Save build log to the ci-log branch
+        if: always()
+        run: |
+          mkdir -p /tmp/cilog
+          cp build.log /tmp/cilog/build.log 2>/dev/null || echo "no log" > /tmp/cilog/build.log
+          echo "${{ github.sha }} ${{ job.status }} run ${{ github.run_number }}" > /tmp/cilog/status.txt
+          cd /tmp/cilog
+          git init -q -b ci-log
+          git config user.name "offgrow-ci"
+          git config user.email "ci@offgrow.invalid"
+          git add -A
+          git commit -qm "Build log for ${{ github.sha }}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-log
+
+      - name: Rename APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk offgrow.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: offgrow-apk
+          path: offgrow.apk
+
+      - name: Publish to the "latest" release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest offgrow.apk \
+            --prerelease \
+            --target "${{ github.sha }}" \
+            --title "Offgrow test build ${{ github.run_number }}" \
+            --notes "Download offgrow.apk on your Android phone and open it to install. Built from ${{ github.sha }}."
